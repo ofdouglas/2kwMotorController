@@ -1,0 +1,614 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:2kwMotorController
+LIBS:2kwMotorController-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 59758257
+P 5700 4450
+F 0 "Q?" H 6000 4500 50  0000 R CNN
+F 1 "IRFP4468" H 6250 4400 50  0000 R CNN
+F 2 "" H 5900 4550 50  0000 C CNN
+F 3 "" H 5700 4450 50  0000 C CNN
+	1    5700 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM5102 U?
+U 1 1 5975825E
+P 4050 5000
+F 0 "U?" H 4050 4750 60  0000 C CNN
+F 1 "LM5102" H 4050 5450 60  0000 C CNN
+F 2 "" H 4050 5000 60  0000 C CNN
+F 3 "" H 4050 5000 60  0000 C CNN
+	1    4050 5000
+	1    0    0    -1  
+$EndComp
+Text Label 7150 4900 0    60   ~ 0
+M+
+Text Label 7400 4900 0    60   ~ 0
+M-
+$Comp
+L R R?
+U 1 1 59758271
+P 5300 4450
+F 0 "R?" V 5380 4450 50  0000 C CNN
+F 1 "R" V 5300 4450 50  0000 C CNN
+F 2 "" V 5230 4450 50  0000 C CNN
+F 3 "" H 5300 4450 50  0000 C CNN
+	1    5300 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 59758278
+P 5300 5500
+F 0 "R?" V 5380 5500 50  0000 C CNN
+F 1 "R" V 5300 5500 50  0000 C CNN
+F 2 "" V 5230 5500 50  0000 C CNN
+F 3 "" H 5300 5500 50  0000 C CNN
+	1    5300 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDPWR #PWR?
+U 1 1 5975827F
+P 6850 5850
+F 0 "#PWR?" H 6850 5650 50  0001 C CNN
+F 1 "GNDPWR" H 6850 5720 50  0000 C CNN
+F 2 "" H 6850 5800 50  0000 C CNN
+F 3 "" H 6850 5800 50  0000 C CNN
+	1    6850 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L FERRITE_BEAD FB?
+U 1 1 59758285
+P 4950 4450
+F 0 "FB?" H 4950 4300 60  0000 C CNN
+F 1 "FERRITE_BEAD" H 5000 4600 60  0001 C CNN
+F 2 "" H 5400 4950 60  0000 C CNN
+F 3 "" H 5400 4950 60  0000 C CNN
+	1    4950 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L FERRITE_BEAD FB?
+U 1 1 5975828C
+P 4950 5500
+F 0 "FB?" H 4950 5350 60  0000 C CNN
+F 1 "FERRITE_BEAD" H 5000 5650 60  0001 C CNN
+F 2 "" H 5400 6000 60  0000 C CNN
+F 3 "" H 5400 6000 60  0000 C CNN
+	1    4950 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59758293
+P 4900 4800
+F 0 "C?" H 4925 4900 50  0000 L CNN
+F 1 "C" H 4925 4700 50  0000 L CNN
+F 2 "" H 4938 4650 50  0000 C CNN
+F 3 "" H 4900 4800 50  0000 C CNN
+	1    4900 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDPWR #PWR?
+U 1 1 5975829A
+P 3550 5550
+F 0 "#PWR?" H 3550 5350 50  0001 C CNN
+F 1 "GNDPWR" H 3550 5420 50  0000 C CNN
+F 2 "" H 3550 5500 50  0000 C CNN
+F 3 "" H 3550 5500 50  0000 C CNN
+	1    3550 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 597582A0
+P 4550 5350
+F 0 "R?" V 4630 5350 50  0000 C CNN
+F 1 "R" V 4550 5350 50  0000 C CNN
+F 2 "" V 4480 5350 50  0000 C CNN
+F 3 "" H 4550 5350 50  0000 C CNN
+	1    4550 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDPWR #PWR?
+U 1 1 597582A7
+P 4550 5550
+F 0 "#PWR?" H 4550 5350 50  0001 C CNN
+F 1 "GNDPWR" H 4550 5420 50  0000 C CNN
+F 2 "" H 4550 5500 50  0000 C CNN
+F 3 "" H 4550 5500 50  0000 C CNN
+	1    4550 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 597582AD
+P 3550 5350
+F 0 "R?" V 3630 5350 50  0000 C CNN
+F 1 "R" V 3550 5350 50  0000 C CNN
+F 2 "" V 3480 5350 50  0000 C CNN
+F 3 "" H 3550 5350 50  0000 C CNN
+	1    3550 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 597582B5
+P 3300 4700
+F 0 "C?" H 3325 4800 50  0000 L CNN
+F 1 "C" H 3325 4600 50  0000 L CNN
+F 2 "" H 3338 4550 50  0000 C CNN
+F 3 "" H 3300 4700 50  0000 C CNN
+	1    3300 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDPWR #PWR?
+U 1 1 597582BC
+P 3000 4800
+F 0 "#PWR?" H 3000 4600 50  0001 C CNN
+F 1 "GNDPWR" H 3000 4670 50  0000 C CNN
+F 2 "" H 3000 4750 50  0000 C CNN
+F 3 "" H 3000 4750 50  0000 C CNN
+	1    3000 4800
+	1    0    0    -1  
+$EndComp
+Text Label 3350 4900 0    60   ~ 0
+PWM1
+Text Label 3350 5000 0    60   ~ 0
+PWM2
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 597582C4
+P 5700 5500
+F 0 "Q?" H 6000 5550 50  0000 R CNN
+F 1 "IRFP4468" H 6250 5450 50  0000 R CNN
+F 2 "" H 5900 5600 50  0000 C CNN
+F 3 "" H 5700 5500 50  0000 C CNN
+	1    5700 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 597582CB
+P 7650 5500
+F 0 "Q?" H 7950 5550 50  0000 R CNN
+F 1 "IRFP4468" H 8200 5450 50  0000 R CNN
+F 2 "" H 7850 5600 50  0000 C CNN
+F 3 "" H 7650 5500 50  0000 C CNN
+	1    7650 5500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 597582D2
+P 7650 4450
+F 0 "Q?" H 7950 4500 50  0000 R CNN
+F 1 "IRFP4468" H 8200 4400 50  0000 R CNN
+F 2 "" H 7850 4550 50  0000 C CNN
+F 3 "" H 7650 4450 50  0000 C CNN
+	1    7650 4450
+	-1   0    0    -1  
+$EndComp
+Text Label 6800 4150 0    60   ~ 0
+VBUS
+$Comp
+L CONN_01X02 P?
+U 1 1 597582DA
+P 2900 2350
+F 0 "P?" H 2900 2500 50  0000 C CNN
+F 1 "CONN_01X02" V 3000 2350 50  0000 C CNN
+F 2 "" H 2900 2350 50  0000 C CNN
+F 3 "" H 2900 2350 50  0000 C CNN
+	1    2900 2350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 597582E1
+P 3600 3300
+F 0 "Q?" V 3650 3600 50  0000 R CNN
+F 1 "IRFP4468" V 3750 3750 50  0000 R CNN
+F 2 "" H 3800 3400 50  0000 C CNN
+F 3 "" H 3600 3300 50  0000 C CNN
+	1    3600 3300
+	0    1    -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 597582E8
+P 4250 2550
+F 0 "R?" V 4330 2550 50  0000 C CNN
+F 1 "0.5" V 4250 2550 50  0000 C CNN
+F 2 "" V 4180 2550 50  0000 C CNN
+F 3 "" H 4250 2550 50  0000 C CNN
+	1    4250 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 597582EF
+P 4150 2950
+F 0 "Q?" H 4450 3000 50  0000 R CNN
+F 1 "IRFP4468" H 4700 2900 50  0000 R CNN
+F 2 "" H 4350 3050 50  0000 C CNN
+F 3 "" H 4150 2950 50  0000 C CNN
+	1    4150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDPWR #PWR?
+U 1 1 597582F6
+P 5000 3250
+F 0 "#PWR?" H 5000 3050 50  0001 C CNN
+F 1 "GNDPWR" H 5000 3120 50  0000 C CNN
+F 2 "" H 5000 3200 50  0000 C CNN
+F 3 "" H 5000 3200 50  0000 C CNN
+	1    5000 3250
+	1    0    0    -1  
+$EndComp
+Text Label 4500 2300 0    60   ~ 0
+VBUS
+$Comp
+L C C?
+U 1 1 597582FE
+P 6200 1850
+F 0 "C?" H 6225 1950 50  0000 L CNN
+F 1 "C" H 6225 1750 50  0000 L CNN
+F 2 "" H 6238 1700 50  0000 C CNN
+F 3 "" H 6200 1850 50  0000 C CNN
+	1    6200 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59758305
+P 6450 1850
+F 0 "C?" H 6475 1950 50  0000 L CNN
+F 1 "C" H 6475 1750 50  0000 L CNN
+F 2 "" H 6488 1700 50  0000 C CNN
+F 3 "" H 6450 1850 50  0000 C CNN
+	1    6450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5975830C
+P 6700 1850
+F 0 "C?" H 6725 1950 50  0000 L CNN
+F 1 "C" H 6725 1750 50  0000 L CNN
+F 2 "" H 6738 1700 50  0000 C CNN
+F 3 "" H 6700 1850 50  0000 C CNN
+	1    6700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59758313
+P 6950 1850
+F 0 "C?" H 6975 1950 50  0000 L CNN
+F 1 "C" H 6975 1750 50  0000 L CNN
+F 2 "" H 6988 1700 50  0000 C CNN
+F 3 "" H 6950 1850 50  0000 C CNN
+	1    6950 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5975831A
+P 7200 1850
+F 0 "C?" H 7225 1950 50  0000 L CNN
+F 1 "C" H 7225 1750 50  0000 L CNN
+F 2 "" H 7238 1700 50  0000 C CNN
+F 3 "" H 7200 1850 50  0000 C CNN
+	1    7200 1850
+	1    0    0    -1  
+$EndComp
+Text Label 7200 1650 0    60   ~ 0
+VBUS
+$Comp
+L GNDPWR #PWR?
+U 1 1 59758322
+P 7200 2100
+F 0 "#PWR?" H 7200 1900 50  0001 C CNN
+F 1 "GNDPWR" H 7200 1970 50  0000 C CNN
+F 2 "" H 7200 2050 50  0000 C CNN
+F 3 "" H 7200 2050 50  0000 C CNN
+	1    7200 2100
+	1    0    0    -1  
+$EndComp
+Text HLabel 1150 3600 0    60   Input ~ 0
+PWM1
+Text HLabel 1150 3850 0    60   Input ~ 0
+PWM2
+Text Label 1500 3600 0    60   ~ 0
+PWM1
+Text Label 1500 3850 0    60   ~ 0
+PWM2
+Text Label 6100 4900 0    60   ~ 0
+ISENSE+
+Text Label 6550 4900 0    60   ~ 0
+ISENSE-
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 5975F9D5
+P 3850 3800
+F 0 "Q?" V 4050 4000 50  0000 R CNN
+F 1 "Q_NMOS_GDS" V 4100 3850 50  0000 R CNN
+F 2 "" H 4050 3900 50  0000 C CNN
+F 3 "" H 3850 3800 50  0000 C CNN
+	1    3850 3800
+	0    -1   -1   0   
+$EndComp
+Text Label 3050 3200 2    60   ~ 0
+BATTERY_GND
+Text Notes 7800 2900 2    197  ~ 39
+optocouplers
+Text Notes 5300 6050 2    197  ~ 39
+gate driver protection
+Text Notes 5100 6650 2    79   ~ 16
+* reduce circuit parasitics\n* ferrite bead at MOSFET gate\n* diode clamp gate driver pins\n* decoupling caps over wide frequency range
+$Comp
+L THERMISTOR TH?
+U 1 1 5986B315
+P 4450 3700
+F 0 "TH?" V 4550 3750 50  0000 C CNN
+F 1 "SL15" V 4350 3800 50  0000 C BNN
+F 2 "" H 4450 3700 50  0000 C CNN
+F 3 "" H 4450 3700 50  0000 C CNN
+	1    4450 3700
+	0    1    1    0   
+$EndComp
+Text Notes 3650 2000 2    118  ~ 24
+MOTOR BATTERY
+Text Notes 5800 2050 2    118  ~ 24
+polarity protection?
+Text Notes 4700 2600 2    59   ~ 0
+ARCOL\nHS200
+Text Notes 7100 3900 2    59   ~ 0
+HEATSINK:\nDHS-B10680-04A
+Text HLabel 1150 4100 0    60   Input ~ 0
+PWM3
+Text HLabel 1150 4350 0    60   Input ~ 0
+PWM4
+Text Label 1500 4100 0    60   ~ 0
+PWM3
+Text Label 1500 4350 0    60   ~ 0
+PWM4
+Text Label 3300 4050 0    59   ~ 0
+VBUS_CHRG
+Text HLabel 1400 3350 0    59   Input ~ 0
+VBUS_CHRG
+Text Label 3200 3550 0    59   ~ 0
+VBUS_EN
+Text HLabel 1300 3150 0    59   Input ~ 0
+VBUS_EN
+Text Label 3600 2950 0    59   ~ 0
+VBUS_DIS
+Text HLabel 1300 2950 0    59   Input ~ 0
+VBUS_DIS
+Text Label 1500 2950 0    59   ~ 0
+VBUS_DIS
+Wire Wire Line
+	5800 4650 5800 5300
+Wire Wire Line
+	7550 4650 7550 5300
+Wire Wire Line
+	6550 4900 7150 4900
+Wire Wire Line
+	7400 4900 7550 4900
+Connection ~ 7550 4900
+Wire Wire Line
+	4550 4900 6100 4900
+Connection ~ 5800 4900
+Wire Wire Line
+	5800 5700 5800 5800
+Wire Wire Line
+	5800 5800 7550 5800
+Wire Wire Line
+	7550 5800 7550 5700
+Wire Wire Line
+	5800 4250 5800 4150
+Wire Wire Line
+	7550 4150 7550 4250
+Wire Wire Line
+	6850 5850 6850 5800
+Connection ~ 6850 5800
+Wire Wire Line
+	5450 4450 5500 4450
+Wire Wire Line
+	5450 5500 5500 5500
+Wire Wire Line
+	4550 4800 4750 4800
+Wire Wire Line
+	5050 4800 5150 4800
+Wire Wire Line
+	5150 4800 5150 4900
+Connection ~ 5150 4900
+Wire Wire Line
+	4550 4700 4700 4700
+Wire Wire Line
+	4700 4700 4700 4450
+Wire Wire Line
+	4700 4450 4800 4450
+Wire Wire Line
+	5100 4450 5150 4450
+Wire Wire Line
+	5100 5500 5150 5500
+Wire Wire Line
+	4550 5000 4700 5000
+Wire Wire Line
+	4700 5000 4700 5500
+Wire Wire Line
+	4700 5500 4800 5500
+Wire Wire Line
+	4550 5100 4550 5200
+Wire Wire Line
+	4550 5500 4550 5550
+Wire Wire Line
+	3550 5100 3550 5200
+Wire Wire Line
+	3550 5500 3550 5550
+Wire Wire Line
+	3000 4800 3550 4800
+Wire Wire Line
+	3100 4700 3150 4700
+Wire Wire Line
+	3100 4800 3100 4700
+Wire Wire Line
+	3450 4700 3550 4700
+Connection ~ 3100 4800
+Wire Wire Line
+	3550 4900 3350 4900
+Wire Wire Line
+	3350 5000 3550 5000
+Wire Wire Line
+	3100 2400 3150 2400
+Wire Wire Line
+	3150 2400 3150 3700
+Wire Wire Line
+	4250 3200 4250 3150
+Wire Wire Line
+	4250 2750 4250 2700
+Wire Wire Line
+	4250 2300 4250 2400
+Connection ~ 4250 2300
+Connection ~ 4250 3200
+Wire Wire Line
+	5000 3200 5000 3250
+Wire Wire Line
+	6200 1700 6200 1650
+Wire Wire Line
+	6200 1650 7200 1650
+Wire Wire Line
+	6200 2000 6200 2050
+Wire Wire Line
+	6200 2050 7200 2050
+Wire Wire Line
+	7200 2000 7200 2100
+Wire Wire Line
+	7200 1650 7200 1700
+Wire Wire Line
+	6950 1700 6950 1650
+Connection ~ 6950 1650
+Wire Wire Line
+	6700 1700 6700 1650
+Connection ~ 6700 1650
+Wire Wire Line
+	6450 1700 6450 1650
+Connection ~ 6450 1650
+Wire Wire Line
+	6450 2000 6450 2050
+Connection ~ 6450 2050
+Wire Wire Line
+	6700 2000 6700 2050
+Connection ~ 6700 2050
+Wire Wire Line
+	6950 2000 6950 2050
+Connection ~ 6950 2050
+Connection ~ 7200 2050
+Wire Wire Line
+	3500 4700 3500 4350
+Connection ~ 3500 4700
+Wire Wire Line
+	1150 3600 1500 3600
+Wire Wire Line
+	1150 3850 1500 3850
+Wire Wire Line
+	5800 4150 7550 4150
+Connection ~ 3150 3200
+Wire Wire Line
+	4050 3700 4200 3700
+Connection ~ 4750 3200
+Wire Wire Line
+	4700 3700 4750 3700
+Wire Wire Line
+	4750 3700 4750 3200
+Wire Wire Line
+	1150 4100 1500 4100
+Wire Wire Line
+	1150 4350 1500 4350
+Wire Wire Line
+	1300 2950 1500 2950
+Wire Wire Line
+	3600 2950 3950 2950
+Wire Wire Line
+	3200 3550 3600 3550
+Wire Wire Line
+	3600 3550 3600 3500
+Wire Wire Line
+	3050 3200 3400 3200
+Wire Wire Line
+	3800 3200 5000 3200
+Wire Wire Line
+	3850 4000 3850 4050
+Wire Wire Line
+	3850 4050 3300 4050
+Wire Wire Line
+	1300 3150 1500 3150
+Text Label 1500 3150 0    59   ~ 0
+VBUS_EN
+Wire Wire Line
+	1400 3350 1500 3350
+Text Label 1500 3350 0    59   ~ 0
+VBUS_CHRG
+Wire Wire Line
+	3100 2300 4500 2300
+Text Notes 5800 1800 2    118  ~ 24
+fuses?
+Text Notes 4850 4050 2    60   ~ 0
+SOFT START\n...HOW MANY AMPS?
+Wire Wire Line
+	3150 3700 3650 3700
+Text Notes 6800 1450 2    59   ~ 0
+5mF
+$EndSCHEMATC
