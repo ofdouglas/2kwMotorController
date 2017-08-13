@@ -159,7 +159,7 @@ F 3 "" H 3100 1100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 1350 1600 0    60   ~ 0
-IS_OUT <= 50mA
+IS_OUT <= 60mA
 Text HLabel 1100 1050 0    60   Input ~ 0
 ISENSE+
 Text HLabel 2300 1050 2    60   Output ~ 0
@@ -298,8 +298,6 @@ F 3 "" H 1500 3500 50  0000 C CNN
 	1    1500 3500
 	1    0    0    -1  
 $EndComp
-Text Label 1450 2800 2    59   ~ 0
-+12_ISO
 $Comp
 L GND #PWR?
 U 1 1 597E9194
@@ -449,9 +447,9 @@ Wire Wire Line
 Wire Wire Line
 	2450 3250 2200 3250
 Wire Wire Line
-	2200 3750 2200 3250
+	2200 3250 2200 3750
 Wire Wire Line
-	1200 3750 2200 3750
+	2200 3750 1200 3750
 Wire Wire Line
 	1250 3750 1250 3250
 Wire Wire Line
@@ -541,8 +539,6 @@ Connection ~ 4050 2500
 Connection ~ 4050 3150
 Wire Wire Line
 	1500 2800 1450 2800
-Text Label 2300 2800 2    59   ~ 0
-+10_ISO
 Wire Wire Line
 	2350 2800 2300 2800
 Text Notes 2000 4050 2    59   ~ 0
@@ -560,4 +556,8 @@ F 3 "" H 1600 3150 50  0000 C CNN
 $EndComp
 Text Notes 9700 5250 2    59   ~ 0
 signswise: NPN open collector\nsome others: differential
+Text HLabel 1450 2800 0    60   Input ~ 0
++12_ISO
+Text HLabel 2300 2800 0    60   Input ~ 0
++10_ISO
 $EndSCHEMATC
