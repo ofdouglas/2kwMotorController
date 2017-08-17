@@ -1,3 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP +12V_ISO
+K POWER, PWR
+$ENDCMP
+#
+$CMP +5V_ISO
+K POWER, PWR
+$ENDCMP
+#
 #End Doc Library
