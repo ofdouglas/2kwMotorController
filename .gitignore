@@ -1,0 +1,10 @@
+*~
+*.o
+*.raw
+*.log
+*.bak
+*-bak
+*fp-lib-table
+appnotes
+datasheet
+

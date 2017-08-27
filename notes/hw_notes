@@ -1,0 +1,109 @@
+H-BRIDGE THERMAL REQUIREMENTS
+* Max power dissipation while driving is about 130 W
+* Max power dissipation on any MOSFET is about 50 W
+* Bleeder resistor may dissipate ~4 kW for a few seconds while braking
+
+BLEEDER RESISTOR POWER REQUIREMENTS
+Assumption: Vgen ~= 40V (10,000 RPM on E30-400)
+* Max regenerative current is about 80A
+* Transient power dissipation of 3 - 4 kW (a few hundred ms)
+* 0.5 Ohm resistor: Max 75A, 4 kW, Vbus kept below 50V
+* 1.0 Ohm resistor: Max 65A, 3 kW, Vbus kept below 60V
+
+DC FAN POWER REQUIREMENTS
+* 40 - 50 CFM required for Wakefield 511-3U heatsink
+* Many 12V DC fans can push 50 CFM at 2W [170 mA] {$5}
+* Some 12V DC fans can push 100 CFM at 10W [830 mA] {$15}
+
+GATE DRIVER POWER REQUIREMENTS
+* 10-12V drive voltage is desired
+* Each driver consumes about 25mA max when switching at 20 kHz
+* Total power consumption is about 12*.025*2 = 0.60 W
+
+SECONDARY POWER SUPPLY
+* Run the fan, gate drivers, sensors, MCU, etc, from a 12V battery
+* Total power draw should be less than 500 mA (6W)
+* Will need step-down to 3.3V and possibly 5V as well for digital stuff
+
+SENSOR CIRCUITS
+All sensors must be isolated!
+* Current sensor
+* Temperature sensor (x2) [Motor, Heatsink]
+* Voltage sensor (x2) [Battery, VBus]
+
+COMMUNICATION CIRCUITS
+* CAN bus
+* Ethernet port
+* Debug UART
+
+
+=======================
+
+
+HIGH-CURRENT CONDUCTORS
+* First prototype can use wide traces with extra solder:
+ At 5mm width, 2oz/ft^2 cu, 20A causes 30C rise
+* Later versions can use custom-milled busbar soldered to component leads
+ 5mm x 2mm copper bar provides plenty of current capacity
+
+CURRENT SENSOR: LAH-100 [Closed-loop Hall Effect]
+* 2000:1 stepdown transformer, outputs 50mA secondary at 100A primary
+* Runs on +/-12 to +/-15V supply; 10 - 60 mA consumed @ +/-15V
+* 160A input max
+* 0.25% accuracy
+* W,L,H = (15, 33, 21)mm
+
+ADC INPUT SIGNAL PROTECTION
+* Feed ADC from op amp operating on same 3.3V supply
+
+ADC INPUT SIGNAL CONDITIONING
+* Simple level shifter with 1 op amp, 2 resistors
+* Low pass (antialiasing filters) will be needed
+* 20 kHz PWM frequency -> 200+ kHz bandwidth desired
+
+HEATSINK
+* Delta LGA heatsink with Cu base and Al fin structure (70, 106, 25.5)mm
+* Screw / spring assembly on Cu base will pull heatsink down onto PCB
+* TO-247 MOSFETs mounted flush against bottom of PCB, leads bent right angle
+* Insulating pad (silicone, etc) between each FET and the heatsink
+* TO-247 thickness ~= 5mm (space between PCB and heatsink
+  Space between leads and heatsink ~= 2.4mm
+  Leads must be bent >= 4.29mm away from case
+  Minimum bend radius mustbe 0.5mm
+
+PCB Quote
+Assuming 70 x 150mm size, 4 layers, 1oz/ft^2, 6mil trace
+Easy EDA: $40.22 for 5 boards, + $7.30 [1-3 weeks] or + $28.80 [3-4 days] (+3-4 days)
+
+SECONDARY SUPPLY BUDGET
+* 12V DC Fan: 2W
+* Current sensor: 10 - 60 mA @ 12V = 120 - 720 mW
+* Gate drivers: 10V, ~20 mA = 200 mW
+* Optocouplers: 10V->5V, ~20 mA = 200 mW
+* MCU: 130 mA @ 3.3V MAX = 430 mW
+* Misc [LEDs, op amps, etc] ~100 mW? 
+RAW TOTAL: P ~= 3.8 W
+Assuming 80% converter efficiency, P ~= 3.6/0.8 = 4.75W
+
++12 rail max: ~270 mA / 3.2 W
+-12 rail max: ~100 mA / 0.9 W
+3.3 rail max: ~200 mA / 660 mW
+
+9V SECONDARY BATTERY SPECS
+P = 3.75W -> I = 415 mA
+6 cells at 1.5V nominal: usable until cells hit ~0.9V (5.4V total)
+
+
+
+ALTERNATE SECONDARY SUPPLY IDEA:
+* High voltage buck converter on motor battery to power gate drive, fan, optos, etc
+* ... still need to generate +/-12V for current sensor. Which means LT3471 or similar.
+
+
+
+
+VOLTAGE SENSOR
+* Isolated with linearized optocoupler, such as LOC110 or HCNR200
+* Use photovoltaic mode for better linearity (but lower bandwidth)
+* Include trim pot(s) to compensate for transfer gain error (manufacturing error)
+* Determine available op amp supply voltages before calculating resistor values!
