@@ -1,0 +1,27 @@
+* Z:\home\odougs\storage\project\2kwMotorController\sim\sensor-spice\hallsensor.asc
+Isense 0 Vsense PULSE(10mA 12mA 0 {0.5/fpwm} {0.5/fpwm} 0 {1/fpwm})
+Rsense Vsense 0 71.5 pwr=0.2
+R1 N003 Vsense 100k
+R2 N002 N001 100k
+Radj N003 N002 71.5
+VDDA N001 0 3.3
+XU1 NC_01 NC_02 NC_03 NC_04 NC_05 level.2 Avol=400k GBW=10Meg Slew=2Meg ilimit=25m rail=0 Vos=0 phimargin=90 en=0 enk=0 in=0 ink=0 Rin=500Meg
+C2 Vsense 0 27n
+R3 Vadc N004 33
+C1 Vadc 0 200pF
+XU2 N003 N004 N001 0 N004 AD8515
+* .dc Isense 0 45m 1m
+.param fpwm 20k
+.tran 2m
+* I_sense value for ripple current sim:\nPULSE(10 12mA 0 {0.5/fpwm} {0.5/fpwm} 0 {1/fpwm})
+* .op
+* 200mW\n0.1%
+* I_primary = (Vadc - 1.65) * 55.944
+* I_sense = I_motor / 2000
+* U1: RRIO op amp
+* SAR ADC input drive
+* stable dielectric \nsuch as C0G
+.lib ADI.lib
+.lib UniversalOpamps2.sub
+.backanno
+.end
