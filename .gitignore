@@ -2,6 +2,8 @@
 *.o
 *.raw
 *.log
+*.plt
+*.net
 *.bak
 *-bak
 *fp-lib-table
