@@ -16,4 +16,8 @@ $CMP +5V_ISO
 K POWER, PWR
 $ENDCMP
 #
+$CMP GNDMBAT
+K POWER, PWR
+$ENDCMP
+#
 #End Doc Library

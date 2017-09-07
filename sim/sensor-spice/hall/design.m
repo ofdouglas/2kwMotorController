@@ -1,6 +1,6 @@
-# Using VDDA=3.3V, assume op-amp saturates 50mV from rails
-Vo_max = 3.25
-Vo_min = 0.05
+# Using VDDA=3.3V, VREFA=3.0V, assume op-amp saturates 25mV from rails
+Vo_max = 3.00
+Vo_min = 0.025
 
 # Max design current is 90A, but overload up to 100 can be sensed
 # Sensor output current is 1/2000 of primary current, bi-directional
@@ -9,12 +9,13 @@ Is_min = -0.045
 
 # ADC input must be positive, so we'll shift the input such that
 # Is_min corresponds with Vo_min, Is_max with Vo_max
-Vo_shift = (Vo_max + Vo_min) / 2
+Vo_shift_ideal = (Vo_max + Vo_min) / 2
+Vo_shift = 1.5  # Roundead to 1 decimal place
 
 # Now choose R so that (Is_max * R)/2 + Vo_shift == Vo_max
 # (output of resistive level shifter is (Va + Vb)/2)
-# R = 2 * (Vo_max - Vo_shift) / Is_max
-R = 71.5	# Rounded to E48 value
+R_ideal = 2 * (Vo_max - Vo_shift) / Is_max
+R = 64.9	# Rounded to nearest E48 value
 
 # Antialising filter bandwidth = 80kHz to pick up a few harmonics
 # of motor ripple current (f_pwm = 20kHz)

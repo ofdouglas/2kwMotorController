@@ -1,0 +1,25 @@
+R2 is output side resistor. R1 is input side resistor
+K3 is current transfer ratio. Nominal 1, actual [0.668, 1.179]
+
+vout/vin = K3 * R2/R1
+
+Vin_max = 70V
+Vout_max = 3V
+assuming K3 = 1, R1/R2 = 23.333
+
+R1 = Vin/(K1 * If) (If_max = 15mA, K1_min = 0.004)
+R1 = 1.2M
+R2' = R1/23.333 = 50k
+
+Need to compensate for gain error in K3 = [0.668, 1.179]
+R2_max = R2' / 0.668 = 75k
+R2_min = R2' / 0.179 = 42k
+
+Now R2_min/R1*Vin_max*K3_max = 3.0 = Vout_max
+and R2_max/R1*Vin_max*K3_min = 3.0 = Vout_min
+
+so R2 must range from [42k, 75k]
+R2 = 42k fixed + 33k pot
+
+Using E24 values:
+R2 = 39k fixed + 36k pot

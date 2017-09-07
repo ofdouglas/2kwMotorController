@@ -131,7 +131,7 @@
 			},
 			"12": {
 				"nameDecoratorText": "12",
-				"assignedToName": "AIN0",
+				"assignedToName": "GPIO_PE3",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -139,13 +139,13 @@
 				"errorCount": 0,
 				"warningCount": 0,
 				"nonSolverErrorCount": 0,
-				"requirementName": "Sensors",
-				"requirementId": "MyADC1",
-				"interfacePin": "AIN0"
+				"requirementName": "DebugPins",
+				"requirementId": "MyGPIO1",
+				"interfacePin": "GPIO#"
 			},
 			"13": {
 				"nameDecoratorText": "13",
-				"assignedToName": "AIN1",
+				"assignedToName": "GPIO_PE2",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -153,13 +153,13 @@
 				"errorCount": 0,
 				"warningCount": 0,
 				"nonSolverErrorCount": 0,
-				"requirementName": "Sensors",
-				"requirementId": "MyADC1",
-				"interfacePin": "AIN1"
+				"requirementName": "DebugPins",
+				"requirementId": "MyGPIO1",
+				"interfacePin": "GPIO#"
 			},
 			"14": {
 				"nameDecoratorText": "14",
-				"assignedToName": "AIN2",
+				"assignedToName": "GPIO_PE1",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -167,13 +167,13 @@
 				"errorCount": 0,
 				"warningCount": 0,
 				"nonSolverErrorCount": 0,
-				"requirementName": "Sensors",
-				"requirementId": "MyADC1",
-				"interfacePin": "AIN2"
+				"requirementName": "StatusLEDs",
+				"requirementId": "MyGPIO2",
+				"interfacePin": "GPIO#"
 			},
 			"15": {
 				"nameDecoratorText": "15",
-				"assignedToName": "AIN3",
+				"assignedToName": "GPIO_PE0",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -181,9 +181,9 @@
 				"errorCount": 0,
 				"warningCount": 0,
 				"nonSolverErrorCount": 0,
-				"requirementName": "Sensors",
-				"requirementId": "MyADC1",
-				"interfacePin": "AIN3"
+				"requirementName": "StatusLEDs",
+				"requirementId": "MyGPIO2",
+				"interfacePin": "GPIO#"
 			},
 			"18": {
 				"nameDecoratorText": "18",
@@ -195,69 +195,13 @@
 				"errorCount": 0,
 				"warningCount": 0,
 				"nonSolverErrorCount": 0,
-				"requirementName": "DebugPins",
-				"requirementId": "MyGPIO1",
+				"requirementName": "StatusLEDs",
+				"requirementId": "MyGPIO2",
 				"interfacePin": "GPIO#"
 			},
 			"19": {
 				"nameDecoratorText": "19",
 				"assignedToName": "GPIO_PK1",
-				"errorText": "",
-				"warningText": "",
-				"errorDetailsText": [],
-				"warningDetailsText": [],
-				"errorCount": 0,
-				"warningCount": 0,
-				"nonSolverErrorCount": 0,
-				"requirementName": "DebugPins",
-				"requirementId": "MyGPIO1",
-				"interfacePin": "GPIO#"
-			},
-			"20": {
-				"nameDecoratorText": "20",
-				"assignedToName": "GPIO_PK2",
-				"errorText": "",
-				"warningText": "",
-				"errorDetailsText": [],
-				"warningDetailsText": [],
-				"errorCount": 0,
-				"warningCount": 0,
-				"nonSolverErrorCount": 0,
-				"requirementName": "StatusLEDs",
-				"requirementId": "MyGPIO2",
-				"interfacePin": "GPIO#"
-			},
-			"21": {
-				"nameDecoratorText": "21",
-				"assignedToName": "GPIO_PK3",
-				"errorText": "",
-				"warningText": "",
-				"errorDetailsText": [],
-				"warningDetailsText": [],
-				"errorCount": 0,
-				"warningCount": 0,
-				"nonSolverErrorCount": 0,
-				"requirementName": "StatusLEDs",
-				"requirementId": "MyGPIO2",
-				"interfacePin": "GPIO#"
-			},
-			"22": {
-				"nameDecoratorText": "22",
-				"assignedToName": "GPIO_PC7",
-				"errorText": "",
-				"warningText": "",
-				"errorDetailsText": [],
-				"warningDetailsText": [],
-				"errorCount": 0,
-				"warningCount": 0,
-				"nonSolverErrorCount": 0,
-				"requirementName": "StatusLEDs",
-				"requirementId": "MyGPIO2",
-				"interfacePin": "GPIO#"
-			},
-			"23": {
-				"nameDecoratorText": "23",
-				"assignedToName": "GPIO_PC6",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -296,6 +240,34 @@
 				"requirementName": "OverCurrentCmp",
 				"requirementId": "MyComparator1",
 				"interfacePin": "-"
+			},
+			"35": {
+				"nameDecoratorText": "35",
+				"assignedToName": "U4RX",
+				"errorText": "",
+				"warningText": "",
+				"errorDetailsText": [],
+				"warningDetailsText": [],
+				"errorCount": 0,
+				"warningCount": 0,
+				"nonSolverErrorCount": 0,
+				"requirementName": "DebugUART",
+				"requirementId": "MyUART1",
+				"interfacePin": "RX"
+			},
+			"36": {
+				"nameDecoratorText": "36",
+				"assignedToName": "U4TX",
+				"errorText": "",
+				"warningText": "",
+				"errorDetailsText": [],
+				"warningDetailsText": [],
+				"errorCount": 0,
+				"warningCount": 0,
+				"nonSolverErrorCount": 0,
+				"requirementName": "DebugUART",
+				"requirementId": "MyUART1",
+				"interfacePin": "TX"
 			},
 			"41": {
 				"nameDecoratorText": "41",
@@ -563,9 +535,9 @@
 				"requirementId": "MyETHERNET1",
 				"interfacePin": "EN0PPS"
 			},
-			"118": {
-				"nameDecoratorText": "118",
-				"assignedToName": "U6RX",
+			"123": {
+				"nameDecoratorText": "123",
+				"assignedToName": "AIN9",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -573,13 +545,13 @@
 				"errorCount": 0,
 				"warningCount": 0,
 				"nonSolverErrorCount": 0,
-				"requirementName": "DebugUART",
-				"requirementId": "MyUART1",
-				"interfacePin": "RX"
+				"requirementName": "Sensors",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN9"
 			},
-			"119": {
-				"nameDecoratorText": "119",
-				"assignedToName": "U6TX",
+			"124": {
+				"nameDecoratorText": "124",
+				"assignedToName": "AIN8",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -587,9 +559,37 @@
 				"errorCount": 0,
 				"warningCount": 0,
 				"nonSolverErrorCount": 0,
-				"requirementName": "DebugUART",
-				"requirementId": "MyUART1",
-				"interfacePin": "TX"
+				"requirementName": "Sensors",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN8"
+			},
+			"125": {
+				"nameDecoratorText": "125",
+				"assignedToName": "AIN7",
+				"errorText": "",
+				"warningText": "",
+				"errorDetailsText": [],
+				"warningDetailsText": [],
+				"errorCount": 0,
+				"warningCount": 0,
+				"nonSolverErrorCount": 0,
+				"requirementName": "Sensors",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN7"
+			},
+			"126": {
+				"nameDecoratorText": "126",
+				"assignedToName": "AIN6",
+				"errorText": "",
+				"warningText": "",
+				"errorDetailsText": [],
+				"warningDetailsText": [],
+				"errorCount": 0,
+				"warningCount": 0,
+				"nonSolverErrorCount": 0,
+				"requirementName": "Sensors",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN6"
 			},
 			"127": {
 				"nameDecoratorText": "127",
@@ -1266,10 +1266,10 @@
 								"configurables": {}
 							},
 							{
-								"used": true,
+								"used": false,
 								"solution": {
-									"nameDecoratorText": "AIN0",
-									"assignedToName": "12",
+									"nameDecoratorText": "",
+									"assignedToName": "",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1382,7 +1382,7 @@
 									"warningCount": 0,
 									"nonSolverErrorCount": 0
 								},
-								"assignedToName": "Any",
+								"assignedToName": "128",
 								"removable": false,
 								"type": "Single",
 								"name": "AIN4",
@@ -1390,10 +1390,10 @@
 								"configurables": {}
 							},
 							{
-								"used": false,
+								"used": true,
 								"solution": {
-									"nameDecoratorText": "",
-									"assignedToName": "",
+									"nameDecoratorText": "AIN6",
+									"assignedToName": "126",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1413,7 +1413,7 @@
 									"warningCount": 0,
 									"nonSolverErrorCount": 0
 								},
-								"assignedToName": "Any",
+								"assignedToName": "126",
 								"removable": false,
 								"type": "Single",
 								"name": "AIN6",
@@ -1483,10 +1483,10 @@
 								"configurables": {}
 							},
 							{
-								"used": true,
+								"used": false,
 								"solution": {
-									"nameDecoratorText": "AIN2",
-									"assignedToName": "14",
+									"nameDecoratorText": "",
+									"assignedToName": "",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1638,10 +1638,10 @@
 								"configurables": {}
 							},
 							{
-								"used": false,
+								"used": true,
 								"solution": {
-									"nameDecoratorText": "",
-									"assignedToName": "",
+									"nameDecoratorText": "AIN9",
+									"assignedToName": "123",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1661,7 +1661,7 @@
 									"warningCount": 0,
 									"nonSolverErrorCount": 0
 								},
-								"assignedToName": "Any",
+								"assignedToName": "123",
 								"removable": false,
 								"type": "Single",
 								"name": "AIN9",
@@ -1700,10 +1700,10 @@
 								"configurables": {}
 							},
 							{
-								"used": false,
+								"used": true,
 								"solution": {
-									"nameDecoratorText": "",
-									"assignedToName": "",
+									"nameDecoratorText": "AIN8",
+									"assignedToName": "124",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1723,7 +1723,7 @@
 									"warningCount": 0,
 									"nonSolverErrorCount": 0
 								},
-								"assignedToName": "Any",
+								"assignedToName": "124",
 								"removable": false,
 								"type": "Single",
 								"name": "AIN8",
@@ -1731,10 +1731,10 @@
 								"configurables": {}
 							},
 							{
-								"used": true,
+								"used": false,
 								"solution": {
-									"nameDecoratorText": "AIN1",
-									"assignedToName": "13",
+									"nameDecoratorText": "",
+									"assignedToName": "",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1793,10 +1793,10 @@
 								"configurables": {}
 							},
 							{
-								"used": true,
+								"used": false,
 								"solution": {
-									"nameDecoratorText": "AIN3",
-									"assignedToName": "15",
+									"nameDecoratorText": "",
+									"assignedToName": "",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1886,10 +1886,10 @@
 								"configurables": {}
 							},
 							{
-								"used": false,
+								"used": true,
 								"solution": {
-									"nameDecoratorText": "",
-									"assignedToName": "",
+									"nameDecoratorText": "AIN7",
+									"assignedToName": "125",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -1909,7 +1909,7 @@
 									"warningCount": 0,
 									"nonSolverErrorCount": 0
 								},
-								"assignedToName": "Any",
+								"assignedToName": "125",
 								"removable": false,
 								"type": "Single",
 								"name": "AIN7",
@@ -1940,7 +1940,7 @@
 									"warningCount": 0,
 									"nonSolverErrorCount": 0
 								},
-								"assignedToName": "Any",
+								"assignedToName": "127",
 								"removable": false,
 								"type": "Single",
 								"name": "AIN5",
@@ -2888,8 +2888,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PK0",
-											"assignedToName": "18",
+											"nameDecoratorText": "GPIO_PE3",
+											"assignedToName": "12",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -2928,7 +2928,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PK0",
+									"assignedToName": "GPIO_PE3",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -2999,8 +2999,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PK1",
-											"assignedToName": "19",
+											"nameDecoratorText": "GPIO_PE2",
+											"assignedToName": "13",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -3039,7 +3039,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PK1",
+									"assignedToName": "GPIO_PE2",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -3152,8 +3152,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PK2",
-											"assignedToName": "20",
+											"nameDecoratorText": "GPIO_PE1",
+											"assignedToName": "14",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -3192,7 +3192,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PK2",
+									"assignedToName": "GPIO_PE1",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -3263,8 +3263,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PK3",
-											"assignedToName": "21",
+											"nameDecoratorText": "GPIO_PE0",
+											"assignedToName": "15",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -3303,7 +3303,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PK3",
+									"assignedToName": "GPIO_PE0",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -3374,8 +3374,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PC7",
-											"assignedToName": "22",
+											"nameDecoratorText": "GPIO_PK0",
+											"assignedToName": "18",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -3414,7 +3414,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PC7",
+									"assignedToName": "GPIO_PK0",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -3485,8 +3485,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PC6",
-											"assignedToName": "23",
+											"nameDecoratorText": "GPIO_PK1",
+											"assignedToName": "19",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -3525,7 +3525,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PC6",
+									"assignedToName": "GPIO_PK1",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -4120,15 +4120,15 @@
 							"warningCount": 0,
 							"nonSolverErrorCount": 0
 						},
-						"selectedInstance": "Any",
+						"selectedInstance": "UART4",
 						"selectedVoltage": "Any",
 						"selectedUseCase": "UART",
 						"pinRequirements": [
 							{
 								"used": true,
 								"solution": {
-									"nameDecoratorText": "U6RX",
-									"assignedToName": "118",
+									"nameDecoratorText": "U4RX",
+									"assignedToName": "35",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -4158,8 +4158,8 @@
 							{
 								"used": true,
 								"solution": {
-									"nameDecoratorText": "U6TX",
-									"assignedToName": "119",
+									"nameDecoratorText": "U4TX",
+									"assignedToName": "36",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -4375,7 +4375,7 @@
 						],
 						"peripheralSolution": {
 							"nameDecoratorText": "",
-							"assignedToName": "UART6",
+							"assignedToName": "UART4",
 							"errorText": "",
 							"warningText": "",
 							"errorDetailsText": [],
