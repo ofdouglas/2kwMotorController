@@ -4,18 +4,18 @@ Vo_min = 0.025
 
 # Max design current is 90A, but overload up to 100 can be sensed
 # Sensor output current is 1/2000 of primary current, bi-directional
-Is_max = 0.045
-Is_min = -0.045
+Is_max = 0.050
+Is_min = -0.050
 
 # ADC input must be positive, so we'll shift the input such that
 # Is_min corresponds with Vo_min, Is_max with Vo_max
 Vo_shift_ideal = (Vo_max + Vo_min) / 2
-Vo_shift = 1.5  # Roundead to 1 decimal place
+Vo_shift = 1.5 # Round to 2 decimal places if needed
 
-# Now choose R so that (Is_max * R)/2 + Vo_shift == Vo_max
+# Now use  Is_max * R / 2 + Vo_shift = V_max  to choose R
 # (output of resistive level shifter is (Va + Vb)/2)
 R_ideal = 2 * (Vo_max - Vo_shift) / Is_max
-R = 64.9	# Rounded to nearest E48 value
+R = 59.0	# Rounded to nearest E48 value
 
 # Antialising filter bandwidth = 80kHz to pick up a few harmonics
 # of motor ripple current (f_pwm = 20kHz)
@@ -36,7 +36,8 @@ ApV = 1 / VpA
 # Ex: Vo_shift = 1.65, Vout = 2.5, so
 # Ip = (Vout - Vo_shift) * ApV = 47.8 amps
 
-
+I_max = (Vo_max - Vo_shift) * ApV
+I_min = (Vo_min - Vo_shift) * ApV
 
 
 # TM4C1294KCPDT SAR ADC sampling time (can be multiplied by 2^N, N <= 7)

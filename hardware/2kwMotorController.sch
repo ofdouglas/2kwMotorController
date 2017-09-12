@@ -177,5 +177,5 @@ Wire Wire Line
 Wire Wire Line
 	2700 2800 3350 2800
 Text Notes 8400 5450 0    157  ~ 31
-inrush current limit\nCAN connection\nconnectors\nVDDA filter\ngate drive for fan
+h-bridge decoupling\nCAN connection\nconnectors\nVDDA filter
 $EndSCHEMATC

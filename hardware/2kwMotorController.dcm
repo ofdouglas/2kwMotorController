@@ -16,6 +16,12 @@ $CMP +5V_ISO
 K POWER, PWR
 $ENDCMP
 #
+$CMP ADA4805-1
+D Op Amp in 5-pin package
+K op amp amplifier operational 
+F http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf
+$ENDCMP
+#
 $CMP GNDCBAT
 K POWER, PWR
 $ENDCMP
