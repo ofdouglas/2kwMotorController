@@ -30,4 +30,9 @@ $CMP GNDMBAT
 K POWER, PWR
 $ENDCMP
 #
+$CMP NMOS_8PIN
+D Transistor N-MOSFET (general)
+K nmos n-mos n-mosfet transistor
+$ENDCMP
+#
 #End Doc Library

@@ -50,7 +50,7 @@ U 1 1 59758257
 P 6900 2200
 F 0 "Q5" H 7200 2250 50  0000 R CNN
 F 1 "IRFP4468" H 7450 2150 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 7100 2300 50  0001 C CNN
+F 2 "2kwMotorController:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 7100 2300 50  0001 C CNN
 F 3 "" H 6900 2200 50  0000 C CNN
 	1    6900 2200
 	1    0    0    -1  
@@ -87,7 +87,7 @@ U 1 1 597582C4
 P 6900 3250
 F 0 "Q6" H 7200 3300 50  0000 R CNN
 F 1 "IRFP4468" H 7450 3200 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 7100 3350 50  0001 C CNN
+F 2 "2kwMotorController:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 7100 3350 50  0001 C CNN
 F 3 "" H 6900 3250 50  0000 C CNN
 	1    6900 3250
 	1    0    0    -1  
@@ -98,7 +98,7 @@ U 1 1 597582CB
 P 8600 3250
 F 0 "Q8" H 8900 3300 50  0000 R CNN
 F 1 "IRFP4468" H 9150 3200 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 8800 3350 50  0001 C CNN
+F 2 "2kwMotorController:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 8800 3350 50  0001 C CNN
 F 3 "" H 8600 3250 50  0000 C CNN
 	1    8600 3250
 	-1   0    0    -1  
@@ -109,7 +109,7 @@ U 1 1 597582D2
 P 8600 2200
 F 0 "Q7" H 8900 2250 50  0000 R CNN
 F 1 "IRFP4468" H 9150 2150 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 8800 2300 50  0001 C CNN
+F 2 "2kwMotorController:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 8800 2300 50  0001 C CNN
 F 3 "" H 8600 2200 50  0000 C CNN
 	1    8600 2200
 	-1   0    0    -1  
@@ -456,7 +456,7 @@ U 1 1 597582EF
 P 3850 3000
 F 0 "Q4" H 3900 3350 50  0000 R CNN
 F 1 "IRFP4468" H 3900 3250 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 4050 3100 50  0001 C CNN
+F 2 "2kwMotorController:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 4050 3100 50  0001 C CNN
 F 3 "" H 3850 3000 50  0000 C CNN
 	1    3850 3000
 	-1   0    0    -1  
@@ -467,7 +467,7 @@ U 1 1 597582E1
 P 1450 3650
 F 0 "Q3" V 1400 3500 50  0000 R CNN
 F 1 "IRFP4468" V 1650 3800 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 1650 3750 50  0001 C CNN
+F 2 "2kwMotorController:TO-247_Horizontal_Neutral123_MountFromLS_largePads" H 1650 3750 50  0001 C CNN
 F 3 "" H 1450 3650 50  0000 C CNN
 	1    1450 3650
 	0    -1   -1   0   
