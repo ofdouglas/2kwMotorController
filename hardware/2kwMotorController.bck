@@ -40,4 +40,9 @@ D Interrupteur simple
 K switch
 $ENDCMP
 #
+$CMP SW-SPST
+D Interrupteur simple
+K switch
+$ENDCMP
+#
 #End Doc Library
