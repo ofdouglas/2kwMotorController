@@ -35,4 +35,9 @@ D Transistor N-MOSFET (general)
 K nmos n-mos n-mosfet transistor
 $ENDCMP
 #
+$CMP SPST
+D Interrupteur simple
+K switch
+$ENDCMP
+#
 #End Doc Library
