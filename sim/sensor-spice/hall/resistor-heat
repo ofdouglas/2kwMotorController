@@ -1,0 +1,15 @@
+Is heating of the sense resistor a significant cause of error?
+
+I = 0.045
+R = 59
+P = I^2*R = 0.1195
+Rth ~= 200 C/W (1206 package)
+dT = +24C
+tc = 25e-6 (tempco of chosen resistor is 25 ppm)
+dR = tc*dT = 6e-4
+dR/R * 100 = 0.001% error
+
+Conclusion: Heating causes negligible error.
+
+References:
+Thermal Management in Surface-Mounted Resistor Applications (Vishay Application Note)
