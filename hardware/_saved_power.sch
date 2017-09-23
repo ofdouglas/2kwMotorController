@@ -1128,7 +1128,7 @@ Connection ~ 7500 1150
 Wire Wire Line
 	7500 1550 7500 1650
 Wire Wire Line
-	6300 1150 6300 1300
+	6300 1300 6300 1150
 Connection ~ 6300 1150
 Wire Wire Line
 	3100 1550 3100 1600
