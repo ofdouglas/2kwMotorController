@@ -1182,8 +1182,6 @@ FAN_GATE
 Text Label 10050 2250 0    60   ~ 0
 FAN_DRAIN
 Wire Wire Line
-	1150 1150 3500 1150
-Wire Wire Line
 	1150 1250 1250 1250
 Wire Wire Line
 	2500 1050 2500 1250
@@ -1295,8 +1293,6 @@ Connection ~ 4250 5600
 Wire Wire Line
 	10250 4300 10250 4250
 Wire Wire Line
-	7250 1150 7800 1150
-Wire Wire Line
 	7250 1450 7300 1450
 Wire Wire Line
 	6350 1300 6300 1300
@@ -1305,9 +1301,6 @@ Wire Wire Line
 Wire Wire Line
 	7300 1300 7300 1600
 Connection ~ 6100 1150
-Wire Wire Line
-	7500 1100 7500 1250
-Connection ~ 7500 1150
 Wire Wire Line
 	7500 1550 7500 1650
 Wire Wire Line
@@ -1322,8 +1315,6 @@ Wire Wire Line
 Wire Wire Line
 	4150 1050 4150 1250
 Connection ~ 3600 1600
-Wire Wire Line
-	3800 1150 4950 1150
 Wire Wire Line
 	5250 1150 6350 1150
 Wire Wire Line
@@ -1535,7 +1526,7 @@ Wire Wire Line
 	4150 5800 5200 5800
 Connection ~ 5200 5800
 Wire Wire Line
-	3100 1250 3100 1150
+	3100 1150 3100 1250
 Wire Wire Line
 	4150 1600 4150 1550
 Connection ~ 4150 1150
@@ -1558,8 +1549,6 @@ Wire Wire Line
 Connection ~ 8350 2700
 Wire Wire Line
 	8350 3050 8350 3100
-Wire Wire Line
-	7800 1150 7800 1100
 Wire Wire Line
 	7900 2600 7900 2700
 Connection ~ 7900 2700
@@ -1682,4 +1671,13 @@ F 3 "" H 3650 3100 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	2600 7250 2600 7300
+Wire Wire Line
+	4150 1150 4950 1150
+Wire Wire Line
+	1150 1150 3100 1150
+Wire Wire Line
+	7500 1250 7500 1100
+Wire Wire Line
+	7250 1150 7500 1150
+Connection ~ 7500 1150
 $EndSCHEMATC
