@@ -45,4 +45,9 @@ D Interrupteur simple
 K switch
 $ENDCMP
 #
+$CMP TEST_1P
+D point
+K point tp
+$ENDCMP
+#
 #End Doc Library
