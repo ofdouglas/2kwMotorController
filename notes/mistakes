@@ -1,0 +1,22 @@
+mistakes made on rev0 of board:
+
+C10 is 10uF cap in 0603 footprint - should have been 0805!
+ -> will try using 4.7uF 0603 cap instead (probably fine)
+
+D8 is SK310-B in POWERMITE footprint - should have been DO-214AA
+ -> will try using MBRM-120 POWERMITE diode instead (probably fine)
+
+Appending use of connector to it's name clutters the BOM. For example,
+CONN_01X02_CBAT, CONN_01X02_FAN need to be the same footprint...
+
+Find way to get all needed part info into BOM: rated voltage, tolerance, etc..
+
+Too many different part values! Should consolidate for values that have flexibility
+
+Parts that won't be installed on the board (e.g. thermistor temp sensor) should still be in schematic so they make it into the BOM. Just delete the footprint when it comes up in pcbnew.
+
+Available range of trimpots for RV2 does not match range used in schematic!
+
+Name for component PDM1-S12-S3 should not have been truncated to PDM1-S (other parts in this series)
+
+BOM export script (bom2csv-grouped) messed up some of the 'Voltage' fields, grouped 16V caps with 100V caps!
