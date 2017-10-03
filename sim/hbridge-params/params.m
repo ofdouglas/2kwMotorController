@@ -72,11 +72,19 @@ Tmax = 175 * 0.75;	% MOSFET maximum junction temperature
 Ta = 45;		% Ambient temperature
 DT = Tmax - Ta;		% 
 
-% IRF4468 junction-heatsink thermal resistance (insulating pad)
-%Rjs = 1;
+% IRF4468 thermal resistance
+% NOTE: 100 PSI may not be feasible, but the Sil-Pad A2000 resistance 
+% is only 12% higher at 10 PSI, and 7% higher at 25 PSI. Assuming the
+% CD-02-05 is the same, we can expect Rcs < 0.45. Unfortunately, the 
+% CD-02-05 datasheet doesn't confirm this theory...
+Rjc = 0.3       % Junction to case
+%Rcs = 0.4;      % case-heatsink (CD-02-05 pad @ 100 PSI)
+%Rcs = 1.15;     % case-heatsink (Sil-Pad A2000 @ 100 PSI)
+Rcs = 0.45;      % case-heatsink (CD-02-05 pad @ 10 PSI [EXTRAPOLATED])
+Rjs = Rjc + Rcs % Total junction-heatsink thermal resistance
 
 % IXFN360N junction-heatsink thermal resistance (paste)
-Rjs = 0.25;
+%Rjs = 0.25;
 
 % Required R_thermal if each MOSFET is mounted on it's own heatsink
 Rs0 = DT ./ P_max - Rjs

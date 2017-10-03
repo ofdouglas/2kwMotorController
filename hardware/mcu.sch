@@ -676,9 +676,9 @@ NoConn ~ 8500 5250
 NoConn ~ 8500 5450
 NoConn ~ 8500 5550
 Text Label 1300 1700 0    60   ~ 0
-CAN_RX
+CAN1_RX
 Text Label 1300 1800 0    60   ~ 0
-CAN_TX
+CAN1_TX
 $Comp
 L R R32
 U 1 1 59BE47BE
@@ -881,10 +881,10 @@ Text HLabel 1250 1900 0    60   Output ~ 0
 PWM_FAN
 Text HLabel 1250 1450 0    60   Output ~ 0
 VBUS_EN_MCU
-Text Label 3850 1700 2    60   ~ 0
-MCU_UART_RX
-Text Label 3250 1800 0    60   ~ 0
-MCU_UART_TX
+Text Label 3875 1700 2    60   ~ 0
+MCU_UART3_RX
+Text Label 3200 1800 0    60   ~ 0
+MCU_UART3_TX
 $Comp
 L CONN_01X03 P5
 U 1 1 59C7136C
