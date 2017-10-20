@@ -6,16 +6,12 @@
  */
 
 #include "stdinclude.h"
-#include "build.h"
 #include "system.h"
-#include "logger.h"
 #include "xprintf.h"
-#include "inc/tm4c1294ncpdt.h"
-#include "inc/hw_memmap.h"
-#include "driverlib/sysctl.h"
 #include "driverlib/uart.h"
-#include "FreeRTOS.h"
-#include "queue.h"
+
+// File index for ASSERT() macro
+FILENUM(5)
 
 
 
@@ -25,7 +21,7 @@
 #if BUILD_TARGET == BUILD_TARGET_LAUNCHPAD
 #define DEBUG_UART_SYSCTL_PERIPH    SYSCTL_PERIPH_UART0
 #define DEBUG_UART_BASE             UART0_BASE
-#elif BUILD_TARGET == BUILD_TARGET_2KWMC
+#elif BUILD_TARGET == BUILD_TARGET_2KWMC_R0
 #define DEBUG_UART_SYSCTL_PERIPH    SYSCTL_PERIPH_UART3
 #define DEBUG_UART_BASE             UART3_BASE
 #else
@@ -112,7 +108,7 @@ static void debug_uart_ISR(void)
 static void debug_uart_putc(unsigned char c)
 {
     if (buffer_is_empty() && UARTSpaceAvail(DEBUG_UART_BASE))
-        UARTCharPutNonBlocking(UART0_BASE, c);
+        UARTCharPutNonBlocking(DEBUG_UART_BASE, c);
     else {
         while (buffer_is_full())
             ; // Wait. The buffer should be sized so that this is rare.
@@ -198,5 +194,28 @@ void logger_task_code(void * arg)
         // Excess arguments will be safely ignored (C Standard sec. 7.19.6.1)
         xprintf(msg.str, msg.args[0], msg.args[1], msg.args[2]);
     }
+}
+
+
+/* Helper function for printing float values with integer printf specifiers.
+ * We use this because xprintf does not support float printf specifiers.
+ *
+ * Example: (x = 1234, precision = 3) will yield { 1, 234 }. Then
+ *  xprintf("%3d.%03d", 1, 234) will print "1.234".
+ *
+ * float analog_val = adc_results[i] * 3.3 / 4096;
+ * struct real_int ri = real_int_from_float(analog_val, 3);
+ * log_message("%AIN3 = %3d.%03dv\n", ri.whole, ri.fract, 0);
+ */
+struct real_int real_int_from_float(float x, int precision)
+{
+    int scale = 10;
+    while (precision--)
+        scale *= 10;
+
+    struct real_int ri;
+    ri.whole = (int)x;
+    ri.fract = scale * (x - (int)x);
+    return ri;
 }
 

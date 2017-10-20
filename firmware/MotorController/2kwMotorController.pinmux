@@ -101,9 +101,9 @@
 				"requirementId": "MyADC1",
 				"interfacePin": "AIN19"
 			},
-			"33": {
-				"nameDecoratorText": "33",
-				"assignedToName": "GPIO_PA0",
+			"40": {
+				"nameDecoratorText": "40",
+				"assignedToName": "GPIO_PA6",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -115,9 +115,9 @@
 				"requirementId": "MyGPIO3",
 				"interfacePin": "GPIO#"
 			},
-			"36": {
-				"nameDecoratorText": "36",
-				"assignedToName": "GPIO_PA3",
+			"41": {
+				"nameDecoratorText": "41",
+				"assignedToName": "GPIO_PA7",
 				"errorText": "",
 				"warningText": "",
 				"errorDetailsText": [],
@@ -3086,8 +3086,8 @@
 												"displayName": "FLOAT"
 											},
 											"io": {
-												"name": "input",
-												"displayName": "Input"
+												"name": "output",
+												"displayName": "Output"
 											}
 										}
 									}
@@ -3197,8 +3197,8 @@
 												"displayName": "FLOAT"
 											},
 											"io": {
-												"name": "input",
-												"displayName": "Input"
+												"name": "output",
+												"displayName": "Output"
 											}
 										}
 									}
@@ -3308,8 +3308,8 @@
 												"displayName": "FLOAT"
 											},
 											"io": {
-												"name": "input",
-												"displayName": "Input"
+												"name": "output",
+												"displayName": "Output"
 											}
 										}
 									}
@@ -3419,8 +3419,8 @@
 												"displayName": "FLOAT"
 											},
 											"io": {
-												"name": "input",
-												"displayName": "Input"
+												"name": "output",
+												"displayName": "Output"
 											}
 										}
 									}
@@ -3476,8 +3476,8 @@
 								"displayName": "FLOAT"
 							},
 							"io": {
-								"name": "input",
-								"displayName": "Input"
+								"name": "output",
+								"displayName": "Output"
 							}
 						},
 						"requirementNameErrorMessage": ""
@@ -3540,8 +3540,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PA0",
-											"assignedToName": "33",
+											"nameDecoratorText": "GPIO_PA6",
+											"assignedToName": "40",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -3561,7 +3561,7 @@
 											"warningCount": 0,
 											"nonSolverErrorCount": 0
 										},
-										"assignedToName": "33",
+										"assignedToName": "40",
 										"removable": false,
 										"type": "Single",
 										"name": "GPIO#",
@@ -3580,7 +3580,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PA0",
+									"assignedToName": "GPIO_PA6",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -3693,8 +3693,8 @@
 									{
 										"used": true,
 										"solution": {
-											"nameDecoratorText": "GPIO_PA3",
-											"assignedToName": "36",
+											"nameDecoratorText": "GPIO_PA7",
+											"assignedToName": "41",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -3714,7 +3714,7 @@
 											"warningCount": 0,
 											"nonSolverErrorCount": 0
 										},
-										"assignedToName": "36",
+										"assignedToName": "41",
 										"removable": false,
 										"type": "Single",
 										"name": "GPIO#",
@@ -3725,15 +3725,15 @@
 												"displayName": "FLOAT"
 											},
 											"io": {
-												"name": "input",
-												"displayName": "Input"
+												"name": "output",
+												"displayName": "Output"
 											}
 										}
 									}
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PA3",
+									"assignedToName": "GPIO_PA7",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -3782,8 +3782,8 @@
 								"displayName": "FLOAT"
 							},
 							"io": {
-								"name": "input",
-								"displayName": "Input"
+								"name": "output",
+								"displayName": "Output"
 							}
 						},
 						"requirementNameErrorMessage": ""
@@ -5183,9 +5183,9 @@
 		}
 	},
 	"versions": {
-		"data": "2017072713",
-		"timestamp": "2017072713",
-		"tool": "4.0.1496 ",
-		"templates": "2017072713"
+		"data": "2017101618",
+		"timestamp": "2017101618",
+		"tool": "4.0.1508 ",
+		"templates": "2017101618"
 	}
 }

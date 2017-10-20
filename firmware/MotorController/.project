@@ -26,11 +26,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>xprintf.c</name>
-			<type>1</type>
-			<locationURI>PARENT-6-PROJECT_LOC/home/odougs/storage/project/2kwMotorController/firmware/xprintf/xprintf.c</locationURI>
-		</link>
-		<link>
 			<name>FreeRTOS/event_groups.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/FreeRTOS/Source/event_groups.c</locationURI>
@@ -64,6 +59,11 @@
 			<name>FreeRTOS/timers.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/FreeRTOS/Source/timers.c</locationURI>
+		</link>
+		<link>
+			<name>source/xprintf.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/xprintf/xprintf.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

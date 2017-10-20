@@ -1,0 +1,2489 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (exit)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o) (_global_impure_ptr)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (__libc_init_array)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+                              ./FreeRTOS/queue.o (memcpy)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memset.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (memset)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o) (__call_exitprocs)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o) (atexit)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o) (__retarget_lock_acquire_recursive)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o) (__register_exitproc)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                              ./source/sensors.o (ADCIntClear)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                              ./source/pinconfig.o (GPIOPadConfigSet)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                              /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o) (IntRegister)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                              ./source/control.o (PWMGenConfigure)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                              ./source/control.o (SysCtlPeripheralEnable)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                              ./source/sensors.o (TimerEnable)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                              ./source/logger.o (UARTFIFOLevelSet)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                              ./source/sensors.o (uDMAEnable)
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                              /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o) (CPUcpsid)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+                              ./source/control.o (__aeabi_dsub)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+                              ./source/control.o (__aeabi_dmul)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
+                              ./source/control.o (__aeabi_dcmplt)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixunsdfsi.o)
+                              ./source/control.o (__aeabi_d2uiz)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+                              ./source/control.o (__aeabi_d2f)
+/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+                              /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+rt_adc_buffer       0x20              ./source/sensors.o
+xfunc_in            0x4               ./source/xprintf.o
+log_msg_queue       0x4               ./source/logger.o
+xfunc_out           0x4               ./source/xprintf.o
+pwm_period_ticks    0x4               ./source/control.o
+xQueueRegistry      0x50              ./FreeRTOS/queue.o
+__lock___env_recursive_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+control_task_handle
+                    0x4               ./source/main.o
+__lock___malloc_recursive_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+uDMA_control_table  0x400             ./source/sensors.o
+led_task_handle     0x4               ./source/main.o
+logger_task_handle  0x4               ./source/main.o
+sensor_task_handle  0x4               ./source/main.o
+__lock___at_quick_exit_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000080000 xr
+SRAM             0x0000000020000000 0x0000000000040000 xw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+LOAD ./startup.o
+LOAD ./FreeRTOS/event_groups.o
+LOAD ./FreeRTOS/heap_1.o
+LOAD ./FreeRTOS/list.o
+LOAD ./FreeRTOS/port.o
+LOAD ./FreeRTOS/queue.o
+LOAD ./FreeRTOS/tasks.o
+LOAD ./FreeRTOS/timers.o
+LOAD ./source/can.o
+LOAD ./source/control.o
+LOAD ./source/debug.o
+LOAD ./source/logger.o
+LOAD ./source/main.o
+LOAD ./source/pinconfig.o
+LOAD ./source/sensors.o
+LOAD ./source/system.o
+LOAD ./source/xprintf.o
+                0x0000000000000000                PROVIDE (_intvecs_base_address, 0x0)
+
+.intvecs        0x0000000000000000      0x208
+ *(.intvecs)
+ .intvecs       0x0000000000000000      0x208 ./startup.o
+                0x0000000000000000                g_pfnVectors
+                0x0000000020000000                PROVIDE (_vtable_base_address, 0x20000000)
+
+.vtable
+ *(.vtable)
+
+.text           0x0000000000000210     0x8cbc
+ CREATE_OBJECT_SYMBOLS
+ *(.text)
+ .text          0x0000000000000210        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .text          0x0000000000000210       0x6c /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .text          0x000000000000027c       0x74 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+                0x000000000000027c                _mainCRTStartup
+                0x000000000000027c                _start
+ .text          0x00000000000002f0        0x0 ./startup.o
+ .text          0x00000000000002f0        0x0 ./FreeRTOS/event_groups.o
+ .text          0x00000000000002f0        0x0 ./FreeRTOS/heap_1.o
+ .text          0x00000000000002f0        0x0 ./FreeRTOS/list.o
+ .text          0x00000000000002f0        0x0 ./FreeRTOS/port.o
+ .text          0x00000000000002f0        0x0 ./FreeRTOS/queue.o
+ .text          0x00000000000002f0        0x0 ./FreeRTOS/tasks.o
+ .text          0x00000000000002f0        0x0 ./FreeRTOS/timers.o
+ .text          0x00000000000002f0        0x0 ./source/can.o
+ .text          0x00000000000002f0        0x0 ./source/control.o
+ .text          0x00000000000002f0        0x0 ./source/debug.o
+ .text          0x00000000000002f0        0x0 ./source/logger.o
+ .text          0x00000000000002f0        0x0 ./source/main.o
+ .text          0x00000000000002f0        0x0 ./source/pinconfig.o
+ .text          0x00000000000002f0        0x0 ./source/sensors.o
+ .text          0x00000000000002f0        0x0 ./source/system.o
+ .text          0x00000000000002f0        0x0 ./source/xprintf.o
+ .text          0x00000000000002f0        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o)
+ .text          0x00000000000002f0        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .text          0x00000000000002f0        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+ .text          0x00000000000002f0      0x134 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+                0x00000000000002f0                memcpy
+ .text          0x0000000000000424        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memset.o)
+ .text          0x0000000000000424        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+ .text          0x0000000000000424        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+ .text          0x0000000000000424        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+ .text          0x0000000000000424        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text          0x0000000000000424        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+ .text          0x0000000000000424        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .text          0x0000000000000424      0x370 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+                0x0000000000000424                __aeabi_drsub
+                0x000000000000042c                __aeabi_dsub
+                0x000000000000042c                __subdf3
+                0x0000000000000430                __adddf3
+                0x0000000000000430                __aeabi_dadd
+                0x00000000000006a8                __aeabi_ui2d
+                0x00000000000006a8                __floatunsidf
+                0x00000000000006c8                __floatsidf
+                0x00000000000006c8                __aeabi_i2d
+                0x00000000000006ec                __extendsfdf2
+                0x00000000000006ec                __aeabi_f2d
+                0x0000000000000728                __aeabi_ul2d
+                0x0000000000000728                __floatundidf
+                0x0000000000000738                __floatdidf
+                0x0000000000000738                __aeabi_l2d
+ .text          0x0000000000000794      0x424 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+                0x0000000000000794                __aeabi_dmul
+                0x0000000000000794                __muldf3
+                0x00000000000009e8                __aeabi_ddiv
+                0x00000000000009e8                __divdf3
+ .text          0x0000000000000bb8      0x110 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
+                0x0000000000000bb8                __gtdf2
+                0x0000000000000bb8                __gedf2
+                0x0000000000000bc0                __ltdf2
+                0x0000000000000bc0                __ledf2
+                0x0000000000000bc8                __cmpdf2
+                0x0000000000000bc8                __eqdf2
+                0x0000000000000bc8                __nedf2
+                0x0000000000000c44                __aeabi_cdrcmple
+                0x0000000000000c54                __aeabi_cdcmple
+                0x0000000000000c54                __aeabi_cdcmpeq
+                0x0000000000000c64                __aeabi_dcmpeq
+                0x0000000000000c78                __aeabi_dcmplt
+                0x0000000000000c8c                __aeabi_dcmple
+                0x0000000000000ca0                __aeabi_dcmpge
+                0x0000000000000cb4                __aeabi_dcmpgt
+ .text          0x0000000000000cc8       0x40 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixunsdfsi.o)
+                0x0000000000000cc8                __fixunsdfsi
+                0x0000000000000cc8                __aeabi_d2uiz
+ .text          0x0000000000000d08       0xa0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+                0x0000000000000d08                __aeabi_d2f
+                0x0000000000000d08                __truncdfsf2
+ .text          0x0000000000000da8        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .text          0x0000000000000da8        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .text          0x0000000000000da8        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ *(.text.*)
+ .text._dummy0  0x0000000000000da8        0xe ./startup.o
+                0x0000000000000da8                _dummy0
+ *fill*         0x0000000000000db6        0x2 
+ .text.ResetISR
+                0x0000000000000db8       0x6c ./startup.o
+                0x0000000000000db8                ResetISR
+ .text.NmiSR    0x0000000000000e24        0x6 ./startup.o
+ .text.FaultISR
+                0x0000000000000e2a        0x6 ./startup.o
+ .text.IntDefaultHandler
+                0x0000000000000e30        0x6 ./startup.o
+ .text.xEventGroupGenericCreate
+                0x0000000000000e36       0x3c ./FreeRTOS/event_groups.o
+                0x0000000000000e36                xEventGroupGenericCreate
+ *fill*         0x0000000000000e72        0x2 
+ .text.xEventGroupSync
+                0x0000000000000e74      0x124 ./FreeRTOS/event_groups.o
+                0x0000000000000e74                xEventGroupSync
+ .text.xEventGroupWaitBits
+                0x0000000000000f98      0x164 ./FreeRTOS/event_groups.o
+                0x0000000000000f98                xEventGroupWaitBits
+ .text.xEventGroupClearBits
+                0x00000000000010fc       0x6c ./FreeRTOS/event_groups.o
+                0x00000000000010fc                xEventGroupClearBits
+ .text.xEventGroupGetBitsFromISR
+                0x0000000000001168       0x46 ./FreeRTOS/event_groups.o
+                0x0000000000001168                xEventGroupGetBitsFromISR
+ .text.xEventGroupSetBits
+                0x00000000000011ae      0x112 ./FreeRTOS/event_groups.o
+                0x00000000000011ae                xEventGroupSetBits
+ .text.vEventGroupDelete
+                0x00000000000012c0       0x60 ./FreeRTOS/event_groups.o
+                0x00000000000012c0                vEventGroupDelete
+ .text.vEventGroupSetBitsCallback
+                0x0000000000001320       0x1a ./FreeRTOS/event_groups.o
+                0x0000000000001320                vEventGroupSetBitsCallback
+ .text.vEventGroupClearBitsCallback
+                0x000000000000133a       0x1a ./FreeRTOS/event_groups.o
+                0x000000000000133a                vEventGroupClearBitsCallback
+ .text.prvTestWaitCondition
+                0x0000000000001354       0x44 ./FreeRTOS/event_groups.o
+ .text.uxEventGroupGetNumber
+                0x0000000000001398       0x2c ./FreeRTOS/event_groups.o
+                0x0000000000001398                uxEventGroupGetNumber
+ .text.pvPortMalloc
+                0x00000000000013c4       0x8c ./FreeRTOS/heap_1.o
+                0x00000000000013c4                pvPortMalloc
+ .text.vPortFree
+                0x0000000000001450       0x2e ./FreeRTOS/heap_1.o
+                0x0000000000001450                vPortFree
+ *fill*         0x000000000000147e        0x2 
+ .text.vPortInitialiseBlocks
+                0x0000000000001480       0x18 ./FreeRTOS/heap_1.o
+                0x0000000000001480                vPortInitialiseBlocks
+ .text.xPortGetFreeHeapSize
+                0x0000000000001498       0x1c ./FreeRTOS/heap_1.o
+                0x0000000000001498                xPortGetFreeHeapSize
+ .text.vListInitialise
+                0x00000000000014b4       0x40 ./FreeRTOS/list.o
+                0x00000000000014b4                vListInitialise
+ .text.vListInitialiseItem
+                0x00000000000014f4       0x1a ./FreeRTOS/list.o
+                0x00000000000014f4                vListInitialiseItem
+ .text.vListInsertEnd
+                0x000000000000150e       0x48 ./FreeRTOS/list.o
+                0x000000000000150e                vListInsertEnd
+ .text.vListInsert
+                0x0000000000001556       0x72 ./FreeRTOS/list.o
+                0x0000000000001556                vListInsert
+ .text.uxListRemove
+                0x00000000000015c8       0x54 ./FreeRTOS/list.o
+                0x00000000000015c8                uxListRemove
+ .text.pxPortInitialiseStack
+                0x000000000000161c       0x64 ./FreeRTOS/port.o
+                0x000000000000161c                pxPortInitialiseStack
+ .text.prvTaskExitError
+                0x0000000000001680       0x3c ./FreeRTOS/port.o
+ *fill*         0x00000000000016bc        0x4 
+ .text.vPortSVCHandler
+                0x00000000000016c0       0x28 ./FreeRTOS/port.o
+                0x00000000000016c0                vPortSVCHandler
+ .text.prvPortStartFirstTask
+                0x00000000000016e8       0x20 ./FreeRTOS/port.o
+ .text.xPortStartScheduler
+                0x0000000000001708      0x118 ./FreeRTOS/port.o
+                0x0000000000001708                xPortStartScheduler
+ .text.vPortEndScheduler
+                0x0000000000001820       0x34 ./FreeRTOS/port.o
+                0x0000000000001820                vPortEndScheduler
+ .text.vPortEnterCritical
+                0x0000000000001854       0x5c ./FreeRTOS/port.o
+                0x0000000000001854                vPortEnterCritical
+ .text.vPortExitCritical
+                0x00000000000018b0       0x50 ./FreeRTOS/port.o
+                0x00000000000018b0                vPortExitCritical
+ .text.xPortPendSVHandler
+                0x0000000000001900       0x68 ./FreeRTOS/port.o
+                0x0000000000001900                xPortPendSVHandler
+ .text.xPortSysTickHandler
+                0x0000000000001968       0x40 ./FreeRTOS/port.o
+                0x0000000000001968                xPortSysTickHandler
+ .text.vPortSetupTimerInterrupt
+                0x00000000000019a8       0x28 ./FreeRTOS/port.o
+                0x00000000000019a8                vPortSetupTimerInterrupt
+ .text.vPortEnableVFP
+                0x00000000000019d0       0x14 ./FreeRTOS/port.o
+ .text.vPortValidateInterruptPriority
+                0x00000000000019e4       0x7c ./FreeRTOS/port.o
+                0x00000000000019e4                vPortValidateInterruptPriority
+ .text.xQueueGenericReset
+                0x0000000000001a60       0xd0 ./FreeRTOS/queue.o
+                0x0000000000001a60                xQueueGenericReset
+ .text.prvAllocateQueueMemory
+                0x0000000000001b30       0x64 ./FreeRTOS/queue.o
+ .text.xQueueGenericCreate
+                0x0000000000001b94       0x78 ./FreeRTOS/queue.o
+                0x0000000000001b94                xQueueGenericCreate
+ .text.xQueueCreateMutex
+                0x0000000000001c0c       0x54 ./FreeRTOS/queue.o
+                0x0000000000001c0c                xQueueCreateMutex
+ .text.xQueueGiveMutexRecursive
+                0x0000000000001c60       0x66 ./FreeRTOS/queue.o
+                0x0000000000001c60                xQueueGiveMutexRecursive
+ .text.xQueueTakeMutexRecursive
+                0x0000000000001cc6       0x6e ./FreeRTOS/queue.o
+                0x0000000000001cc6                xQueueTakeMutexRecursive
+ .text.xQueueGenericSend
+                0x0000000000001d34      0x1b8 ./FreeRTOS/queue.o
+                0x0000000000001d34                xQueueGenericSend
+ .text.xQueueGenericSendFromISR
+                0x0000000000001eec      0x118 ./FreeRTOS/queue.o
+                0x0000000000001eec                xQueueGenericSendFromISR
+ .text.xQueueGiveFromISR
+                0x0000000000002004      0x100 ./FreeRTOS/queue.o
+                0x0000000000002004                xQueueGiveFromISR
+ .text.xQueueGenericReceive
+                0x0000000000002104      0x1e8 ./FreeRTOS/queue.o
+                0x0000000000002104                xQueueGenericReceive
+ .text.xQueueReceiveFromISR
+                0x00000000000022ec       0xe8 ./FreeRTOS/queue.o
+                0x00000000000022ec                xQueueReceiveFromISR
+ .text.xQueuePeekFromISR
+                0x00000000000023d4       0xca ./FreeRTOS/queue.o
+                0x00000000000023d4                xQueuePeekFromISR
+ .text.uxQueueMessagesWaiting
+                0x000000000000249e       0x3a ./FreeRTOS/queue.o
+                0x000000000000249e                uxQueueMessagesWaiting
+ .text.uxQueueSpacesAvailable
+                0x00000000000024d8       0x44 ./FreeRTOS/queue.o
+                0x00000000000024d8                uxQueueSpacesAvailable
+ .text.uxQueueMessagesWaitingFromISR
+                0x000000000000251c       0x36 ./FreeRTOS/queue.o
+                0x000000000000251c                uxQueueMessagesWaitingFromISR
+ .text.vQueueDelete
+                0x0000000000002552       0x3a ./FreeRTOS/queue.o
+                0x0000000000002552                vQueueDelete
+ .text.uxQueueGetQueueNumber
+                0x000000000000258c       0x18 ./FreeRTOS/queue.o
+                0x000000000000258c                uxQueueGetQueueNumber
+ .text.vQueueSetQueueNumber
+                0x00000000000025a4       0x1c ./FreeRTOS/queue.o
+                0x00000000000025a4                vQueueSetQueueNumber
+ .text.ucQueueGetQueueType
+                0x00000000000025c0       0x1a ./FreeRTOS/queue.o
+                0x00000000000025c0                ucQueueGetQueueType
+ .text.prvCopyDataToQueue
+                0x00000000000025da       0xd6 ./FreeRTOS/queue.o
+ .text.prvCopyDataFromQueue
+                0x00000000000026b0       0x4c ./FreeRTOS/queue.o
+ .text.prvUnlockQueue
+                0x00000000000026fc       0x98 ./FreeRTOS/queue.o
+ .text.prvIsQueueEmpty
+                0x0000000000002794       0x2c ./FreeRTOS/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00000000000027c0       0x42 ./FreeRTOS/queue.o
+                0x00000000000027c0                xQueueIsQueueEmptyFromISR
+ .text.prvIsQueueFull
+                0x0000000000002802       0x30 ./FreeRTOS/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x0000000000002832       0x46 ./FreeRTOS/queue.o
+                0x0000000000002832                xQueueIsQueueFullFromISR
+ .text.vQueueAddToRegistry
+                0x0000000000002878       0x50 ./FreeRTOS/queue.o
+                0x0000000000002878                vQueueAddToRegistry
+ .text.pcQueueGetQueueName
+                0x00000000000028c8       0x4c ./FreeRTOS/queue.o
+                0x00000000000028c8                pcQueueGetQueueName
+ .text.vQueueUnregisterQueue
+                0x0000000000002914       0x54 ./FreeRTOS/queue.o
+                0x0000000000002914                vQueueUnregisterQueue
+ .text.xTaskGenericCreate
+                0x0000000000002968      0x1a0 ./FreeRTOS/tasks.o
+                0x0000000000002968                xTaskGenericCreate
+ .text.vTaskDelete
+                0x0000000000002b08      0x128 ./FreeRTOS/tasks.o
+                0x0000000000002b08                vTaskDelete
+ .text.vTaskDelayUntil
+                0x0000000000002c30       0xf4 ./FreeRTOS/tasks.o
+                0x0000000000002c30                vTaskDelayUntil
+ .text.vTaskDelay
+                0x0000000000002d24       0x68 ./FreeRTOS/tasks.o
+                0x0000000000002d24                vTaskDelay
+ .text.eTaskGetState
+                0x0000000000002d8c       0xb0 ./FreeRTOS/tasks.o
+                0x0000000000002d8c                eTaskGetState
+ .text.uxTaskPriorityGet
+                0x0000000000002e3c       0x34 ./FreeRTOS/tasks.o
+                0x0000000000002e3c                uxTaskPriorityGet
+ .text.uxTaskPriorityGetFromISR
+                0x0000000000002e70       0x58 ./FreeRTOS/tasks.o
+                0x0000000000002e70                uxTaskPriorityGetFromISR
+ .text.vTaskPrioritySet
+                0x0000000000002ec8      0x15c ./FreeRTOS/tasks.o
+                0x0000000000002ec8                vTaskPrioritySet
+ .text.vTaskSuspend
+                0x0000000000003024      0x110 ./FreeRTOS/tasks.o
+                0x0000000000003024                vTaskSuspend
+ .text.prvTaskIsTaskSuspended
+                0x0000000000003134       0x74 ./FreeRTOS/tasks.o
+ .text.vTaskResume
+                0x00000000000031a8       0xb8 ./FreeRTOS/tasks.o
+                0x00000000000031a8                vTaskResume
+ .text.xTaskResumeFromISR
+                0x0000000000003260       0xe0 ./FreeRTOS/tasks.o
+                0x0000000000003260                xTaskResumeFromISR
+ .text.vTaskStartScheduler
+                0x0000000000003340       0xa0 ./FreeRTOS/tasks.o
+                0x0000000000003340                vTaskStartScheduler
+ .text.vTaskEndScheduler
+                0x00000000000033e0       0x30 ./FreeRTOS/tasks.o
+                0x00000000000033e0                vTaskEndScheduler
+ .text.vTaskSuspendAll
+                0x0000000000003410       0x1c ./FreeRTOS/tasks.o
+                0x0000000000003410                vTaskSuspendAll
+ .text.xTaskResumeAll
+                0x000000000000342c      0x134 ./FreeRTOS/tasks.o
+                0x000000000000342c                xTaskResumeAll
+ .text.xTaskGetTickCount
+                0x0000000000003560       0x20 ./FreeRTOS/tasks.o
+                0x0000000000003560                xTaskGetTickCount
+ .text.xTaskGetTickCountFromISR
+                0x0000000000003580       0x24 ./FreeRTOS/tasks.o
+                0x0000000000003580                xTaskGetTickCountFromISR
+ .text.uxTaskGetNumberOfTasks
+                0x00000000000035a4       0x18 ./FreeRTOS/tasks.o
+                0x00000000000035a4                uxTaskGetNumberOfTasks
+ .text.uxTaskGetSystemState
+                0x00000000000035bc      0x11c ./FreeRTOS/tasks.o
+                0x00000000000035bc                uxTaskGetSystemState
+ .text.xTaskIncrementTick
+                0x00000000000036d8      0x17c ./FreeRTOS/tasks.o
+                0x00000000000036d8                xTaskIncrementTick
+ .text.vTaskSwitchContext
+                0x0000000000003854      0x100 ./FreeRTOS/tasks.o
+                0x0000000000003854                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x0000000000003954       0x48 ./FreeRTOS/tasks.o
+                0x0000000000003954                vTaskPlaceOnEventList
+ .text.vTaskPlaceOnUnorderedEventList
+                0x000000000000399c       0x74 ./FreeRTOS/tasks.o
+                0x000000000000399c                vTaskPlaceOnUnorderedEventList
+ .text.xTaskRemoveFromEventList
+                0x0000000000003a10       0xc4 ./FreeRTOS/tasks.o
+                0x0000000000003a10                xTaskRemoveFromEventList
+ .text.xTaskRemoveFromUnorderedEventList
+                0x0000000000003ad4       0xcc ./FreeRTOS/tasks.o
+                0x0000000000003ad4                xTaskRemoveFromUnorderedEventList
+ .text.vTaskSetTimeOutState
+                0x0000000000003ba0       0x48 ./FreeRTOS/tasks.o
+                0x0000000000003ba0                vTaskSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x0000000000003be8       0xbc ./FreeRTOS/tasks.o
+                0x0000000000003be8                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x0000000000003ca4       0x18 ./FreeRTOS/tasks.o
+                0x0000000000003ca4                vTaskMissedYield
+ .text.uxTaskGetTaskNumber
+                0x0000000000003cbc       0x2c ./FreeRTOS/tasks.o
+                0x0000000000003cbc                uxTaskGetTaskNumber
+ .text.vTaskSetTaskNumber
+                0x0000000000003ce8       0x26 ./FreeRTOS/tasks.o
+                0x0000000000003ce8                vTaskSetTaskNumber
+ .text.prvIdleTask
+                0x0000000000003d0e        0xe ./FreeRTOS/tasks.o
+ .text.prvInitialiseTCBVariables
+                0x0000000000003d1c       0xa8 ./FreeRTOS/tasks.o
+ .text.prvInitialiseTaskLists
+                0x0000000000003dc4       0x80 ./FreeRTOS/tasks.o
+ .text.prvCheckTasksWaitingTermination
+                0x0000000000003e44       0x78 ./FreeRTOS/tasks.o
+ .text.prvAllocateTCBAndStack
+                0x0000000000003ebc       0x80 ./FreeRTOS/tasks.o
+ .text.vTaskGetTaskInfo
+                0x0000000000003f3c       0xbc ./FreeRTOS/tasks.o
+                0x0000000000003f3c                vTaskGetTaskInfo
+ .text.prvListTasksWithinSingleList
+                0x0000000000003ff8       0xa4 ./FreeRTOS/tasks.o
+ .text.prvTaskCheckFreeStackSpace
+                0x000000000000409c       0x38 ./FreeRTOS/tasks.o
+ .text.uxTaskGetStackHighWaterMark
+                0x00000000000040d4       0x38 ./FreeRTOS/tasks.o
+                0x00000000000040d4                uxTaskGetStackHighWaterMark
+ .text.prvDeleteTCB
+                0x000000000000410c       0x20 ./FreeRTOS/tasks.o
+ .text.prvResetNextTaskUnblockTime
+                0x000000000000412c       0x4c ./FreeRTOS/tasks.o
+ .text.xTaskGetCurrentTaskHandle
+                0x0000000000004178       0x20 ./FreeRTOS/tasks.o
+                0x0000000000004178                xTaskGetCurrentTaskHandle
+ .text.vTaskPriorityInherit
+                0x0000000000004198       0xec ./FreeRTOS/tasks.o
+                0x0000000000004198                vTaskPriorityInherit
+ .text.xTaskPriorityDisinherit
+                0x0000000000004284      0x108 ./FreeRTOS/tasks.o
+                0x0000000000004284                xTaskPriorityDisinherit
+ .text.uxTaskResetEventItemValue
+                0x000000000000438c       0x30 ./FreeRTOS/tasks.o
+                0x000000000000438c                uxTaskResetEventItemValue
+ .text.pvTaskIncrementMutexHeldCount
+                0x00000000000043bc       0x28 ./FreeRTOS/tasks.o
+                0x00000000000043bc                pvTaskIncrementMutexHeldCount
+ .text.ulTaskNotifyTake
+                0x00000000000043e4       0x90 ./FreeRTOS/tasks.o
+                0x00000000000043e4                ulTaskNotifyTake
+ .text.xTaskNotifyWait
+                0x0000000000004474       0xb4 ./FreeRTOS/tasks.o
+                0x0000000000004474                xTaskNotifyWait
+ .text.xTaskGenericNotify
+                0x0000000000004528      0x140 ./FreeRTOS/tasks.o
+                0x0000000000004528                xTaskGenericNotify
+ .text.xTaskGenericNotifyFromISR
+                0x0000000000004668      0x18c ./FreeRTOS/tasks.o
+                0x0000000000004668                xTaskGenericNotifyFromISR
+ .text.vTaskNotifyGiveFromISR
+                0x00000000000047f4      0x120 ./FreeRTOS/tasks.o
+                0x00000000000047f4                vTaskNotifyGiveFromISR
+ .text.xTaskNotifyStateClear
+                0x0000000000004914       0x4c ./FreeRTOS/tasks.o
+                0x0000000000004914                xTaskNotifyStateClear
+ .text.prvAddCurrentTaskToDelayedList
+                0x0000000000004960       0xc8 ./FreeRTOS/tasks.o
+ .text._dummy7  0x0000000000004a28        0xe ./source/can.o
+                0x0000000000004a28                _dummy7
+ .text._dummy4  0x0000000000004a36        0xe ./source/control.o
+                0x0000000000004a36                _dummy4
+ .text.pwm_duty_update
+                0x0000000000004a44       0x94 ./source/control.o
+                0x0000000000004a44                pwm_duty_update
+ .text.hbridge_enabled
+                0x0000000000004ad8       0x24 ./source/control.o
+ .text.hbridge_connected
+                0x0000000000004afc       0x2a ./source/control.o
+ *fill*         0x0000000000004b26        0x2 
+ .text.hbridge_set_bleeder_duty
+                0x0000000000004b28       0xd8 ./source/control.o
+ .text.hbridge_soft_start_bypass
+                0x0000000000004c00       0x14 ./source/control.o
+ .text.pwm_setup
+                0x0000000000004c14       0x60 ./source/control.o
+                0x0000000000004c14                pwm_setup
+ *fill*         0x0000000000004c74        0x4 
+ .text.pid_current_loop
+                0x0000000000004c78       0x9c ./source/control.o
+                0x0000000000004c78                pid_current_loop
+ .text.pid_velocity_loop
+                0x0000000000004d14       0x20 ./source/control.o
+                0x0000000000004d14                pid_velocity_loop
+ .text.pid_position_loop
+                0x0000000000004d34       0x20 ./source/control.o
+                0x0000000000004d34                pid_position_loop
+ .text.pid_state_reset
+                0x0000000000004d54       0x34 ./source/control.o
+                0x0000000000004d54                pid_state_reset
+ .text.duty_cycle_clamp
+                0x0000000000004d88       0x74 ./source/control.o
+ .text.hbridge_regen_control
+                0x0000000000004dfc      0x114 ./source/control.o
+ .text.hbridge_safety_control
+                0x0000000000004f10       0x46 ./source/control.o
+ *fill*         0x0000000000004f56        0x2 
+ .text.update_control_mode
+                0x0000000000004f58       0x34 ./source/control.o
+ .text.control_task_code
+                0x0000000000004f8c      0x168 ./source/control.o
+                0x0000000000004f8c                control_task_code
+ .text._dummy6  0x00000000000050f4        0xe ./source/debug.o
+                0x00000000000050f4                _dummy6
+ *fill*         0x0000000000005102        0x2 
+ .text.led_get  0x0000000000005104       0x58 ./source/debug.o
+                0x0000000000005104                led_get
+ .text.led_set  0x000000000000515c       0x5c ./source/debug.o
+                0x000000000000515c                led_set
+ .text.debug_pins_set
+                0x00000000000051b8       0x48 ./source/debug.o
+                0x00000000000051b8                debug_pins_set
+ .text._dummy5  0x0000000000005200        0xe ./source/logger.o
+                0x0000000000005200                _dummy5
+ .text.increment_mod_n
+                0x000000000000520e       0x2a ./source/logger.o
+ .text.buffer_is_full
+                0x0000000000005238       0x30 ./source/logger.o
+ .text.buffer_is_empty
+                0x0000000000005268       0x28 ./source/logger.o
+ .text.buffer_put
+                0x0000000000005290       0x38 ./source/logger.o
+ .text.buffer_get
+                0x00000000000052c8       0x38 ./source/logger.o
+ .text.debug_uart_ISR
+                0x0000000000005300       0x64 ./source/logger.o
+ .text.debug_uart_putc
+                0x0000000000005364       0x54 ./source/logger.o
+ .text.debug_uart_setup
+                0x00000000000053b8       0x44 ./source/logger.o
+ .text.log_message
+                0x00000000000053fc       0x48 ./source/logger.o
+                0x00000000000053fc                log_message
+ .text.log_message_from_ISR
+                0x0000000000005444       0x40 ./source/logger.o
+                0x0000000000005444                log_message_from_ISR
+ .text.logger_task_code
+                0x0000000000005484       0x48 ./source/logger.o
+                0x0000000000005484                logger_task_code
+ .text.real_int_from_float
+                0x00000000000054cc       0x80 ./source/logger.o
+                0x00000000000054cc                real_int_from_float
+ .text._dummy1  0x000000000000554c        0xe ./source/main.o
+                0x000000000000554c                _dummy1
+ .text.vApplicationStackOverflowHook
+                0x000000000000555a        0x6 ./source/main.o
+                0x000000000000555a                vApplicationStackOverflowHook
+ .text.assertion_failed
+                0x0000000000005560       0x1c ./source/main.o
+                0x0000000000005560                assertion_failed
+ .text.led_task_code
+                0x000000000000557c       0x64 ./source/main.o
+                0x000000000000557c                led_task_code
+ .text.main     0x00000000000055e0       0x94 ./source/main.o
+                0x00000000000055e0                main
+ .text._dummy8  0x0000000000005674        0xe ./source/pinconfig.o
+                0x0000000000005674                _dummy8
+ *fill*         0x0000000000005682        0x2 
+ .text.pinconfig
+                0x0000000000005684      0x284 ./source/pinconfig.o
+                0x0000000000005684                pinconfig
+ .text._dummy3  0x0000000000005908        0xe ./source/sensors.o
+                0x0000000000005908                _dummy3
+ .text.encoder_setup
+                0x0000000000005916        0xe ./source/sensors.o
+ .text.adc0_seq0_ISR
+                0x0000000000005924       0x74 ./source/sensors.o
+                0x0000000000005924                adc0_seq0_ISR
+ .text.rt_trigger_timer_setup
+                0x0000000000005998       0x60 ./source/sensors.o
+ .text.rt_adc_setup
+                0x00000000000059f8       0xa0 ./source/sensors.o
+ .text.celsius_from_adc_raw
+                0x0000000000005a98       0x1e ./source/sensors.o
+ .text.voltage_from_adc_raw
+                0x0000000000005ab6       0x1e ./source/sensors.o
+ .text.adc1_seq0_ISR
+                0x0000000000005ad4       0x68 ./source/sensors.o
+                0x0000000000005ad4                adc1_seq0_ISR
+ .text.ls_trigger_timer_setup
+                0x0000000000005b3c       0x60 ./source/sensors.o
+ .text.ls_adc_setup
+                0x0000000000005b9c       0x48 ./source/sensors.o
+ .text.sensor_get_motor_position_rads
+                0x0000000000005be4       0x1c ./source/sensors.o
+                0x0000000000005be4                sensor_get_motor_position_rads
+ .text.sensor_get_motor_velocity_rads
+                0x0000000000005c00       0x1c ./source/sensors.o
+                0x0000000000005c00                sensor_get_motor_velocity_rads
+ .text.sensor_get_motor_current_amps
+                0x0000000000005c1c       0x1c ./source/sensors.o
+                0x0000000000005c1c                sensor_get_motor_current_amps
+ .text.sensor_get_vbus_volts
+                0x0000000000005c38       0x1c ./source/sensors.o
+                0x0000000000005c38                sensor_get_vbus_volts
+ .text.sensor_get_vbatt_volts
+                0x0000000000005c54       0x1c ./source/sensors.o
+                0x0000000000005c54                sensor_get_vbatt_volts
+ .text.sensor_get_motor_temp_celsius
+                0x0000000000005c70       0x1c ./source/sensors.o
+                0x0000000000005c70                sensor_get_motor_temp_celsius
+ .text.sensor_get_hbridge_temp_celsius
+                0x0000000000005c8c       0x1c ./source/sensors.o
+                0x0000000000005c8c                sensor_get_hbridge_temp_celsius
+ .text.sensor_setup
+                0x0000000000005ca8       0x3c ./source/sensors.o
+                0x0000000000005ca8                sensor_setup
+ .text._dummy2  0x0000000000005ce4        0xe ./source/system.o
+                0x0000000000005ce4                _dummy2
+ *fill*         0x0000000000005cf2        0x2 
+ .text.system_get_state
+                0x0000000000005cf4       0x18 ./source/system.o
+                0x0000000000005cf4                system_get_state
+ .text.system_thread
+                0x0000000000005d0c       0x14 ./source/system.o
+                0x0000000000005d0c                system_thread
+ .text.system_init_clocks
+                0x0000000000005d20       0x24 ./source/system.o
+                0x0000000000005d20                system_init_clocks
+ .text.system_get_sysclk_freq
+                0x0000000000005d44       0x18 ./source/system.o
+                0x0000000000005d44                system_get_sysclk_freq
+ .text.system_get_control_mode
+                0x0000000000005d5c       0x18 ./source/system.o
+                0x0000000000005d5c                system_get_control_mode
+ .text.system_get_drive_mode
+                0x0000000000005d74       0x18 ./source/system.o
+                0x0000000000005d74                system_get_drive_mode
+ .text.system_get_control_target
+                0x0000000000005d8c       0x1c ./source/system.o
+                0x0000000000005d8c                system_get_control_target
+ .text.system_get_update_mode
+                0x0000000000005da8       0x18 ./source/system.o
+                0x0000000000005da8                system_get_update_mode
+ .text.system_get_bus_voltage
+                0x0000000000005dc0       0x18 ./source/system.o
+                0x0000000000005dc0                system_get_bus_voltage
+ .text.xputc    0x0000000000005dd8       0x50 ./source/xprintf.o
+                0x0000000000005dd8                xputc
+ .text.xputs    0x0000000000005e28       0x28 ./source/xprintf.o
+                0x0000000000005e28                xputs
+ .text.xfputs   0x0000000000005e50       0x40 ./source/xprintf.o
+                0x0000000000005e50                xfputs
+ .text.xvprintf
+                0x0000000000005e90      0x344 ./source/xprintf.o
+ .text.xprintf  0x00000000000061d4       0x24 ./source/xprintf.o
+                0x00000000000061d4                xprintf
+ .text.xsprintf
+                0x00000000000061f8       0x40 ./source/xprintf.o
+                0x00000000000061f8                xsprintf
+ .text.xfprintf
+                0x0000000000006238       0x3c ./source/xprintf.o
+                0x0000000000006238                xfprintf
+ .text.put_dump
+                0x0000000000006274       0xf4 ./source/xprintf.o
+                0x0000000000006274                put_dump
+ .text.xgets    0x0000000000006368       0xa0 ./source/xprintf.o
+                0x0000000000006368                xgets
+ .text.xfgets   0x0000000000006408       0x38 ./source/xprintf.o
+                0x0000000000006408                xfgets
+ .text.xatoi    0x0000000000006440      0x150 ./source/xprintf.o
+                0x0000000000006440                xatoi
+ .text.exit     0x0000000000006590       0x20 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o)
+                0x0000000000006590                exit
+ .text.__libc_init_array
+                0x00000000000065b0       0x50 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+                0x00000000000065b0                __libc_init_array
+ .text.memset   0x0000000000006600       0x9c /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memset.o)
+                0x0000000000006600                memset
+ .text.startup.register_fini
+                0x000000000000669c       0x14 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000000066b0       0xe8 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+                0x00000000000066b0                __call_exitprocs
+ .text.atexit   0x0000000000006798        0xc /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+                0x0000000000006798                atexit
+ .text.__libc_fini_array
+                0x00000000000067a4       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+                0x00000000000067a4                __libc_fini_array
+ .text.__retarget_lock_init
+                0x00000000000067d8        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067d8                __retarget_lock_init
+ .text.__retarget_lock_init_recursive
+                0x00000000000067dc        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067dc                __retarget_lock_init_recursive
+ .text.__retarget_lock_close
+                0x00000000000067e0        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067e0                __retarget_lock_close
+ .text.__retarget_lock_close_recursive
+                0x00000000000067e4        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067e4                __retarget_lock_close_recursive
+ .text.__retarget_lock_acquire
+                0x00000000000067e8        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067e8                __retarget_lock_acquire
+ .text.__retarget_lock_acquire_recursive
+                0x00000000000067ec        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067ec                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_try_acquire
+                0x00000000000067f0        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067f0                __retarget_lock_try_acquire
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000000067f4        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067f4                __retarget_lock_try_acquire_recursive
+ .text.__retarget_lock_release
+                0x00000000000067f8        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067f8                __retarget_lock_release
+ .text.__retarget_lock_release_recursive
+                0x00000000000067fc        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000067fc                __retarget_lock_release_recursive
+ .text.__register_exitproc
+                0x0000000000006800       0xc4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+                0x0000000000006800                __register_exitproc
+ .text._ADCIntNumberGet
+                0x00000000000068c4       0x54 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntRegister
+                0x0000000000006918       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006918                ADCIntRegister
+ .text.ADCIntUnregister
+                0x0000000000006932       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006932                ADCIntUnregister
+ .text.ADCIntDisable
+                0x0000000000006948       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006948                ADCIntDisable
+ .text.ADCIntEnable
+                0x0000000000006958       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006958                ADCIntEnable
+ .text.ADCIntStatus
+                0x0000000000006968       0x34 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006968                ADCIntStatus
+ .text.ADCIntClear
+                0x000000000000699c        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x000000000000699c                ADCIntClear
+ .text.ADCSequenceEnable
+                0x00000000000069a6        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x00000000000069a6                ADCSequenceEnable
+ .text.ADCSequenceDisable
+                0x00000000000069b4       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x00000000000069b4                ADCSequenceDisable
+ .text.ADCSequenceConfigure
+                0x00000000000069c4       0x54 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x00000000000069c4                ADCSequenceConfigure
+ .text.ADCSequenceStepConfigure
+                0x0000000000006a18       0x84 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006a18                ADCSequenceStepConfigure
+ .text.ADCSequenceOverflow
+                0x0000000000006a9c        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006a9c                ADCSequenceOverflow
+ .text.ADCSequenceOverflowClear
+                0x0000000000006aa8        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006aa8                ADCSequenceOverflowClear
+ .text.ADCSequenceUnderflow
+                0x0000000000006ab2        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006ab2                ADCSequenceUnderflow
+ .text.ADCSequenceUnderflowClear
+                0x0000000000006abe        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006abe                ADCSequenceUnderflowClear
+ .text.ADCSequenceDataGet
+                0x0000000000006ac8       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006ac8                ADCSequenceDataGet
+ .text.ADCProcessorTrigger
+                0x0000000000006ae6       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006ae6                ADCProcessorTrigger
+ *fill*         0x0000000000006afe        0x2 
+ .text.ADCSoftwareOversampleConfigure
+                0x0000000000006b00       0x28 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006b00                ADCSoftwareOversampleConfigure
+ .text.ADCSoftwareOversampleStepConfigure
+                0x0000000000006b28       0x8c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006b28                ADCSoftwareOversampleStepConfigure
+ .text.ADCSoftwareOversampleDataGet
+                0x0000000000006bb4       0x48 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006bb4                ADCSoftwareOversampleDataGet
+ .text.ADCHardwareOversampleConfigure
+                0x0000000000006bfc       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006bfc                ADCHardwareOversampleConfigure
+ .text.ADCComparatorConfigure
+                0x0000000000006c0c        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c0c                ADCComparatorConfigure
+ .text.ADCComparatorRegionSet
+                0x0000000000006c16        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c16                ADCComparatorRegionSet
+ .text.ADCComparatorReset
+                0x0000000000006c24       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c24                ADCComparatorReset
+ .text.ADCComparatorIntDisable
+                0x0000000000006c42       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c42                ADCComparatorIntDisable
+ .text.ADCComparatorIntEnable
+                0x0000000000006c54       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c54                ADCComparatorIntEnable
+ .text.ADCComparatorIntStatus
+                0x0000000000006c64        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c64                ADCComparatorIntStatus
+ .text.ADCComparatorIntClear
+                0x0000000000006c68        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c68                ADCComparatorIntClear
+ .text.ADCIntDisableEx
+                0x0000000000006c6c        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c6c                ADCIntDisableEx
+ .text.ADCIntEnableEx
+                0x0000000000006c76        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c76                ADCIntEnableEx
+ .text.ADCIntStatusEx
+                0x0000000000006c7e       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c7e                ADCIntStatusEx
+ .text.ADCIntClearEx
+                0x0000000000006c90        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c90                ADCIntClearEx
+ .text.ADCReferenceSet
+                0x0000000000006c94        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006c94                ADCReferenceSet
+ .text.ADCReferenceGet
+                0x0000000000006ca0        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006ca0                ADCReferenceGet
+ .text.ADCPhaseDelaySet
+                0x0000000000006ca8        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006ca8                ADCPhaseDelaySet
+ .text.ADCPhaseDelayGet
+                0x0000000000006cac        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006cac                ADCPhaseDelayGet
+ .text.ADCSequenceDMAEnable
+                0x0000000000006cb0       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006cb0                ADCSequenceDMAEnable
+ .text.ADCSequenceDMADisable
+                0x0000000000006cc0       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006cc0                ADCSequenceDMADisable
+ .text.ADCBusy  0x0000000000006cd2        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006cd2                ADCBusy
+ .text.ADCClockConfigSet
+                0x0000000000006cda       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006cda                ADCClockConfigSet
+ .text.ADCClockConfigGet
+                0x0000000000006cf2       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000006cf2                ADCClockConfigGet
+ .text._GPIOIntNumberGet
+                0x0000000000006d10       0x48 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .text.GPIODirModeSet
+                0x0000000000006d58       0x2e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000006d58                GPIODirModeSet
+ .text.GPIODirModeGet
+                0x0000000000006d86       0x24 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000006d86                GPIODirModeGet
+ .text.GPIOIntTypeSet
+                0x0000000000006daa       0x5a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000006daa                GPIOIntTypeSet
+ .text.GPIOIntTypeGet
+                0x0000000000006e04       0x4a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000006e04                GPIOIntTypeGet
+ .text.GPIOPadConfigSet
+                0x0000000000006e4e      0x130 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000006e4e                GPIOPadConfigSet
+ .text.GPIOPadConfigGet
+                0x0000000000006f7e       0xc4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000006f7e                GPIOPadConfigGet
+ .text.GPIOIntEnable
+                0x0000000000007042        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007042                GPIOIntEnable
+ .text.GPIOIntDisable
+                0x000000000000704e        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000704e                GPIOIntDisable
+ .text.GPIOIntStatus
+                0x000000000000705c        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000705c                GPIOIntStatus
+ .text.GPIOIntClear
+                0x000000000000706a        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000706a                GPIOIntClear
+ .text.GPIOIntRegister
+                0x0000000000007070       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007070                GPIOIntRegister
+ .text.GPIOIntUnregister
+                0x000000000000708a       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000708a                GPIOIntUnregister
+ .text.GPIOIntRegisterPin
+                0x00000000000070a0       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000070a0                GPIOIntRegisterPin
+ .text.GPIOIntUnregisterPin
+                0x00000000000070be       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000070be                GPIOIntUnregisterPin
+ .text.GPIOPinRead
+                0x00000000000070d8        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000070d8                GPIOPinRead
+ .text.GPIOPinWrite
+                0x00000000000070de        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000070de                GPIOPinWrite
+ .text.GPIOPinTypeADC
+                0x00000000000070e4       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000070e4                GPIOPinTypeADC
+ .text.GPIOPinTypeCAN
+                0x0000000000007100       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007100                GPIOPinTypeCAN
+ .text.GPIOPinTypeComparator
+                0x000000000000711c       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000711c                GPIOPinTypeComparator
+ .text.GPIOPinTypeComparatorOutput
+                0x0000000000007138       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007138                GPIOPinTypeComparatorOutput
+ .text.GPIOPinTypeDIVSCLK
+                0x0000000000007154       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007154                GPIOPinTypeDIVSCLK
+ .text.GPIOPinTypeEPI
+                0x0000000000007170       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007170                GPIOPinTypeEPI
+ .text.GPIOPinTypeEthernetLED
+                0x000000000000718c       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000718c                GPIOPinTypeEthernetLED
+ .text.GPIOPinTypeEthernetMII
+                0x00000000000071a8       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000071a8                GPIOPinTypeEthernetMII
+ .text.GPIOPinTypeGPIOInput
+                0x00000000000071c4       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000071c4                GPIOPinTypeGPIOInput
+ .text.GPIOPinTypeGPIOOutput
+                0x00000000000071e0       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000071e0                GPIOPinTypeGPIOOutput
+ .text.GPIOPinTypeGPIOOutputOD
+                0x00000000000071fc       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000071fc                GPIOPinTypeGPIOOutputOD
+ .text.GPIOPinTypeHibernateRTCCLK
+                0x0000000000007218       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007218                GPIOPinTypeHibernateRTCCLK
+ .text.GPIOPinTypeI2C
+                0x0000000000007234       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007234                GPIOPinTypeI2C
+ .text.GPIOPinTypeI2CSCL
+                0x0000000000007250       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007250                GPIOPinTypeI2CSCL
+ .text.GPIOPinTypeLCD
+                0x000000000000726c       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000726c                GPIOPinTypeLCD
+ .text.GPIOPinTypeOneWire
+                0x0000000000007288       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007288                GPIOPinTypeOneWire
+ .text.GPIOPinTypePWM
+                0x00000000000072a4       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000072a4                GPIOPinTypePWM
+ .text.GPIOPinTypeQEI
+                0x00000000000072c0       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000072c0                GPIOPinTypeQEI
+ .text.GPIOPinTypeSSI
+                0x00000000000072dc       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000072dc                GPIOPinTypeSSI
+ .text.GPIOPinTypeTimer
+                0x00000000000072f8       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000072f8                GPIOPinTypeTimer
+ .text.GPIOPinTypeTrace
+                0x0000000000007314       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007314                GPIOPinTypeTrace
+ .text.GPIOPinTypeUART
+                0x0000000000007330       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007330                GPIOPinTypeUART
+ .text.GPIOPinTypeUSBAnalog
+                0x000000000000734c       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000734c                GPIOPinTypeUSBAnalog
+ .text.GPIOPinTypeUSBDigital
+                0x0000000000007368       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007368                GPIOPinTypeUSBDigital
+ .text.GPIOPinTypeWakeHigh
+                0x0000000000007384       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007384                GPIOPinTypeWakeHigh
+ .text.GPIOPinTypeWakeLow
+                0x00000000000073a2       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000073a2                GPIOPinTypeWakeLow
+ .text.GPIOPinWakeStatus
+                0x00000000000073c0        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000073c0                GPIOPinWakeStatus
+ *fill*         0x00000000000073c6        0x2 
+ .text.GPIOPinConfigure
+                0x00000000000073c8       0x4c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x00000000000073c8                GPIOPinConfigure
+ .text.GPIODMATriggerEnable
+                0x0000000000007414        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007414                GPIODMATriggerEnable
+ .text.GPIODMATriggerDisable
+                0x0000000000007420        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x0000000000007420                GPIODMATriggerDisable
+ .text.GPIOADCTriggerEnable
+                0x000000000000742e        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000742e                GPIOADCTriggerEnable
+ .text.GPIOADCTriggerDisable
+                0x000000000000743a        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+                0x000000000000743a                GPIOADCTriggerDisable
+ .text._IntDefaultHandler
+                0x0000000000007448        0x2 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntMasterEnable
+                0x000000000000744a        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000000000000744a                IntMasterEnable
+ .text.IntMasterDisable
+                0x0000000000007458        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x0000000000007458                IntMasterDisable
+ *fill*         0x0000000000007466        0x2 
+ .text.IntRegister
+                0x0000000000007468       0x34 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x0000000000007468                IntRegister
+ .text.IntUnregister
+                0x000000000000749c       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000000000000749c                IntUnregister
+ .text.IntPriorityGroupingSet
+                0x00000000000074b0       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000074b0                IntPriorityGroupingSet
+ .text.IntPriorityGroupingGet
+                0x00000000000074cc       0x24 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000074cc                IntPriorityGroupingGet
+ .text.IntPrioritySet
+                0x00000000000074f0       0x2c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000074f0                IntPrioritySet
+ .text.IntPriorityGet
+                0x000000000000751c       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000000000000751c                IntPriorityGet
+ .text.IntEnable
+                0x0000000000007538       0x60 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x0000000000007538                IntEnable
+ .text.IntDisable
+                0x0000000000007598       0x60 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x0000000000007598                IntDisable
+ .text.IntIsEnabled
+                0x00000000000075f8       0x64 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000075f8                IntIsEnabled
+ .text.IntPendSet
+                0x000000000000765c       0x50 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000000000000765c                IntPendSet
+ .text.IntPendClear
+                0x00000000000076ac       0x40 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000076ac                IntPendClear
+ .text.IntPriorityMaskSet
+                0x00000000000076ec        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000076ec                IntPriorityMaskSet
+ .text.IntPriorityMaskGet
+                0x00000000000076f0        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000076f0                IntPriorityMaskGet
+ .text.IntTrigger
+                0x00000000000076f4        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000076f4                IntTrigger
+ .text._PWMGenIntNumberGet
+                0x0000000000007700      0x104 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+ .text._PWMFaultIntNumberGet
+                0x0000000000007804       0x48 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+ .text.PWMGenConfigure
+                0x000000000000784c       0x30 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x000000000000784c                PWMGenConfigure
+ .text.PWMGenPeriodSet
+                0x000000000000787c       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x000000000000787c                PWMGenPeriodSet
+ .text.PWMGenPeriodGet
+                0x000000000000788e       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x000000000000788e                PWMGenPeriodGet
+ .text.PWMGenEnable
+                0x00000000000078a0        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000078a0                PWMGenEnable
+ .text.PWMGenDisable
+                0x00000000000078aa        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000078aa                PWMGenDisable
+ .text.PWMPulseWidthSet
+                0x00000000000078b4       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000078b4                PWMPulseWidthSet
+ .text.PWMPulseWidthGet
+                0x00000000000078d2       0x20 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000078d2                PWMPulseWidthGet
+ .text.PWMDeadBandEnable
+                0x00000000000078f2       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000078f2                PWMDeadBandEnable
+ .text.PWMDeadBandDisable
+                0x0000000000007902        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007902                PWMDeadBandDisable
+ .text.PWMSyncUpdate
+                0x000000000000790e        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x000000000000790e                PWMSyncUpdate
+ .text.PWMSyncTimeBase
+                0x0000000000007912        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007912                PWMSyncTimeBase
+ .text.PWMOutputState
+                0x0000000000007916       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007916                PWMOutputState
+ .text.PWMOutputInvert
+                0x0000000000007926       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007926                PWMOutputInvert
+ .text.PWMOutputFaultLevel
+                0x0000000000007936       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007936                PWMOutputFaultLevel
+ .text.PWMOutputFault
+                0x0000000000007946       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007946                PWMOutputFault
+ .text.PWMGenIntRegister
+                0x0000000000007956       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007956                PWMGenIntRegister
+ .text.PWMGenIntUnregister
+                0x0000000000007970       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007970                PWMGenIntUnregister
+ .text.PWMFaultIntRegister
+                0x0000000000007986       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007986                PWMFaultIntRegister
+ .text.PWMFaultIntUnregister
+                0x00000000000079a0       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079a0                PWMFaultIntUnregister
+ .text.PWMGenIntTrigEnable
+                0x00000000000079b6        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079b6                PWMGenIntTrigEnable
+ .text.PWMGenIntTrigDisable
+                0x00000000000079c0        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079c0                PWMGenIntTrigDisable
+ .text.PWMGenIntStatus
+                0x00000000000079cc        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079cc                PWMGenIntStatus
+ .text.PWMGenIntClear
+                0x00000000000079d8        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079d8                PWMGenIntClear
+ .text.PWMIntEnable
+                0x00000000000079de        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079de                PWMIntEnable
+ .text.PWMIntDisable
+                0x00000000000079e6        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079e6                PWMIntDisable
+ .text.PWMFaultIntClear
+                0x00000000000079f0        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079f0                PWMFaultIntClear
+ .text.PWMIntStatus
+                0x00000000000079f8        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x00000000000079f8                PWMIntStatus
+ .text.PWMFaultIntClearExt
+                0x0000000000007a02        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a02                PWMFaultIntClearExt
+ .text.PWMGenFaultConfigure
+                0x0000000000007a06       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a06                PWMGenFaultConfigure
+ .text.PWMGenFaultTriggerSet
+                0x0000000000007a1e        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a1e                PWMGenFaultTriggerSet
+ .text.PWMGenFaultTriggerGet
+                0x0000000000007a2a        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a2a                PWMGenFaultTriggerGet
+ .text.PWMGenFaultStatus
+                0x0000000000007a36       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a36                PWMGenFaultStatus
+ .text.PWMGenFaultClear
+                0x0000000000007a4e       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a4e                PWMGenFaultClear
+ .text.PWMClockSet
+                0x0000000000007a66       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a66                PWMClockSet
+ .text.PWMClockGet
+                0x0000000000007a7a       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a7a                PWMClockGet
+ .text.PWMOutputUpdateMode
+                0x0000000000007a94       0x30 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+                0x0000000000007a94                PWMOutputUpdateMode
+ .text._SysCtlMemTimingGet
+                0x0000000000007ac4       0x24 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlSRAMSizeGet
+                0x0000000000007ae8       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007ae8                SysCtlSRAMSizeGet
+ .text.SysCtlFlashSizeGet
+                0x0000000000007af8       0x3c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007af8                SysCtlFlashSizeGet
+ .text.SysCtlFlashSectorSizeGet
+                0x0000000000007b34       0x38 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007b34                SysCtlFlashSectorSizeGet
+ .text.SysCtlPeripheralPresent
+                0x0000000000007b6c       0x26 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007b6c                SysCtlPeripheralPresent
+ .text.SysCtlPeripheralReady
+                0x0000000000007b92       0x26 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007b92                SysCtlPeripheralReady
+ .text.SysCtlPeripheralPowerOn
+                0x0000000000007bb8       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007bb8                SysCtlPeripheralPowerOn
+ .text.SysCtlPeripheralPowerOff
+                0x0000000000007bda       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007bda                SysCtlPeripheralPowerOff
+ .text.SysCtlPeripheralReset
+                0x0000000000007bfc       0x3a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007bfc                SysCtlPeripheralReset
+ .text.SysCtlPeripheralEnable
+                0x0000000000007c36       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007c36                SysCtlPeripheralEnable
+ .text.SysCtlPeripheralDisable
+                0x0000000000007c58       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007c58                SysCtlPeripheralDisable
+ .text.SysCtlPeripheralSleepEnable
+                0x0000000000007c7a       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007c7a                SysCtlPeripheralSleepEnable
+ .text.SysCtlPeripheralSleepDisable
+                0x0000000000007c9c       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007c9c                SysCtlPeripheralSleepDisable
+ .text.SysCtlPeripheralDeepSleepEnable
+                0x0000000000007cbe       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007cbe                SysCtlPeripheralDeepSleepEnable
+ .text.SysCtlPeripheralDeepSleepDisable
+                0x0000000000007ce0       0x22 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007ce0                SysCtlPeripheralDeepSleepDisable
+ *fill*         0x0000000000007d02        0x2 
+ .text.SysCtlPeripheralClockGating
+                0x0000000000007d04       0x48 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007d04                SysCtlPeripheralClockGating
+ .text.SysCtlIntRegister
+                0x0000000000007d4c       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007d4c                SysCtlIntRegister
+ .text.SysCtlIntUnregister
+                0x0000000000007d60       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007d60                SysCtlIntUnregister
+ *fill*         0x0000000000007d72        0x2 
+ .text.SysCtlIntEnable
+                0x0000000000007d74       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007d74                SysCtlIntEnable
+ .text.SysCtlIntDisable
+                0x0000000000007d84       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007d84                SysCtlIntDisable
+ .text.SysCtlIntClear
+                0x0000000000007d94        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007d94                SysCtlIntClear
+ .text.SysCtlIntStatus
+                0x0000000000007da0       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007da0                SysCtlIntStatus
+ .text.SysCtlLDOSleepSet
+                0x0000000000007db4        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007db4                SysCtlLDOSleepSet
+ .text.SysCtlLDOSleepGet
+                0x0000000000007dc0        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007dc0                SysCtlLDOSleepGet
+ .text.SysCtlLDODeepSleepSet
+                0x0000000000007dcc        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007dcc                SysCtlLDODeepSleepSet
+ .text.SysCtlLDODeepSleepGet
+                0x0000000000007dd8        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007dd8                SysCtlLDODeepSleepGet
+ .text.SysCtlSleepPowerSet
+                0x0000000000007de4        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007de4                SysCtlSleepPowerSet
+ .text.SysCtlDeepSleepPowerSet
+                0x0000000000007df0        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007df0                SysCtlDeepSleepPowerSet
+ .text.SysCtlReset
+                0x0000000000007dfc       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007dfc                SysCtlReset
+ .text.SysCtlSleep
+                0x0000000000007e0c        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007e0c                SysCtlSleep
+ .text.SysCtlDeepSleep
+                0x0000000000007e10       0x20 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007e10                SysCtlDeepSleep
+ .text.SysCtlResetCauseGet
+                0x0000000000007e30        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007e30                SysCtlResetCauseGet
+ .text.SysCtlResetCauseClear
+                0x0000000000007e3c       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007e3c                SysCtlResetCauseClear
+ .text.SysCtlDelay
+                0x0000000000007e4c        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007e4c                SysCtlDelay
+ .text.SysCtlMOSCConfigSet
+                0x0000000000007e54        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007e54                SysCtlMOSCConfigSet
+ .text.SysCtlPIOSCCalibrate
+                0x0000000000007e60       0x48 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007e60                SysCtlPIOSCCalibrate
+ .text.SysCtlResetBehaviorSet
+                0x0000000000007ea8        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007ea8                SysCtlResetBehaviorSet
+ .text.SysCtlResetBehaviorGet
+                0x0000000000007eb4        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007eb4                SysCtlResetBehaviorGet
+ .text.SysCtlClockFreqSet
+                0x0000000000007ec0      0x248 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000007ec0                SysCtlClockFreqSet
+ .text.SysCtlClockSet
+                0x0000000000008108      0x11c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008108                SysCtlClockSet
+ .text.SysCtlClockGet
+                0x0000000000008224      0x12c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008224                SysCtlClockGet
+ .text.SysCtlDeepSleepClockSet
+                0x0000000000008350        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008350                SysCtlDeepSleepClockSet
+ .text.SysCtlDeepSleepClockConfigSet
+                0x000000000000835c       0x60 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000000000000835c                SysCtlDeepSleepClockConfigSet
+ .text.SysCtlPWMClockSet
+                0x00000000000083bc       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000083bc                SysCtlPWMClockSet
+ .text.SysCtlPWMClockGet
+                0x00000000000083d0       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000083d0                SysCtlPWMClockGet
+ .text.SysCtlGPIOAHBEnable
+                0x00000000000083e8       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000083e8                SysCtlGPIOAHBEnable
+ .text.SysCtlGPIOAHBDisable
+                0x0000000000008400       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008400                SysCtlGPIOAHBDisable
+ .text.SysCtlUSBPLLEnable
+                0x000000000000841c       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000000000000841c                SysCtlUSBPLLEnable
+ .text.SysCtlUSBPLLDisable
+                0x000000000000842c       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000000000000842c                SysCtlUSBPLLDisable
+ .text.SysCtlVoltageEventConfig
+                0x000000000000843c        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x000000000000843c                SysCtlVoltageEventConfig
+ .text.SysCtlVoltageEventStatus
+                0x0000000000008448        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008448                SysCtlVoltageEventStatus
+ .text.SysCtlVoltageEventClear
+                0x0000000000008454       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008454                SysCtlVoltageEventClear
+ .text.SysCtlVCOGet
+                0x0000000000008464       0x78 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008464                SysCtlVCOGet
+ .text.SysCtlNMIStatus
+                0x00000000000084dc        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000084dc                SysCtlNMIStatus
+ .text.SysCtlNMIClear
+                0x00000000000084e8       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000084e8                SysCtlNMIClear
+ .text.SysCtlClockOutConfig
+                0x00000000000084f8       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000084f8                SysCtlClockOutConfig
+ .text.SysCtlAltClkConfig
+                0x0000000000008508        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x0000000000008508                SysCtlAltClkConfig
+ .text._TimerIntNumberGet
+                0x0000000000008514       0x50 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .text.TimerEnable
+                0x0000000000008564       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008564                TimerEnable
+ .text.TimerDisable
+                0x0000000000008574       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008574                TimerDisable
+ .text.TimerConfigure
+                0x0000000000008584       0x58 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008584                TimerConfigure
+ .text.TimerControlLevel
+                0x00000000000085dc       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000085dc                TimerControlLevel
+ *fill*         0x00000000000085fa        0x2 
+ .text.TimerControlTrigger
+                0x00000000000085fc       0x54 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000085fc                TimerControlTrigger
+ .text.TimerControlEvent
+                0x0000000000008650       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008650                TimerControlEvent
+ .text.TimerControlStall
+                0x0000000000008664       0x1e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008664                TimerControlStall
+ .text.TimerControlWaitOnTrigger
+                0x0000000000008682       0x2e /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008682                TimerControlWaitOnTrigger
+ .text.TimerRTCEnable
+                0x00000000000086b0        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086b0                TimerRTCEnable
+ .text.TimerRTCDisable
+                0x00000000000086ba        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086ba                TimerRTCDisable
+ .text.TimerClockSourceSet
+                0x00000000000086c4        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086c4                TimerClockSourceSet
+ .text.TimerClockSourceGet
+                0x00000000000086ca        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086ca                TimerClockSourceGet
+ .text.TimerPrescaleSet
+                0x00000000000086d0       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086d0                TimerPrescaleSet
+ .text.TimerPrescaleGet
+                0x00000000000086e2        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086e2                TimerPrescaleGet
+ .text.TimerPrescaleMatchSet
+                0x00000000000086ec       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086ec                TimerPrescaleMatchSet
+ .text.TimerPrescaleMatchGet
+                0x00000000000086fe        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000086fe                TimerPrescaleMatchGet
+ .text.TimerLoadSet
+                0x0000000000008708       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008708                TimerLoadSet
+ .text.TimerLoadGet
+                0x000000000000871a        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x000000000000871a                TimerLoadGet
+ .text.TimerLoadSet64
+                0x0000000000008724        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008724                TimerLoadSet64
+ .text.TimerLoadGet64
+                0x000000000000872a       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x000000000000872a                TimerLoadGet64
+ .text.TimerValueGet
+                0x0000000000008742        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008742                TimerValueGet
+ .text.TimerValueGet64
+                0x000000000000874c       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x000000000000874c                TimerValueGet64
+ .text.TimerMatchSet
+                0x0000000000008764       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008764                TimerMatchSet
+ .text.TimerMatchGet
+                0x0000000000008776        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008776                TimerMatchGet
+ .text.TimerMatchSet64
+                0x0000000000008780        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008780                TimerMatchSet64
+ .text.TimerMatchGet64
+                0x0000000000008786       0x18 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008786                TimerMatchGet64
+ .text.TimerIntRegister
+                0x000000000000879e       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x000000000000879e                TimerIntRegister
+ .text.TimerIntUnregister
+                0x00000000000087b8       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087b8                TimerIntUnregister
+ .text.TimerIntEnable
+                0x00000000000087ce        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087ce                TimerIntEnable
+ .text.TimerIntDisable
+                0x00000000000087d6        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087d6                TimerIntDisable
+ .text.TimerIntStatus
+                0x00000000000087e0        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087e0                TimerIntStatus
+ .text.TimerIntClear
+                0x00000000000087ea        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087ea                TimerIntClear
+ .text.TimerSynchronize
+                0x00000000000087ee        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087ee                TimerSynchronize
+ .text.TimerADCEventSet
+                0x00000000000087f2        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087f2                TimerADCEventSet
+ .text.TimerADCEventGet
+                0x00000000000087f6        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087f6                TimerADCEventGet
+ .text.TimerDMAEventSet
+                0x00000000000087fa        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087fa                TimerDMAEventSet
+ .text.TimerDMAEventGet
+                0x00000000000087fe        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x00000000000087fe                TimerDMAEventGet
+ .text.TimerUpdateMode
+                0x0000000000008802       0x26 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+                0x0000000000008802                TimerUpdateMode
+ .text._UARTIntNumberGet
+                0x0000000000008828       0x44 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTParityModeSet
+                0x000000000000886c        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x000000000000886c                UARTParityModeSet
+ .text.UARTParityModeGet
+                0x0000000000008878        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008878                UARTParityModeGet
+ .text.UARTFIFOLevelSet
+                0x0000000000008880        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008880                UARTFIFOLevelSet
+ .text.UARTFIFOLevelGet
+                0x0000000000008886       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008886                UARTFIFOLevelGet
+ .text.UARTConfigGetExpClk
+                0x0000000000008896       0x28 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008896                UARTConfigGetExpClk
+ .text.UARTEnable
+                0x00000000000088be       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000088be                UARTEnable
+ .text.UARTDisable
+                0x00000000000088d4       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000088d4                UARTDisable
+ .text.UARTConfigSetExpClk
+                0x00000000000088f0       0x48 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000088f0                UARTConfigSetExpClk
+ .text.UARTFIFOEnable
+                0x0000000000008938        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008938                UARTFIFOEnable
+ .text.UARTFIFODisable
+                0x0000000000008942        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008942                UARTFIFODisable
+ .text.UARTEnableSIR
+                0x000000000000894c       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x000000000000894c                UARTEnableSIR
+ .text.UARTDisableSIR
+                0x000000000000895e        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x000000000000895e                UARTDisableSIR
+ .text.UARTSmartCardEnable
+                0x0000000000008968       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008968                UARTSmartCardEnable
+ .text.UARTSmartCardDisable
+                0x000000000000897e        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x000000000000897e                UARTSmartCardDisable
+ .text.UARTModemControlSet
+                0x0000000000008988        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008988                UARTModemControlSet
+ .text.UARTModemControlClear
+                0x0000000000008994        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008994                UARTModemControlClear
+ .text.UARTModemControlGet
+                0x00000000000089a2        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089a2                UARTModemControlGet
+ .text.UARTModemStatusGet
+                0x00000000000089aa        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089aa                UARTModemStatusGet
+ .text.UARTFlowControlSet
+                0x00000000000089b4        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089b4                UARTFlowControlSet
+ .text.UARTFlowControlGet
+                0x00000000000089c0        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089c0                UARTFlowControlGet
+ .text.UARTTxIntModeSet
+                0x00000000000089c8        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089c8                UARTTxIntModeSet
+ .text.UARTTxIntModeGet
+                0x00000000000089d4        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089d4                UARTTxIntModeGet
+ .text.UARTCharsAvail
+                0x00000000000089dc        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089dc                UARTCharsAvail
+ .text.UARTSpaceAvail
+                0x00000000000089e8        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089e8                UARTSpaceAvail
+ .text.UARTCharGetNonBlocking
+                0x00000000000089f4        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x00000000000089f4                UARTCharGetNonBlocking
+ .text.UARTCharGet
+                0x0000000000008a02        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a02                UARTCharGet
+ .text.UARTCharPutNonBlocking
+                0x0000000000008a0c       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a0c                UARTCharPutNonBlocking
+ .text.UARTCharPut
+                0x0000000000008a1c        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a1c                UARTCharPut
+ .text.UARTBreakCtl
+                0x0000000000008a26       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a26                UARTBreakCtl
+ .text.UARTBusy
+                0x0000000000008a3c        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a3c                UARTBusy
+ .text.UARTIntRegister
+                0x0000000000008a44       0x1a /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a44                UARTIntRegister
+ .text.UARTIntUnregister
+                0x0000000000008a5e       0x16 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a5e                UARTIntUnregister
+ .text.UARTIntEnable
+                0x0000000000008a74        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a74                UARTIntEnable
+ .text.UARTIntDisable
+                0x0000000000008a7c        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a7c                UARTIntDisable
+ .text.UARTIntStatus
+                0x0000000000008a86        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a86                UARTIntStatus
+ .text.UARTIntClear
+                0x0000000000008a90        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a90                UARTIntClear
+ .text.UARTDMAEnable
+                0x0000000000008a94        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a94                UARTDMAEnable
+ .text.UARTDMADisable
+                0x0000000000008a9c        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008a9c                UARTDMADisable
+ .text.UARTRxErrorGet
+                0x0000000000008aa6        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008aa6                UARTRxErrorGet
+ .text.UARTRxErrorClear
+                0x0000000000008aae        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008aae                UARTRxErrorClear
+ .text.UARTClockSourceSet
+                0x0000000000008ab4        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008ab4                UARTClockSourceSet
+ .text.UARTClockSourceGet
+                0x0000000000008aba        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008aba                UARTClockSourceGet
+ .text.UART9BitEnable
+                0x0000000000008ac0        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008ac0                UART9BitEnable
+ .text.UART9BitDisable
+                0x0000000000008ace        0xe /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008ace                UART9BitDisable
+ .text.UART9BitAddrSet
+                0x0000000000008adc        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008adc                UART9BitAddrSet
+ .text.UART9BitAddrSend
+                0x0000000000008ae6       0x2c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008ae6                UART9BitAddrSend
+ .text.UARTLoopbackEnable
+                0x0000000000008b12        0xa /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000008b12                UARTLoopbackEnable
+ .text.uDMAEnable
+                0x0000000000008b1c        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b1c                uDMAEnable
+ .text.uDMADisable
+                0x0000000000008b28        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b28                uDMADisable
+ .text.uDMAErrorStatusGet
+                0x0000000000008b34        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b34                uDMAErrorStatusGet
+ .text.uDMAErrorStatusClear
+                0x0000000000008b40        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b40                uDMAErrorStatusClear
+ .text.uDMAChannelEnable
+                0x0000000000008b4c       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b4c                uDMAChannelEnable
+ .text.uDMAChannelDisable
+                0x0000000000008b60       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b60                uDMAChannelDisable
+ .text.uDMAChannelIsEnabled
+                0x0000000000008b74       0x1c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b74                uDMAChannelIsEnabled
+ .text.uDMAControlBaseSet
+                0x0000000000008b90        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b90                uDMAControlBaseSet
+ .text.uDMAControlBaseGet
+                0x0000000000008b9c        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008b9c                uDMAControlBaseGet
+ .text.uDMAControlAlternateBaseGet
+                0x0000000000008ba8        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008ba8                uDMAControlAlternateBaseGet
+ .text.uDMAChannelRequest
+                0x0000000000008bb4       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008bb4                uDMAChannelRequest
+ .text.uDMAChannelAttributeEnable
+                0x0000000000008bc8       0x50 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008bc8                uDMAChannelAttributeEnable
+ .text.uDMAChannelAttributeDisable
+                0x0000000000008c18       0x50 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008c18                uDMAChannelAttributeDisable
+ .text.uDMAChannelAttributeGet
+                0x0000000000008c68       0x4c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008c68                uDMAChannelAttributeGet
+ .text.uDMAChannelControlSet
+                0x0000000000008cb4       0x20 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008cb4                uDMAChannelControlSet
+ .text.uDMAChannelTransferSet
+                0x0000000000008cd4       0x88 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008cd4                uDMAChannelTransferSet
+ .text.uDMAChannelScatterGatherSet
+                0x0000000000008d5c       0x50 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008d5c                uDMAChannelScatterGatherSet
+ .text.uDMAChannelSizeGet
+                0x0000000000008dac       0x20 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008dac                uDMAChannelSizeGet
+ .text.uDMAChannelModeGet
+                0x0000000000008dcc       0x24 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008dcc                uDMAChannelModeGet
+ .text.uDMAIntRegister
+                0x0000000000008df0       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008df0                uDMAIntRegister
+ .text.uDMAIntUnregister
+                0x0000000000008e02       0x12 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008e02                uDMAIntUnregister
+ .text.uDMAIntStatus
+                0x0000000000008e14        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008e14                uDMAIntStatus
+ .text.uDMAIntClear
+                0x0000000000008e20        0xc /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008e20                uDMAIntClear
+ .text.uDMAChannelAssign
+                0x0000000000008e2c       0x30 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008e2c                uDMAChannelAssign
+ .text.uDMAChannelSelectSecondary
+                0x0000000000008e5c       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008e5c                uDMAChannelSelectSecondary
+ .text.uDMAChannelSelectDefault
+                0x0000000000008e6c       0x10 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+                0x0000000000008e6c                uDMAChannelSelectDefault
+ .text.CPUcpsid
+                0x0000000000008e7c        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000000000008e7c                CPUcpsid
+ .text.CPUprimask
+                0x0000000000008e84        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000000000008e84                CPUprimask
+ .text.CPUcpsie
+                0x0000000000008e8a        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000000000008e8a                CPUcpsie
+ .text.CPUwfi   0x0000000000008e92        0x4 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000000000008e92                CPUwfi
+ .text.CPUbasepriSet
+                0x0000000000008e96        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000000000008e96                CPUbasepriSet
+ .text.CPUbasepriGet
+                0x0000000000008e9c        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000000000008e9c                CPUbasepriGet
+ *fill*         0x0000000000008ea2        0x2 
+ .text._exit    0x0000000000008ea4        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+                0x0000000000008ea4                _exit
+                0x0000000000008ea8                . = ALIGN (0x4)
+ *(.ctors)
+                0x0000000000008ea8                . = ALIGN (0x4)
+ *(.dtors)
+                0x0000000000008ea8                . = ALIGN (0x4)
+                0x0000000000008ea8                __init_array_start = .
+ *(.init_array*)
+ .init_array    0x0000000000008ea8        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .init_array.00000
+                0x0000000000008eac        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+                0x0000000000008eb0                __init_array_end = .
+ *(.init)
+ .init          0x0000000000008eb0        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000000008eb0                _init
+ .init          0x0000000000008eb4        0x8 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ *(.fini*)
+ .fini          0x0000000000008ebc        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000000008ebc                _fini
+ .fini_array    0x0000000000008ec0        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini          0x0000000000008ec4        0x8 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                [!provide]                        PROVIDE (__etext, .)
+                [!provide]                        PROVIDE (_etext, .)
+                [!provide]                        PROVIDE (etext, .)
+
+.glue_7         0x0000000000008ecc        0x0
+ .glue_7        0x0000000000008ecc        0x0 linker stubs
+
+.glue_7t        0x0000000000008ecc        0x0
+ .glue_7t       0x0000000000008ecc        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000008ecc        0x0
+ .vfp11_veneer  0x0000000000008ecc        0x0 linker stubs
+
+.v4_bx          0x0000000000008ecc        0x0
+ .v4_bx         0x0000000000008ecc        0x0 linker stubs
+
+.iplt           0x0000000000008ecc        0x0
+ .iplt          0x0000000000008ecc        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+
+.rodata         0x0000000000008ecc      0x724
+ *(.rodata)
+ .rodata        0x0000000000008ecc        0x5 ./FreeRTOS/tasks.o
+ *fill*         0x0000000000008ed1        0x3 
+ .rodata        0x0000000000008ed4       0x14 ./source/logger.o
+ .rodata        0x0000000000008ee8       0x35 ./source/main.o
+ *fill*         0x0000000000008f1d        0x3 
+ .rodata        0x0000000000008f20       0x1f ./source/xprintf.o
+ *(.rodata*)
+ *fill*         0x0000000000008f3f        0x1 
+ .rodata.pcInterruptPriorityRegisters
+                0x0000000000008f40        0x4 ./FreeRTOS/port.o
+ .rodata._global_impure_ptr
+                0x0000000000008f44        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+                0x0000000000008f44                _global_impure_ptr
+ .rodata.g_ppui32GPIOIntMapSnowflake
+                0x0000000000008f48       0xd8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .rodata.g_pui32GPIOBaseAddrs
+                0x0000000000009020       0x90 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .rodata.g_ppui32GPIOIntMapBlizzard
+                0x00000000000090b0       0xc0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .rodata.g_pui32Priority
+                0x0000000000009170       0x20 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32Dii16Regs
+                0x0000000000009190       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32PendRegs
+                0x00000000000091a4       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32Regs
+                0x00000000000091b8       0x9c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32EnRegs
+                0x0000000000009254       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32UnpendRegs
+                0x0000000000009268       0x14 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pppui32XTALtoVCO
+                0x000000000000927c      0x1b0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pui32VCOFrequencies
+                0x000000000000942c        0x8 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_sXTALtoMEMTIM
+                0x0000000000009434       0x30 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pui32Xtals
+                0x0000000000009464       0x6c /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_ppui32TimerIntMapSnowflake
+                0x00000000000094d0       0x40 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .rodata.g_ppui32TimerIntMap
+                0x0000000000009510       0x60 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .rodata.g_ppui32UARTIntMap
+                0x0000000000009570       0x40 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .rodata.g_ppui32UARTIntMapSnowflake
+                0x00000000000095b0       0x40 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+
+.eh_frame       0x00000000000095f0        0x4
+ .eh_frame      0x00000000000095f0        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .eh_frame      0x00000000000095f0        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+
+.data           0x0000000020000000      0x464 load address 0x00000000000095f4
+                0x00000000000095f4                __data_load__ = LOADADDR (.data)
+                0x0000000020000000                __data_start__ = .
+ *(.data)
+ .data          0x0000000020000000        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .data          0x0000000020000000        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x0000000020000000                __dso_handle
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .data          0x0000000020000004        0x0 ./startup.o
+ .data          0x0000000020000004        0x0 ./FreeRTOS/event_groups.o
+ .data          0x0000000020000004        0x0 ./FreeRTOS/heap_1.o
+ .data          0x0000000020000004        0x0 ./FreeRTOS/list.o
+ .data          0x0000000020000004        0x0 ./FreeRTOS/port.o
+ .data          0x0000000020000004        0x0 ./FreeRTOS/queue.o
+ .data          0x0000000020000004        0x0 ./FreeRTOS/tasks.o
+ .data          0x0000000020000004        0x0 ./FreeRTOS/timers.o
+ .data          0x0000000020000004        0x0 ./source/can.o
+ .data          0x0000000020000004        0x0 ./source/control.o
+ .data          0x0000000020000004        0x0 ./source/debug.o
+ .data          0x0000000020000004        0x0 ./source/logger.o
+ .data          0x0000000020000004        0x0 ./source/main.o
+ .data          0x0000000020000004        0x0 ./source/pinconfig.o
+ .data          0x0000000020000004        0x0 ./source/sensors.o
+ .data          0x0000000020000004        0x0 ./source/system.o
+ .data          0x0000000020000004        0x0 ./source/xprintf.o
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memset.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+ .data          0x0000000020000004        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .data          0x0000000020000004        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ *(.data*)
+ .data.uxCriticalNesting
+                0x0000000020000004        0x4 ./FreeRTOS/port.o
+ .data.leds_table
+                0x0000000020000008       0x20 ./source/debug.o
+                0x0000000020000008                leds_table
+ .data.adc_src  0x0000000020000028        0x4 ./source/sensors.o
+                0x0000000020000028                adc_src
+ .data.adc_dest
+                0x000000002000002c        0x4 ./source/sensors.o
+                0x000000002000002c                adc_dest
+ .data.hbridge_drive_mode
+                0x0000000020000030        0x4 ./source/system.o
+ .data._impure_ptr
+                0x0000000020000034        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+                0x0000000020000034                _impure_ptr
+ .data.impure_data
+                0x0000000020000038      0x428 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .data.__atexit_recursive_mutex
+                0x0000000020000460        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+                0x0000000020000460                __atexit_recursive_mutex
+                0x0000000020000464                . = ALIGN (0x4)
+                0x0000000020000464                __data_end__ = .
+
+.jcr            0x0000000020000464        0x4 load address 0x0000000000009a58
+ .jcr           0x0000000020000464        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .jcr           0x0000000020000464        0x4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+
+.igot.plt       0x0000000020000468        0x0 load address 0x0000000000009a5c
+ .igot.plt      0x0000000020000468        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+
+vtable          0x0000000020000800      0x400 load address 0x0000000000009a5c
+                [!provide]                        PROVIDE (__start_vtable, .)
+ vtable         0x0000000020000800      0x400 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                [!provide]                        PROVIDE (__stop_vtable, .)
+
+.ARM.exidx      0x0000000000009e5c        0x8
+                0x0000000000009e5c                __exidx_start = .
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0000000000009e5c        0x8 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+                0x0000000000009e64                __exidx_end = .
+
+.ARM.extab      0x0000000000009e64        0x0
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x0000000000009e64        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+
+.rel.dyn        0x0000000000009e64        0x0
+ .rel.iplt      0x0000000000009e64        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+
+.bss            0x0000000020000c00    0x3e02c
+                0x0000000020000c00                __bss_start__ = .
+ *(.shbss)
+ *(.bss)
+ .bss           0x0000000020000c00        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .bss           0x0000000020000c00       0x1c /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .bss           0x0000000020000c1c        0x0 ./startup.o
+ .bss           0x0000000020000c1c        0x0 ./FreeRTOS/event_groups.o
+ .bss           0x0000000020000c1c        0x0 ./FreeRTOS/heap_1.o
+ .bss           0x0000000020000c1c        0x0 ./FreeRTOS/list.o
+ .bss           0x0000000020000c1c        0x0 ./FreeRTOS/port.o
+ .bss           0x0000000020000c1c        0x0 ./FreeRTOS/queue.o
+ .bss           0x0000000020000c1c        0x0 ./FreeRTOS/tasks.o
+ .bss           0x0000000020000c1c        0x0 ./FreeRTOS/timers.o
+ .bss           0x0000000020000c1c        0x0 ./source/can.o
+ .bss           0x0000000020000c1c        0x0 ./source/control.o
+ .bss           0x0000000020000c1c        0x0 ./source/debug.o
+ .bss           0x0000000020000c1c        0x0 ./source/logger.o
+ .bss           0x0000000020000c1c        0x0 ./source/main.o
+ .bss           0x0000000020000c1c        0x0 ./source/pinconfig.o
+ .bss           0x0000000020000c1c        0x0 ./source/sensors.o
+ .bss           0x0000000020000c1c        0x0 ./source/system.o
+ .bss           0x0000000020000c1c        0x0 ./source/xprintf.o
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memset.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+ .bss           0x0000000020000c1c        0x0 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .bss           0x0000000020000c1c        0x0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ *(.bss.*)
+ .bss.pui32Stack
+                0x0000000020000c1c      0x200 ./startup.o
+ .bss.ucHeap    0x0000000020000e1c    0x3d090 ./FreeRTOS/heap_1.o
+ .bss.xNextFreeByte
+                0x000000002003deac        0x4 ./FreeRTOS/heap_1.o
+ .bss.pucAlignedHeap.5968
+                0x000000002003deb0        0x4 ./FreeRTOS/heap_1.o
+ .bss.ucMaxSysCallPriority
+                0x000000002003deb4        0x1 ./FreeRTOS/port.o
+ *fill*         0x000000002003deb5        0x3 
+ .bss.ulMaxPRIGROUPValue
+                0x000000002003deb8        0x4 ./FreeRTOS/port.o
+ .bss.pxCurrentTCB
+                0x000000002003debc        0x4 ./FreeRTOS/tasks.o
+                0x000000002003debc                pxCurrentTCB
+ .bss.pxReadyTasksLists
+                0x000000002003dec0      0x140 ./FreeRTOS/tasks.o
+ .bss.xDelayedTaskList1
+                0x000000002003e000       0x14 ./FreeRTOS/tasks.o
+ .bss.xDelayedTaskList2
+                0x000000002003e014       0x14 ./FreeRTOS/tasks.o
+ .bss.pxDelayedTaskList
+                0x000000002003e028        0x4 ./FreeRTOS/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x000000002003e02c        0x4 ./FreeRTOS/tasks.o
+ .bss.xPendingReadyList
+                0x000000002003e030       0x14 ./FreeRTOS/tasks.o
+ .bss.xTasksWaitingTermination
+                0x000000002003e044       0x14 ./FreeRTOS/tasks.o
+ .bss.uxDeletedTasksWaitingCleanUp
+                0x000000002003e058        0x4 ./FreeRTOS/tasks.o
+ .bss.xSuspendedTaskList
+                0x000000002003e05c       0x14 ./FreeRTOS/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x000000002003e070        0x4 ./FreeRTOS/tasks.o
+ .bss.xTickCount
+                0x000000002003e074        0x4 ./FreeRTOS/tasks.o
+ .bss.uxTopReadyPriority
+                0x000000002003e078        0x4 ./FreeRTOS/tasks.o
+ .bss.xSchedulerRunning
+                0x000000002003e07c        0x4 ./FreeRTOS/tasks.o
+ .bss.uxPendedTicks
+                0x000000002003e080        0x4 ./FreeRTOS/tasks.o
+ .bss.xYieldPending
+                0x000000002003e084        0x4 ./FreeRTOS/tasks.o
+ .bss.xNumOfOverflows
+                0x000000002003e088        0x4 ./FreeRTOS/tasks.o
+ .bss.uxTaskNumber
+                0x000000002003e08c        0x4 ./FreeRTOS/tasks.o
+ .bss.xNextTaskUnblockTime
+                0x000000002003e090        0x4 ./FreeRTOS/tasks.o
+ .bss.xIdleTaskHandle
+                0x000000002003e094        0x4 ./FreeRTOS/tasks.o
+ .bss.uxSchedulerSuspended
+                0x000000002003e098        0x4 ./FreeRTOS/tasks.o
+ .bss.current_accumulator
+                0x000000002003e09c        0x4 ./source/control.o
+ .bss.velocity_accumulator
+                0x000000002003e0a0        0x4 ./source/control.o
+ .bss.position_accumulator
+                0x000000002003e0a4        0x4 ./source/control.o
+ .bss.prev_control_mode.6150
+                0x000000002003e0a8        0x4 ./source/control.o
+ .bss.duty_cycle.6160
+                0x000000002003e0ac        0x4 ./source/control.o
+ .bss.tx_buffer
+                0x000000002003e0b0      0x200 ./source/logger.o
+ .bss.buf_head  0x000000002003e2b0        0x4 ./source/logger.o
+ .bss.buf_tail  0x000000002003e2b4        0x4 ./source/logger.o
+ .bss.motor_velocity_rads
+                0x000000002003e2b8        0x4 ./source/sensors.o
+ .bss.motor_position_rads
+                0x000000002003e2bc        0x4 ./source/sensors.o
+ .bss.motor_current_amps
+                0x000000002003e2c0        0x4 ./source/sensors.o
+ .bss.vbus_volts
+                0x000000002003e2c4        0x4 ./source/sensors.o
+ .bss.vbatt_volts
+                0x000000002003e2c8        0x4 ./source/sensors.o
+ .bss.motor_temp_celsius
+                0x000000002003e2cc        0x4 ./source/sensors.o
+ .bss.hbridge_temp_celsius
+                0x000000002003e2d0        0x4 ./source/sensors.o
+ .bss.system_state
+                0x000000002003e2d4        0x4 ./source/system.o
+ .bss.system_fault_flags
+                0x000000002003e2d8        0x4 ./source/system.o
+ .bss.motor_control_mode
+                0x000000002003e2dc        0x4 ./source/system.o
+ .bss.motor_target_value
+                0x000000002003e2e0        0x4 ./source/system.o
+ .bss.sensor_update_mode
+                0x000000002003e2e4        0x4 ./source/system.o
+ .bss.sysclk_freq
+                0x000000002003e2e8        0x4 ./source/system.o
+ .bss.outptr    0x000000002003e2ec        0x4 ./source/xprintf.o
+ .bss.g_pui8OversampleFactor
+                0x000000002003e2f0        0x6 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+ *(COMMON)
+ *fill*         0x000000002003e2f6        0x2 
+ COMMON         0x000000002003e2f8       0x50 ./FreeRTOS/queue.o
+                0x000000002003e2f8                xQueueRegistry
+ COMMON         0x000000002003e348        0x4 ./source/control.o
+                0x000000002003e348                pwm_period_ticks
+ COMMON         0x000000002003e34c        0x4 ./source/logger.o
+                0x000000002003e34c                log_msg_queue
+ COMMON         0x000000002003e350       0x10 ./source/main.o
+                0x000000002003e350                control_task_handle
+                0x000000002003e354                led_task_handle
+                0x000000002003e358                logger_task_handle
+                0x000000002003e35c                sensor_task_handle
+ *fill*         0x000000002003e360       0xa0 
+ COMMON         0x000000002003e400      0x800 ./source/sensors.o
+                0x000000002003e400                rt_adc_buffer
+                0x000000002003e800                uDMA_control_table
+ COMMON         0x000000002003ec00        0x8 ./source/xprintf.o
+                0x000000002003ec00                xfunc_in
+                0x000000002003ec04                xfunc_out
+ COMMON         0x000000002003ec08       0x21 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x000000002003ec08                __lock___atexit_recursive_mutex
+                0x000000002003ec0c                __lock___arc4random_mutex
+                0x000000002003ec10                __lock___env_recursive_mutex
+                0x000000002003ec14                __lock___sinit_recursive_mutex
+                0x000000002003ec18                __lock___malloc_recursive_mutex
+                0x000000002003ec1c                __lock___at_quick_exit_mutex
+                0x000000002003ec20                __lock___dd_hash_mutex
+                0x000000002003ec24                __lock___tz_mutex
+                0x000000002003ec28                __lock___sfp_recursive_mutex
+                0x000000002003ec2c                . = ALIGN (0x4)
+ *fill*         0x000000002003ec29        0x3 
+                0x000000002003ec2c                __bss_end__ = .
+
+.heap           0x000000002003ec2c        0x0
+                0x000000002003ec2c                __heap_start__ = .
+                0x000000002003ec2c                end = __heap_start__
+                0x000000002003ec2c                _end = end
+                0x000000002003ec2c                __end = end
+ *(.heap)
+                0x000000002003ec2c                __heap_end__ = .
+                0x000000002003ec2c                __HeapLimit = __heap_end__
+
+.stack          0x000000002003ec30        0x0
+                0x000000002003ec30                _stack = .
+                0x000000002003ec30                __stack = .
+ *(.stack)
+START GROUP
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+LOAD /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a
+END GROUP
+START GROUP
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libg.a
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+END GROUP
+START GROUP
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a
+END GROUP
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+LOAD /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+OUTPUT(MotorController.out elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x30
+ .ARM.attributes
+                0x0000000000000000       0x22 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .ARM.attributes
+                0x0000000000000022       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .ARM.attributes
+                0x0000000000000056       0x20 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .ARM.attributes
+                0x0000000000000076       0x39 ./startup.o
+ .ARM.attributes
+                0x00000000000000af       0x39 ./FreeRTOS/event_groups.o
+ .ARM.attributes
+                0x00000000000000e8       0x39 ./FreeRTOS/heap_1.o
+ .ARM.attributes
+                0x0000000000000121       0x39 ./FreeRTOS/list.o
+ .ARM.attributes
+                0x000000000000015a       0x39 ./FreeRTOS/port.o
+ .ARM.attributes
+                0x0000000000000193       0x39 ./FreeRTOS/queue.o
+ .ARM.attributes
+                0x00000000000001cc       0x39 ./FreeRTOS/tasks.o
+ .ARM.attributes
+                0x0000000000000205       0x39 ./FreeRTOS/timers.o
+ .ARM.attributes
+                0x000000000000023e       0x39 ./source/can.o
+ .ARM.attributes
+                0x0000000000000277       0x39 ./source/control.o
+ .ARM.attributes
+                0x00000000000002b0       0x39 ./source/debug.o
+ .ARM.attributes
+                0x00000000000002e9       0x39 ./source/logger.o
+ .ARM.attributes
+                0x0000000000000322       0x39 ./source/main.o
+ .ARM.attributes
+                0x000000000000035b       0x39 ./source/pinconfig.o
+ .ARM.attributes
+                0x0000000000000394       0x39 ./source/sensors.o
+ .ARM.attributes
+                0x00000000000003cd       0x39 ./source/system.o
+ .ARM.attributes
+                0x0000000000000406       0x39 ./source/xprintf.o
+ .ARM.attributes
+                0x000000000000043f       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000473       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000000000004a7       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000000004db       0x20 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000000004fb       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000000000000052f       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x0000000000000563       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x0000000000000597       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000000005cb       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x00000000000005ff       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x0000000000000633       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .ARM.attributes
+                0x000000000000066e       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .ARM.attributes
+                0x00000000000006a9       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .ARM.attributes
+                0x00000000000006e4       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+ .ARM.attributes
+                0x000000000000071f       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .ARM.attributes
+                0x000000000000075a       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .ARM.attributes
+                0x0000000000000795       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .ARM.attributes
+                0x00000000000007d0       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+ .ARM.attributes
+                0x000000000000080b       0x3b /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .ARM.attributes
+                0x0000000000000846       0x22 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000000000000868       0x22 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x000000000000088a       0x22 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000000000008ac       0x22 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x00000000000008ce       0x22 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x00000000000008f0       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000000000000924       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .ARM.attributes
+                0x0000000000000958       0x22 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+
+.comment        0x0000000000000000       0xef
+ .comment       0x0000000000000000       0x7f ./startup.o
+                                         0x80 (size before relaxing)
+ .comment       0x000000000000007f       0x80 ./FreeRTOS/event_groups.o
+ .comment       0x000000000000007f       0x80 ./FreeRTOS/heap_1.o
+ .comment       0x000000000000007f       0x80 ./FreeRTOS/list.o
+ .comment       0x000000000000007f       0x80 ./FreeRTOS/port.o
+ .comment       0x000000000000007f       0x80 ./FreeRTOS/queue.o
+ .comment       0x000000000000007f       0x80 ./FreeRTOS/tasks.o
+ .comment       0x000000000000007f       0x80 ./FreeRTOS/timers.o
+ .comment       0x000000000000007f       0x80 ./source/can.o
+ .comment       0x000000000000007f       0x80 ./source/control.o
+ .comment       0x000000000000007f       0x80 ./source/debug.o
+ .comment       0x000000000000007f       0x80 ./source/logger.o
+ .comment       0x000000000000007f       0x80 ./source/main.o
+ .comment       0x000000000000007f       0x80 ./source/pinconfig.o
+ .comment       0x000000000000007f       0x80 ./source/sensors.o
+ .comment       0x000000000000007f       0x80 ./source/system.o
+ .comment       0x000000000000007f       0x80 ./source/xprintf.o
+ .comment       0x000000000000007f       0x70 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(adc.o)
+                                         0x71 (size before relaxing)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(gpio.o)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(pwm.o)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(timer.o)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(udma.o)
+ .comment       0x00000000000000ef       0x71 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc/libdriver.a(cpu.o)
+
+.debug_info     0x0000000000000000     0x9152
+ .debug_info    0x0000000000000000      0x1ac ./startup.o
+ .debug_info    0x00000000000001ac     0x1187 ./FreeRTOS/event_groups.o
+ .debug_info    0x0000000000001333      0x9df ./FreeRTOS/heap_1.o
+ .debug_info    0x0000000000001d12      0xac9 ./FreeRTOS/list.o
+ .debug_info    0x00000000000027db      0x50e ./FreeRTOS/port.o
+ .debug_info    0x0000000000002ce9     0x1b8f ./FreeRTOS/queue.o
+ .debug_info    0x0000000000004878     0x2742 ./FreeRTOS/tasks.o
+ .debug_info    0x0000000000006fba      0x896 ./FreeRTOS/timers.o
+ .debug_info    0x0000000000007850       0x8d ./source/can.o
+ .debug_info    0x00000000000078dd      0x4e4 ./source/control.o
+ .debug_info    0x0000000000007dc1      0x1b1 ./source/debug.o
+ .debug_info    0x0000000000007f72      0x441 ./source/logger.o
+ .debug_info    0x00000000000083b3      0x1bd ./source/main.o
+ .debug_info    0x0000000000008570       0xb6 ./source/pinconfig.o
+ .debug_info    0x0000000000008626      0x3c4 ./source/sensors.o
+ .debug_info    0x00000000000089ea      0x260 ./source/system.o
+ .debug_info    0x0000000000008c4a      0x508 ./source/xprintf.o
+
+.debug_abbrev   0x0000000000000000     0x19c1
+ .debug_abbrev  0x0000000000000000       0xd0 ./startup.o
+ .debug_abbrev  0x00000000000000d0      0x2cb ./FreeRTOS/event_groups.o
+ .debug_abbrev  0x000000000000039b      0x24b ./FreeRTOS/heap_1.o
+ .debug_abbrev  0x00000000000005e6      0x1df ./FreeRTOS/list.o
+ .debug_abbrev  0x00000000000007c5      0x196 ./FreeRTOS/port.o
+ .debug_abbrev  0x000000000000095b      0x2b9 ./FreeRTOS/queue.o
+ .debug_abbrev  0x0000000000000c14      0x323 ./FreeRTOS/tasks.o
+ .debug_abbrev  0x0000000000000f37      0x178 ./FreeRTOS/timers.o
+ .debug_abbrev  0x00000000000010af       0x3f ./source/can.o
+ .debug_abbrev  0x00000000000010ee      0x146 ./source/control.o
+ .debug_abbrev  0x0000000000001234      0x102 ./source/debug.o
+ .debug_abbrev  0x0000000000001336      0x1af ./source/logger.o
+ .debug_abbrev  0x00000000000014e5       0xf1 ./source/main.o
+ .debug_abbrev  0x00000000000015d6       0x4c ./source/pinconfig.o
+ .debug_abbrev  0x0000000000001622      0x144 ./source/sensors.o
+ .debug_abbrev  0x0000000000001766       0xb7 ./source/system.o
+ .debug_abbrev  0x000000000000181d      0x1a4 ./source/xprintf.o
+
+.debug_aranges  0x0000000000000000      0x7e0
+ .debug_aranges
+                0x0000000000000000       0x40 ./startup.o
+ .debug_aranges
+                0x0000000000000040       0x70 ./FreeRTOS/event_groups.o
+ .debug_aranges
+                0x00000000000000b0       0x38 ./FreeRTOS/heap_1.o
+ .debug_aranges
+                0x00000000000000e8       0x40 ./FreeRTOS/list.o
+ .debug_aranges
+                0x0000000000000128       0x80 ./FreeRTOS/port.o
+ .debug_aranges
+                0x00000000000001a8      0x100 ./FreeRTOS/queue.o
+ .debug_aranges
+                0x00000000000002a8      0x1c8 ./FreeRTOS/tasks.o
+ .debug_aranges
+                0x0000000000000470       0x18 ./FreeRTOS/timers.o
+ .debug_aranges
+                0x0000000000000488       0x20 ./source/can.o
+ .debug_aranges
+                0x00000000000004a8       0x98 ./source/control.o
+ .debug_aranges
+                0x0000000000000540       0x38 ./source/debug.o
+ .debug_aranges
+                0x0000000000000578       0x80 ./source/logger.o
+ .debug_aranges
+                0x00000000000005f8       0x40 ./source/main.o
+ .debug_aranges
+                0x0000000000000638       0x28 ./source/pinconfig.o
+ .debug_aranges
+                0x0000000000000660       0xa8 ./source/sensors.o
+ .debug_aranges
+                0x0000000000000708       0x68 ./source/system.o
+ .debug_aranges
+                0x0000000000000770       0x70 ./source/xprintf.o
+
+.debug_ranges   0x0000000000000000      0x6c8
+ .debug_ranges  0x0000000000000000       0x30 ./startup.o
+ .debug_ranges  0x0000000000000030       0x60 ./FreeRTOS/event_groups.o
+ .debug_ranges  0x0000000000000090       0x28 ./FreeRTOS/heap_1.o
+ .debug_ranges  0x00000000000000b8       0x30 ./FreeRTOS/list.o
+ .debug_ranges  0x00000000000000e8       0x70 ./FreeRTOS/port.o
+ .debug_ranges  0x0000000000000158       0xf0 ./FreeRTOS/queue.o
+ .debug_ranges  0x0000000000000248      0x1b8 ./FreeRTOS/tasks.o
+ .debug_ranges  0x0000000000000400       0x10 ./source/can.o
+ .debug_ranges  0x0000000000000410       0x88 ./source/control.o
+ .debug_ranges  0x0000000000000498       0x28 ./source/debug.o
+ .debug_ranges  0x00000000000004c0       0x70 ./source/logger.o
+ .debug_ranges  0x0000000000000530       0x30 ./source/main.o
+ .debug_ranges  0x0000000000000560       0x18 ./source/pinconfig.o
+ .debug_ranges  0x0000000000000578       0x98 ./source/sensors.o
+ .debug_ranges  0x0000000000000610       0x58 ./source/system.o
+ .debug_ranges  0x0000000000000668       0x60 ./source/xprintf.o
+
+.debug_line     0x0000000000000000     0x39ed
+ .debug_line    0x0000000000000000      0x17a ./startup.o
+ .debug_line    0x000000000000017a      0x4bf ./FreeRTOS/event_groups.o
+ .debug_line    0x0000000000000639      0x2d1 ./FreeRTOS/heap_1.o
+ .debug_line    0x000000000000090a      0x32d ./FreeRTOS/list.o
+ .debug_line    0x0000000000000c37      0x391 ./FreeRTOS/port.o
+ .debug_line    0x0000000000000fc8      0x842 ./FreeRTOS/queue.o
+ .debug_line    0x000000000000180a      0xc4f ./FreeRTOS/tasks.o
+ .debug_line    0x0000000000002459      0x120 ./FreeRTOS/timers.o
+ .debug_line    0x0000000000002579       0x40 ./source/can.o
+ .debug_line    0x00000000000025b9      0x374 ./source/control.o
+ .debug_line    0x000000000000292d      0x179 ./source/debug.o
+ .debug_line    0x0000000000002aa6      0x390 ./source/logger.o
+ .debug_line    0x0000000000002e36      0x1e5 ./source/main.o
+ .debug_line    0x000000000000301b      0x190 ./source/pinconfig.o
+ .debug_line    0x00000000000031ab      0x34d ./source/sensors.o
+ .debug_line    0x00000000000034f8      0x228 ./source/system.o
+ .debug_line    0x0000000000003720      0x2cd ./source/xprintf.o
+
+.debug_str      0x0000000000000000     0x2a2b
+ .debug_str     0x0000000000000000      0x236 ./startup.o
+                                        0x278 (size before relaxing)
+ .debug_str     0x0000000000000236      0x822 ./FreeRTOS/event_groups.o
+                                        0xa55 (size before relaxing)
+ .debug_str     0x0000000000000a58       0xe7 ./FreeRTOS/heap_1.o
+                                        0x66d (size before relaxing)
+ .debug_str     0x0000000000000b3f       0xd5 ./FreeRTOS/list.o
+                                        0x6e6 (size before relaxing)
+ .debug_str     0x0000000000000c14      0x25f ./FreeRTOS/port.o
+                                        0x454 (size before relaxing)
+ .debug_str     0x0000000000000e73      0x55d ./FreeRTOS/queue.o
+                                        0xcd3 (size before relaxing)
+ .debug_str     0x00000000000013d0      0xc79 ./FreeRTOS/tasks.o
+                                       0x1446 (size before relaxing)
+ .debug_str     0x0000000000002049       0x4a ./FreeRTOS/timers.o
+                                        0x595 (size before relaxing)
+ .debug_str     0x0000000000002093       0x18 ./source/can.o
+                                        0x1ce (size before relaxing)
+ .debug_str     0x00000000000020ab      0x2e9 ./source/control.o
+                                        0x524 (size before relaxing)
+ .debug_str     0x0000000000002394       0x75 ./source/debug.o
+                                        0x24b (size before relaxing)
+ .debug_str     0x0000000000002409      0x16b ./source/logger.o
+                                        0x372 (size before relaxing)
+ .debug_str     0x0000000000002574       0xb5 ./source/main.o
+                                        0x2ac (size before relaxing)
+ .debug_str     0x0000000000002629       0x28 ./source/pinconfig.o
+                                        0x1f2 (size before relaxing)
+ .debug_str     0x0000000000002651      0x1fe ./source/sensors.o
+                                        0x491 (size before relaxing)
+ .debug_str     0x000000000000284f      0x118 ./source/system.o
+                                        0x3bc (size before relaxing)
+ .debug_str     0x0000000000002967       0xc4 ./source/xprintf.o
+                                        0x265 (size before relaxing)
+
+.debug_frame    0x0000000000000000     0x2128
+ .debug_frame   0x0000000000000000       0x9c ./startup.o
+ .debug_frame   0x000000000000009c      0x1a8 ./FreeRTOS/event_groups.o
+ .debug_frame   0x0000000000000244       0x9c ./FreeRTOS/heap_1.o
+ .debug_frame   0x00000000000002e0       0xd8 ./FreeRTOS/list.o
+ .debug_frame   0x00000000000003b8      0x19c ./FreeRTOS/port.o
+ .debug_frame   0x0000000000000554      0x450 ./FreeRTOS/queue.o
+ .debug_frame   0x00000000000009a4      0x7bc ./FreeRTOS/tasks.o
+ .debug_frame   0x0000000000001160       0x30 ./source/can.o
+ .debug_frame   0x0000000000001190      0x24c ./source/control.o
+ .debug_frame   0x00000000000013dc       0x9c ./source/debug.o
+ .debug_frame   0x0000000000001478      0x1d0 ./source/logger.o
+ .debug_frame   0x0000000000001648       0xac ./source/main.o
+ .debug_frame   0x00000000000016f4       0x4c ./source/pinconfig.o
+ .debug_frame   0x0000000000001740      0x26c ./source/sensors.o
+ .debug_frame   0x00000000000019ac      0x154 ./source/system.o
+ .debug_frame   0x0000000000001b00      0x1e4 ./source/xprintf.o
+ .debug_frame   0x0000000000001ce4       0x28 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000001d0c       0x2c /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-init.o)
+ .debug_frame   0x0000000000001d38       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000001d6c       0x5c /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000001dc8       0x20 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000001de8       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-fini.o)
+ .debug_frame   0x0000000000001e1c       0xb0 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .debug_frame   0x0000000000001ecc       0x34 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000001f00       0xac /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000001fac       0x50 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000001ffc       0xc4 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x00000000000020c0       0x24 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x00000000000020e4       0x24 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x0000000000002108       0x20 /home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)

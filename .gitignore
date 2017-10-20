@@ -11,3 +11,9 @@ appnotes
 datasheet
 scratch
 hardware/gerber
+*/.metadata
+*/.jxbrowser-data
+*/RemoteSystemsTempFiles
+firmware/*
+!firmware/MotorController
+trace-pictures

@@ -20,3 +20,17 @@ Available range of trimpots for RV2 does not match range used in schematic!
 Name for component PDM1-S12-S3 should not have been truncated to PDM1-S (other parts in this series)
 
 BOM export script (bom2csv-grouped) messed up some of the 'Voltage' fields, grouped 16V caps with 100V caps!
+
+Ordered 12V->3.3V (PDM1-S12-S3) isolated DC/DC converter instead of 12V->12V (PDM1-S12-S12)!
+
+Footprint for main 3.3V DC/DC converter is backwards!
+
+'Zick-zack' pins for 3 position and 5 position terminals are backwards!
+
+Used too much solder paste with stencil, caused lots of solder bridges.
+
+Footprint for soft start resistor works, but ideally would be slightly longer.
+
+C49 and C61,62,64,65 are (almost) redundant - only difference is voltage rating (50V vs 100V). Consolidate into all 100V rated.
+
+Current sensor has tabs for added mechanical stability; the footprint should have slots (not critical).

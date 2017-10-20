@@ -22,61 +22,54 @@
 //
 //*****************************************************************************
 
-#include <stdint.h>
+/*
+ * startup.c - vector table, reset routine, and ISRs / fault handlers
+ *
+ *  Created on: Jun 26, 2017
+ *      Author: Modified from TI source code by Oliver Douglas
+ */
+
+#include "stdinclude.h"
+
+// File index for ASSERT() macro
+FILENUM(0)
 
 //*****************************************************************************
-//
 // Forward declaration of the default fault handlers.
-//
 //*****************************************************************************
 void ResetISR(void);
 static void NmiSR(void);
 static void FaultISR(void);
 static void IntDefaultHandler(void);
 
-//*****************************************************************************
-//
-// External declarations for the interrupt handlers used by the application.
-//
-//*****************************************************************************
-extern void xPortPendSVHandler(void);
-extern void vPortSVCHandler(void);
-extern void xPortSysTickHandler(void);
-
-
-extern void adc0_seq0_ISR(void);
-
 #ifndef HWREG
 #define HWREG(x) (*((volatile uint32_t *)(x)))
 #endif
 
 //*****************************************************************************
-//
 // The entry point for the application.
-//
 //*****************************************************************************
 extern int main(void);
 
 //*****************************************************************************
-//
 // Reserve space for the system stack.
-//
 //*****************************************************************************
 static uint32_t pui32Stack[128];
 
 //*****************************************************************************
-//
 // External declarations for the interrupt handlers used by the application.
-//
 //*****************************************************************************
-// To be added by user
+extern void xPortPendSVHandler(void);
+extern void vPortSVCHandler(void);
+extern void xPortSysTickHandler(void);
+
+extern void adc0_seq0_ISR(void);
+extern void adc1_seq0_ISR(void);
 
 //*****************************************************************************
-//
 // The vector table.  Note that the proper constructs must be placed on this to
 // ensure that it ends up at physical address 0x0000.0000 or at the start of
 // the program if located at a start address other than 0.
-//
 //*****************************************************************************
 __attribute__ ((section(".intvecs")))
 void (* const g_pfnVectors[])(void) =
@@ -144,7 +137,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // PWM Generator 3
     IntDefaultHandler,                      // uDMA Software Transfer
     IntDefaultHandler,                      // uDMA Error
-    IntDefaultHandler,                      // ADC1 Sequence 0
+    adc1_seq0_ISR,                          // ADC1 Sequence 0
     IntDefaultHandler,                      // ADC1 Sequence 1
     IntDefaultHandler,                      // ADC1 Sequence 2
     IntDefaultHandler,                      // ADC1 Sequence 3
@@ -215,11 +208,9 @@ void (* const g_pfnVectors[])(void) =
 };
 
 //*****************************************************************************
-//
 // The following are constructs created by the linker, indicating where the
 // the "data" and "bss" segments reside in memory.  The initializers for the
 // for the "data" segment resides immediately following the "text" segment.
-//
 //*****************************************************************************
 extern uint32_t __data_load__;
 extern uint32_t __data_start__;
@@ -228,32 +219,24 @@ extern uint32_t __bss_start__;
 extern uint32_t __bss_end__;
 
 //*****************************************************************************
-//
 // This is the code that gets called when the processor first starts execution
 // following a reset event.  Only the absolutely necessary set is performed,
 // after which the application supplied entry() routine is called.  Any fancy
 // actions (such as making decisions based on the reset cause register, and
 // resetting the bits in that register) are left solely in the hands of the
 // application.
-//
 //*****************************************************************************
 void
 ResetISR(void)
 {
     uint32_t *pui32Src, *pui32Dest;
 
-    //
     // Copy the data segment initializers from flash to SRAM.
-    //
     pui32Src = &__data_load__;
     for(pui32Dest = &__data_start__; pui32Dest < &__data_end__; )
-    {
         *pui32Dest++ = *pui32Src++;
-    }
 
-    //
     // Zero fill the bss segment.
-    //
     __asm("    ldr     r0, =__bss_start__\n"
           "    ldr     r1, =__bss_end__\n"
           "    mov     r2, #0\n"
@@ -264,76 +247,57 @@ ResetISR(void)
           "        strlt   r2, [r0], #4\n"
           "        blt     zero_loop");
 
-    //
     // Enable the floating-point unit.  This must be done here to handle the
     // case where main() uses floating-point and the function prologue saves
     // floating-point registers (which will fault if floating-point is not
     // enabled).  Any configuration of the floating-point unit using DriverLib
     // APIs must be done here prior to the floating-point unit being enabled.
-    //
     // Note that this does not use DriverLib since it might not be included in
     // this project.
-    //
     HWREG(0xE000ED88) = ((HWREG(0xE000ED88) & ~0x00F00000) | 0x00F00000);
     
-    //
     // Call the application's entry point.
-    //
     main();
 }
 
 //*****************************************************************************
-//
 // This is the code that gets called when the processor receives a NMI.  This
 // simply enters an infinite loop, preserving the system state for examination
 // by a debugger.
-//
 //*****************************************************************************
 static void
 NmiSR(void)
 {
-    //
     // Enter an infinite loop.
-    //
     while(1)
     {
     }
 }
 
 //*****************************************************************************
-//
 // This is the code that gets called when the processor receives a fault
 // interrupt.  This simply enters an infinite loop, preserving the system state
 // for examination by a debugger.
-//
 //*****************************************************************************
 static void
 FaultISR(void)
 {
-    //
     // Enter an infinite loop.
-    //
     while(1)
     {
     }
 }
 
 //*****************************************************************************
-//
 // This is the code that gets called when the processor receives an unexpected
 // interrupt.  This simply enters an infinite loop, preserving the system state
 // for examination by a debugger.
-//
 //*****************************************************************************
 static void
 IntDefaultHandler(void)
 {
-    //
     // Go into an infinite loop.
-    //
     while(1)
     {
     }
 }
-
-
