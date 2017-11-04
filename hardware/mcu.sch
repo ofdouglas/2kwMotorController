@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:2kwMotorController-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -771,7 +772,7 @@ LED_2
 Text Label 7800 2100 2    60   ~ 0
 LED_3
 $Comp
-L LED D9
+L LED-RESCUE-2kwMotorController D9
 U 1 1 59C4E560
 P 1200 4850
 F 0 "D9" H 1200 4950 50  0000 C CNN
@@ -804,7 +805,7 @@ F 3 "" H 1800 5800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D10
+L LED-RESCUE-2kwMotorController D10
 U 1 1 59C4FA15
 P 1200 5150
 F 0 "D10" H 1200 5250 50  0000 C CNN
@@ -826,7 +827,7 @@ F 3 "" H 1600 5150 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D11
+L LED-RESCUE-2kwMotorController D11
 U 1 1 59C4FE16
 P 1200 5450
 F 0 "D11" H 1200 5550 50  0000 C CNN
@@ -848,7 +849,7 @@ F 3 "" H 1600 5450 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D12
+L LED-RESCUE-2kwMotorController D12
 U 1 1 59C4FE24
 P 1200 5750
 F 0 "D12" H 1200 5850 50  0000 C CNN

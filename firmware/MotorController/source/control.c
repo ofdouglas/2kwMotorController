@@ -9,18 +9,34 @@
 #include "stdinclude.h"
 #include "system.h"
 #include "sensors.h"
+#include "encoder.h"
 
 #include "driverlib/pwm.h"
 #include "driverlib/gpio.h"
 
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
 
 
 // File index for ASSERT() macro
 FILENUM(4)
 
+/* PWM Pins:
+ *  M0PWM0 = PF0 (42): VBUS_DIS_MCU
+ *  M0PWM2 = PF2 (44): PWM1_MCU
+ *  M0PWM3 = PF3 (45): PWM2_MCU
+ *  M0PWM4 = PG0 (49): PWM4_MCU
+ *  M0PWM5 = PG1 (50): PWM3_MCU
+ *
+ *    _______
+ *   |       |
+ * --P1      P3--
+ *   |       |
+ *   |---M---|
+ *   |       |
+ * --P2      P4--
+ *   |       |
+ *   ---------
+ *
+ */
 
 /* Define the timeout for sensor data to be received. We add 2 to the timeout
  * because the time until the next tick is unknown (and possibly very short).
@@ -28,13 +44,15 @@ FILENUM(4)
 #define CONTROL_RATE_HZ         10000
 #define CONTROL_PERIOD_SECONDS  (1.0 / CONTROL_RATE_HZ)
 #define CONTROL_PERIOD_TICKS    (configTICK_RATE_HZ / CONTROL_RATE_HZ)
-#define CONTROL_TICK_TIMEOUT    (CONTROL_PERIOD_TICKS + 2)
+//#define CONTROL_TICK_TIMEOUT    (CONTROL_PERIOD_TICKS + 2)
+#define CONTROL_TICK_TIMEOUT    2000
 
 #define PWM_RATE_HZ             20000
 #define DUTY_CYCLE_MAX          98.0
 
+#define BLEEDER_PWM_BIT PWM_OUT_0_BIT
 #define HBRIDGE_PWM_BITS        \
-    (PWM_OUT_0_BIT | PWM_OUT_1_BIT | PWM_OUT_2_BIT | PWM_OUT_3_BIT)
+    (PWM_OUT_2_BIT | PWM_OUT_3_BIT | PWM_OUT_4_BIT | PWM_OUT_5_BIT)
 
 
 // Bus voltage hysteresis for use of bleeder resistor
@@ -53,22 +71,43 @@ uint32_t pwm_period_ticks;
 void pwm_duty_update(float duty)
 {
     int mode = system_get_drive_mode();
-    switch (mode) {
+    int p1_duty, p2_duty, p3_duty, p4_duty;
 
-    // TODO: implement this
+    bool positive = duty >= 0;
+    float abs_duty = positive ? duty : -duty;
+
+    switch (mode) {
     case DRIVE_ASYNC_SIGN_MAG:
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 0);
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 0);
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 0);
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 0);
+        if (positive) {
+            p1_duty = (pwm_period_ticks * abs_duty) / 100;
+            p2_duty = 1;
+            p3_duty = 1;
+            p4_duty = pwm_period_ticks - 1;
+        } else {
+            p1_duty = 1;
+            p2_duty = pwm_period_ticks - 1;
+            p3_duty = (pwm_period_ticks * abs_duty) / 100;
+            p4_duty = 1;
+        }
+        if (abs_duty < 0.01) {
+            p1_duty = 1;
+            p2_duty = 1;
+            p3_duty = 1;
+            p4_duty = 1;
+        }
+
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, p1_duty);
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, p2_duty);
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, p4_duty);
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, p3_duty);
         break;
 
     // TODO: implement this
     case DRIVE_SIGN_MAG:
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 0);
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 0);
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 0);
-        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 0);
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 1);
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 1);
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 1);
+        MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 1);
         break;
 
     // No plans to implement this drive mode yet.
@@ -79,6 +118,8 @@ void pwm_duty_update(float duty)
     default:
         ASSERT (0);
     }
+
+    MAP_PWMSyncUpdate(PWM0_BASE, PWM_GEN_0_BIT | PWM_GEN_1_BIT | PWM_GEN_2_BIT);
 }
 
 // Freewheel the motor if enabled == false
@@ -100,7 +141,7 @@ static void hbridge_set_bleeder_duty(float duty)
     duty = duty > 98.0 ? 98.0 : duty;
 
     uint16_t pulse_width = (duty / 100.0) * pwm_period_ticks;
-    MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, pulse_width);
+    MAP_PWMPulseWidthSet(PWM0_BASE, BLEEDER_PWM_BIT, pulse_width);
 }
 
 // Bypass soft-start resistor (used once vbus has stabilized)
@@ -114,20 +155,38 @@ void pwm_setup(void)
 {
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_PWM0);
 
-    pwm_period_ticks = system_get_sysclk_freq() / PWM_RATE_HZ;
-
     // Count down mode, duty cycles update at end of each period
-    MAP_PWMGenConfigure(PWM0_BASE, PWM_GEN_0,
-                        PWM_GEN_MODE_DOWN | PWM_GEN_MODE_SYNC);
+#define PWM_MODE (PWM_GEN_MODE_DOWN | PWM_GEN_MODE_SYNC | PWM_GEN_MODE_DBG_RUN)
+    MAP_PWMGenConfigure(PWM0_BASE, PWM_GEN_0, PWM_MODE);
+    MAP_PWMGenConfigure(PWM0_BASE, PWM_GEN_1, PWM_MODE);
+    MAP_PWMGenConfigure(PWM0_BASE, PWM_GEN_2, PWM_MODE);
+#undef PWM_MODE
 
     // Set PWM clock rate
-    MAP_PWMGenPeriodSet(PWM0_BASE, PWM_GEN_0, pwm_period_ticks);
+    pwm_period_ticks = system_get_sysclk_freq() / PWM_RATE_HZ;
+    MAP_PWMGenPeriodSet(PWM0_BASE, PWM_GEN_0, pwm_period_ticks - 1);
+    MAP_PWMGenPeriodSet(PWM0_BASE, PWM_GEN_1, pwm_period_ticks - 1);
+    MAP_PWMGenPeriodSet(PWM0_BASE, PWM_GEN_2, pwm_period_ticks - 1);
 
-    MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 0);
+    MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 1);
+    MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 1);
+    MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 1);
+    MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 1);
+    MAP_PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 1);
 
     // Start timers and enable outputs
     MAP_PWMGenEnable(PWM0_BASE, PWM_GEN_0);
+    MAP_PWMGenEnable(PWM0_BASE, PWM_GEN_1);
+    MAP_PWMGenEnable(PWM0_BASE, PWM_GEN_2);
+
+    // MAP_PWMSyncTimeBase(PWM0_BASE, PWM_GEN_1_BIT | PWM_GEN_2_BIT);
+
+
     hbridge_enabled(true);
+
+    // TODO: sketchy fix for mysterious bug causing H-bridge PWM pins to
+    // go high inbetween configuration and first run of control loop
+    pwm_duty_update(0);
 }
 
 
@@ -251,19 +310,17 @@ void control_task_code(void * arg)
         ASSERT(timeout == false);
 
         // read RT sensor data
-        // decimate RT sensor data to primary 10kHz rate
         float motor_current = 0;
         float bus_voltage = 0;
 
-        float motor_velocity = sensor_get_motor_velocity_rads();
-        float motor_position = sensor_get_motor_position_rads();
-
+        float motor_velocity = encoder_get_motor_velocity_rads();
+        float motor_position = encoder_get_motor_position_rads();
 
         static float duty_cycle;
         float control_target;
 
-        //hbridge_safety_control();
-        hbridge_regen_control(duty_cycle, motor_current, bus_voltage);
+        // hbridge_safety_control();
+        // hbridge_regen_control(duty_cycle, motor_current, bus_voltage);
         int control_mode = update_control_mode();
 
         control_target = system_get_control_target();
@@ -271,7 +328,9 @@ void control_task_code(void * arg)
 
         switch(control_mode) {
         case CTRL_OPEN_LOOP:
-            duty_cycle = control_target / system_get_bus_voltage();
+            // todo: maybe it should be equivalent voltage instead of duty %
+            //duty_cycle = control_target / system_get_bus_voltage();
+            duty_cycle = control_target;
             break;
 
         case CTRL_CURRENT:
@@ -293,6 +352,8 @@ void control_task_code(void * arg)
         duty_cycle = duty_cycle_clamp(duty_cycle);
         if (system_get_state() == STATE_RUNNING)
             pwm_duty_update(duty_cycle);
+        if (system_get_state() == STATE_FAULTED)
+            hbridge_enabled(false);
 
         // check sensor update mode and update rate
         // decimate to secondary rate

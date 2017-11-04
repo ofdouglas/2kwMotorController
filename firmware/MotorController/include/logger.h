@@ -8,16 +8,15 @@
 #ifndef LOGGER_H_
 #define LOGGER_H_
 
-
-
-struct log_msg {
+// This is made public so that main() can allocate a log_message queue.
+struct log_message {
     const char * str;
     int32_t args[3];
 };
 
-bool log_message(const char * str, int32_t arg0, int32_t arg1, int32_t arg2);
-int log_message_from_ISR(const char * str, int32_t arg0,
-                         int32_t arg1, int32_t arg2);
+bool log_msg(const char * str, int32_t arg0, int32_t arg1, int32_t arg2);
+int log_msg_ISR(const char * str, int32_t arg0, int32_t arg1, int32_t arg2);
+void log_msg_panic(const char * str, int32_t arg0, int32_t arg1, int32_t arg2);
 
 struct real_int {
     int whole;

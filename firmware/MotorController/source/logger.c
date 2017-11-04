@@ -14,7 +14,6 @@
 FILENUM(5)
 
 
-
 /******************************************************************************
  * Definitions
  *****************************************************************************/
@@ -32,6 +31,9 @@ FILENUM(5)
 #define DEBUG_UART_CONFIG           \
     (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE)
 #define DEBUG_UART_BUFFER_SIZE      512
+
+
+
 
 
 /******************************************************************************
@@ -117,6 +119,15 @@ static void debug_uart_putc(unsigned char c)
     }
 }
 
+/* Used for printing diagnostics after a fatal error. Interrupts will be
+ * disabled and all threads halted, so we use a blocking write in the
+ * context of a system fault handler.
+ */
+static void panic_putc(unsigned char c)
+{
+    UARTCharPut(DEBUG_UART_BASE, c);
+}
+
 /* Configure the UART peripheral. Receive functionality is not used.
  */
 static void debug_uart_setup(void)
@@ -139,22 +150,22 @@ static void debug_uart_setup(void)
 /* Log requests are sent to the logging task via this queue, which is initialized
  * by the system thread during startup.
  */
-QueueHandle_t log_msg_queue;
+QueueHandle_t log_message_queue;
 
 /* Queue a message for printing by the logging task. Return TRUE if the
  * message was queued, else FALSE.
  *
  * Do not call this function from an ISR!
  */
-bool log_message(const char * str, int32_t arg0, int32_t arg1, int32_t arg2)
+bool log_msg(const char * str, int32_t arg0, int32_t arg1, int32_t arg2)
 {
-    struct log_msg msg;
+    struct log_message msg;
     msg.str = str;
     msg.args[0] = arg0;
     msg.args[1] = arg1;
     msg.args[2] = arg2;
 
-    return xQueueSend(log_msg_queue, &msg, 0);
+    return xQueueSend(log_message_queue, &msg, 0);
 }
 
 /* Queue a message for printing by the logging task. Return TRUE if a higher
@@ -163,20 +174,31 @@ bool log_message(const char * str, int32_t arg0, int32_t arg1, int32_t arg2)
  *
  * Only call this function from an ISR!
  */
-int log_message_from_ISR(const char * str, int32_t arg0, int32_t arg1,
+int log_msg_ISR(const char * str, int32_t arg0, int32_t arg1,
                           int32_t arg2)
 {
-    struct log_msg msg;
+    struct log_message msg;
     msg.str = str;
     msg.args[0] = arg0;
     msg.args[1] = arg1;
     msg.args[2] = arg2;
 
     BaseType_t task_woken;
-    xQueueSendFromISR(log_msg_queue, &msg, &task_woken);
+    xQueueSendFromISR(log_message_queue, &msg, &task_woken);
     return task_woken;
 }
 
+
+/* Used for printing diagnostics after a fatal error. Interrupts will be
+ * disabled and all threads halted, so we use a blocking write in the
+ * context of a system fault handler.
+ */
+void log_msg_panic(const char * str, int32_t arg0, int32_t arg1,
+                           int32_t arg2)
+{
+    xdev_out(panic_putc);
+    xprintf(str, arg0, arg1, arg2);
+}
 
 void logger_task_code(void * arg)
 {
@@ -186,10 +208,11 @@ void logger_task_code(void * arg)
     xdev_out(debug_uart_putc);
 
     xprintf("Logging Task Start\n");
+    xprintf("******************\n");
 
     while (true) {
-        struct log_msg msg;
-        xQueueReceive(log_msg_queue, &msg, portMAX_DELAY);
+        struct log_message msg;
+        xQueueReceive(log_message_queue, &msg, portMAX_DELAY);
 
         // Excess arguments will be safely ignored (C Standard sec. 7.19.6.1)
         xprintf(msg.str, msg.args[0], msg.args[1], msg.args[2]);

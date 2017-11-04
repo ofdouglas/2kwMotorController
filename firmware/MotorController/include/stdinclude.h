@@ -25,12 +25,14 @@
 #include "task.h"
 #include "semphr.h"
 #include "queue.h"
+#include "FreeRTOSConfig.h"
 
 // project includes
 #include "build.h"
 #include "logger.h"
 #include "assert.h"
 
-
+#define ABS(x)  ((x) > 0 ? (x) : -(x))
+#define PI      3.1415926
 
 #endif /* STDINCLUDE_H_ */

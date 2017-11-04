@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:2kwMotorController-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -103,7 +104,7 @@ F 3 "" H 8750 4950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D7
+L LED-RESCUE-2kwMotorController D7
 U 1 1 5985847D
 P 8750 4550
 F 0 "D7" H 8750 4650 50  0000 C CNN
@@ -619,7 +620,7 @@ Optocoupler supply
 Text Notes 10150 4000 0    79   ~ 16
 Gate drive supply
 $Comp
-L LED D4
+L LED-RESCUE-2kwMotorController D4
 U 1 1 59B58EF7
 P 4500 1400
 F 0 "D4" H 4500 1500 50  0000 C CNN
@@ -652,7 +653,7 @@ F 3 "" H 4500 2000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D5
+L LED-RESCUE-2kwMotorController D5
 U 1 1 59B74B7C
 P 6450 4600
 F 0 "D5" H 6450 4700 50  0000 C CNN
@@ -685,7 +686,7 @@ F 3 "" H 6350 5450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D6
+L LED-RESCUE-2kwMotorController D6
 U 1 1 59B7727F
 P 6450 5900
 F 0 "D6" H 6450 6000 50  0000 C CNN

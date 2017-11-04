@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:2kwMotorController-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -272,7 +273,7 @@ $EndComp
 Text Notes 5600 6250 0    60   ~ 0
 optocoupler CTR:\nk3 = [0.7, 1.2] (ideally 1.0)
 $Comp
-L POT RV2
+L POT-RESCUE-2kwMotorController RV2
 U 1 1 599D4CE6
 P 5550 6000
 F 0 "RV2" H 5550 5920 50  0000 C CNN
@@ -283,7 +284,7 @@ F 3 "" H 5550 6000 50  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L POT RV1
+L POT-RESCUE-2kwMotorController RV1
 U 1 1 59A7AA70
 P 4100 1550
 F 0 "RV1" H 4100 1470 50  0000 C CNN

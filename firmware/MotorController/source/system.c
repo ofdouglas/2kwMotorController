@@ -6,6 +6,7 @@
  */
 
 #include "system.h"
+#include "debug.h"
 #include "driverlib/rom_map.h"
 #include "driverlib/sysctl.h"
 
@@ -16,7 +17,8 @@ FILENUM(2)
 /******************************************************************************
  * System state variables
  *****************************************************************************/
-static int system_state = STATE_CONFIG;
+//static int system_state = STATE_CONFIG;
+static int system_state = STATE_RUNNING;
 static int system_fault_flags = 0;
 
 static int motor_control_mode = CTRL_OPEN_LOOP;
@@ -57,15 +59,31 @@ int system_get_state(void)
   return system_state;
 }
 
-void system_thread(void * arg)
+void system_task_code(void * arg)
 {
+    vTaskDelay(2000);
 
+    /*
+    int duty[5] = {5, 10, 20, 30, 40};
+    while (1) {
+        for (int i = 0; i <= 5; i++) {
+            motor_target_value = duty[i];
+            vTaskDelay(1000);
+        }
+        motor_target_value = 0;
+        vTaskDelay(1000);
+        for (int i = 0; i <= 5; i++) {
+            motor_target_value = -duty[i];
+            vTaskDelay(1000);
+        }
+        motor_target_value = 0;
+        vTaskDelay(1000);
+    }
+    */
 
-
-
-
-
-
+    motor_target_value = 15;
+    while (1)
+        vTaskDelay(1000);
 }
 
 

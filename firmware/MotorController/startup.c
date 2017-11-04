@@ -30,6 +30,7 @@
  */
 
 #include "stdinclude.h"
+#include "driverlib/interrupt.h"
 
 // File index for ASSERT() macro
 FILENUM(0)
@@ -39,7 +40,7 @@ FILENUM(0)
 //*****************************************************************************
 void ResetISR(void);
 static void NmiSR(void);
-static void FaultISR(void);
+static void HardFault_Handler(void) __attribute__((naked));
 static void IntDefaultHandler(void);
 
 #ifndef HWREG
@@ -65,6 +66,9 @@ extern void xPortSysTickHandler(void);
 
 extern void adc0_seq0_ISR(void);
 extern void adc1_seq0_ISR(void);
+extern void qei_ISR(void);
+
+
 
 //*****************************************************************************
 // The vector table.  Note that the proper constructs must be placed on this to
@@ -78,7 +82,7 @@ void (* const g_pfnVectors[])(void) =
                                             // The initial stack pointer
     ResetISR,                               // The reset handler
     NmiSR,                                  // The NMI handler
-    FaultISR,                               // The hard fault handler
+    HardFault_Handler,                      // The hard fault handler
     IntDefaultHandler,                      // The MPU fault handler
     IntDefaultHandler,                      // The bus fault handler
     IntDefaultHandler,                      // The usage fault handler
@@ -104,7 +108,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // PWM Generator 0
     IntDefaultHandler,                      // PWM Generator 1
     IntDefaultHandler,                      // PWM Generator 2
-    IntDefaultHandler,                      // Quadrature Encoder 0
+    qei_ISR,                                // Quadrature Encoder 0
     adc0_seq0_ISR,                          // ADC Sequence 0
     IntDefaultHandler,                      // ADC Sequence 1
     IntDefaultHandler,                      // ADC Sequence 2
@@ -260,13 +264,8 @@ ResetISR(void)
     main();
 }
 
-//*****************************************************************************
-// This is the code that gets called when the processor receives a NMI.  This
-// simply enters an infinite loop, preserving the system state for examination
-// by a debugger.
-//*****************************************************************************
-static void
-NmiSR(void)
+
+static void NmiSR(void)
 {
     // Enter an infinite loop.
     while(1)
@@ -274,30 +273,68 @@ NmiSR(void)
     }
 }
 
-//*****************************************************************************
-// This is the code that gets called when the processor receives a fault
-// interrupt.  This simply enters an infinite loop, preserving the system state
-// for examination by a debugger.
-//*****************************************************************************
-static void
-FaultISR(void)
+static void IntDefaultHandler(void)
 {
-    // Enter an infinite loop.
+    IntMasterDisable();
+    log_msg_panic("\nFATAL ERROR: unregistered IRQ\n", 0, 0, 0);
     while(1)
-    {
-    }
+        ;
 }
 
-//*****************************************************************************
-// This is the code that gets called when the processor receives an unexpected
-// interrupt.  This simply enters an infinite loop, preserving the system state
-// for examination by a debugger.
-//*****************************************************************************
-static void
-IntDefaultHandler(void)
+/* Fault diagnostics code provided by FreeRTOS.
+ */
+static void HardFault_Handler(void)
 {
-    // Go into an infinite loop.
-    while(1)
-    {
-    }
+    __asm volatile
+    (
+        " tst lr, #4                                                \n"
+        " ite eq                                                    \n"
+        " mrseq r0, msp                                             \n"
+        " mrsne r0, psp                                             \n"
+        " ldr r1, [r0, #24]                                         \n"
+        " ldr r2, handler2_address_const                            \n"
+        " bx r2                                                     \n"
+        " handler2_address_const: .word prvGetRegistersFromStack    \n"
+    );
+}
+
+/* Fault diagnostics code provided by FreeRTOS.
+ */
+void prvGetRegistersFromStack(uint32_t *pulFaultStackAddress)
+{
+    /* These are volatile to try and prevent the compiler/linker optimising them
+    away as the variables never actually get used.  If the debugger won't show the
+    values of the variables, make them global by moving their declaration outside
+    of this function. */
+    volatile uint32_t r0;
+    volatile uint32_t r1;
+    volatile uint32_t r2;
+    volatile uint32_t r3;
+    volatile uint32_t r12;
+    volatile uint32_t lr; /* Link register. */
+    volatile uint32_t pc; /* Program counter. */
+    volatile uint32_t psr;/* Program status register. */
+
+    r0 = pulFaultStackAddress[0];
+    r1 = pulFaultStackAddress[1];
+    r2 = pulFaultStackAddress[2];
+    r3 = pulFaultStackAddress[3];
+
+    r12 = pulFaultStackAddress[4];
+    lr = pulFaultStackAddress[5];
+    pc = pulFaultStackAddress[6];
+    psr = pulFaultStackAddress[7];
+
+    log_msg_panic("\n\nFATAL ERROR: Hard Fault\n", 0, 0, 0);
+    log_msg_panic("=======================\n", 0, 0, 0);
+    log_msg_panic(" R0  = 0x%08x\n", r0, 0, 0);
+    log_msg_panic(" R1  = 0x%08x\n", r1, 0, 0);
+    log_msg_panic(" R2  = 0x%08x\n", r2, 0, 0);
+    log_msg_panic(" R3  = 0x%08x\n", r3, 0, 0);
+    log_msg_panic(" R12 = 0x%08x\n", r12, 0, 0);
+    log_msg_panic(" LR  = 0x%08x\n", lr, 0, 0);
+    log_msg_panic(" PC  = 0x%08x\n", pc, 0, 0);
+    log_msg_panic(" PSR = 0x%08x\n", psr, 0, 0);
+
+    for(;;);
 }

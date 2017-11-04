@@ -20,6 +20,7 @@
  * debug.c      6
  * can.c        7
  * pinconfig.c  8
+ * encoder.c    9
  */
 #define FILENUM(num) \
     enum { F_NUM=num }; \
