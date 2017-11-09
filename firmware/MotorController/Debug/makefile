@@ -19,11 +19,14 @@ ORDERED_OBJS += \
 "./source/can.o" \
 "./source/control.o" \
 "./source/debug.o" \
+"./source/encoder.o" \
+"./source/fir.o" \
 "./source/logger.o" \
 "./source/main.o" \
 "./source/pinconfig.o" \
 "./source/sensors.o" \
 "./source/system.o" \
+"./source/thermistor_lut.o" \
 "./source/xprintf.o" \
 -Wl,-T"../tm4c1294kcpdt.lds" \
 $(GEN_CMDS__FLAG) \
@@ -161,7 +164,7 @@ all: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 MotorController.out: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU Linker'
-	"/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc" -DPART_TM4C1294KCPDT -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MD -std=c99 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"MotorController.map" -L"/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc" -o"MotorController.out" $(ORDERED_OBJS)
+	"/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc" -DPART_TM4C1294KCPDT -O2 -ffunction-sections -fdata-sections -fsingle-precision-constant -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MD -std=c99 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"MotorController.map" -L"/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc" -o"MotorController.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -174,8 +177,8 @@ MotorController.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "startup.o" "FreeRTOS/event_groups.o" "FreeRTOS/heap_1.o" "FreeRTOS/list.o" "FreeRTOS/port.o" "FreeRTOS/queue.o" "FreeRTOS/tasks.o" "FreeRTOS/timers.o" "source/can.o" "source/control.o" "source/debug.o" "source/logger.o" "source/main.o" "source/pinconfig.o" "source/sensors.o" "source/system.o" "source/xprintf.o" 
-	-$(RM) "startup.d" "FreeRTOS/event_groups.d" "FreeRTOS/heap_1.d" "FreeRTOS/list.d" "FreeRTOS/port.d" "FreeRTOS/queue.d" "FreeRTOS/tasks.d" "FreeRTOS/timers.d" "source/can.d" "source/control.d" "source/debug.d" "source/logger.d" "source/main.d" "source/pinconfig.d" "source/sensors.d" "source/system.d" "source/xprintf.d" 
+	-$(RM) "startup.o" "FreeRTOS/event_groups.o" "FreeRTOS/heap_1.o" "FreeRTOS/list.o" "FreeRTOS/port.o" "FreeRTOS/queue.o" "FreeRTOS/tasks.o" "FreeRTOS/timers.o" "source/can.o" "source/control.o" "source/debug.o" "source/encoder.o" "source/fir.o" "source/logger.o" "source/main.o" "source/pinconfig.o" "source/sensors.o" "source/system.o" "source/thermistor_lut.o" "source/xprintf.o" 
+	-$(RM) "startup.d" "FreeRTOS/event_groups.d" "FreeRTOS/heap_1.d" "FreeRTOS/list.d" "FreeRTOS/port.d" "FreeRTOS/queue.d" "FreeRTOS/tasks.d" "FreeRTOS/timers.d" "source/can.d" "source/control.d" "source/debug.d" "source/encoder.d" "source/fir.d" "source/logger.d" "source/main.d" "source/pinconfig.d" "source/sensors.d" "source/system.d" "source/thermistor_lut.d" "source/xprintf.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

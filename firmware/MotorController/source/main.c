@@ -5,27 +5,22 @@
  *      Author: Oliver Douglas
  */
 
+#include "stdinclude.h"
+#include "encoder.h"
+#include "system.h"
+#include "pinconfig.h"
+#include "sensors.h"
 
-#include <assert.h>
-#include <debug.h>
 #include <driverlib/interrupt.h>
 #include <driverlib/rom_map.h>
 #include <inc/hw_nvic.h>
 #include <inc/tm4c1294kcpdt.h>
-#include <logger.h>
-#include <pinconfig.h>
-#include <queue.h>
 #include <sys/_stdint.h>
-#include <system.h>
+
 
 #ifndef HWREG
 #define HWREG(x) (*((volatile uint32_t *)(x)))
 #endif
-
-
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
 
 
 // File index for ASSERT() macro
@@ -37,13 +32,16 @@ FILENUM(1)
  *****************************************************************************/
 TaskHandle_t led_task_handle;
 
-TaskHandle_t sensor_task_handle;
+TaskHandle_t poll_task_handle;
+TaskHandle_t ls_sensor_task_handle;
+TaskHandle_t rt_sensor_task_handle;
 TaskHandle_t control_task_handle;
 TaskHandle_t logger_task_handle;
 TaskHandle_t system_task_handle;
 TaskHandle_t encoder_task_handle;
 
-extern void sensor_task_code(void * arg);
+extern void ls_sensor_task_code(void * arg);
+extern void rt_sensor_task_code(void * arg);
 extern void control_task_code(void * arg);
 extern void logger_task_code(void * arg);
 extern void system_task_code(void * arg);
@@ -91,6 +89,33 @@ void led_task_code(void * foo)
     }
 }
 
+void poll_task_code(void * foo)
+{
+    struct real_int ri;
+/*
+    while (1) {
+        //vTaskDelay(5);
+        vTaskDelay(1000);
+
+        uint32_t tick_count = xTaskGetTickCount();
+        ri = real_int_from_float(tick_count/1000.0, 2);
+
+        log_msg("Uptime              = %d.%02d s\n", ri.whole, ri.fract, 0);
+
+        log_msg("Motor current       = %d mA\n",
+                sensor_get_motor_current_amps() * 1000, 0, 0);
+
+        ri = real_int_from_float(sensor_get_vbus_volts(), 2);
+        log_msg("Bus voltage         = %d.%02d V\n", ri.whole, ri.fract, 0);
+
+        int rpm = encoder_get_motor_velocity_rads() * (30.0 / PI);
+        log_msg("Motor speed         = %d RPM\n", rpm, 0, 0);
+        log_msg("\n", 0, 0, 0);
+    }
+    */
+    while (1)
+        vTaskDelay(1000);
+}
 
 int main (void)
  {
@@ -103,23 +128,29 @@ int main (void)
 
     log_message_queue = xQueueCreate(100, sizeof(struct log_message));
 
+    xTaskCreate(poll_task_code, "poll_task", configMINIMAL_STACK_SIZE,
+                NULL, 2, &poll_task_handle);
+
     xTaskCreate(led_task_code, "led_task", configMINIMAL_STACK_SIZE,
                 NULL, 2, &led_task_handle);
 
     xTaskCreate(logger_task_code, "log_task", 500,
                 NULL, 3, &logger_task_handle);
 
+    xTaskCreate(ls_sensor_task_code, "sensor_task", 500,
+                NULL, 4, &ls_sensor_task_handle);
+
     xTaskCreate(encoder_task_code, "encoder_task", 500,
-                NULL, 4, &encoder_task_handle);
+                NULL, 5, &encoder_task_handle);
 
     xTaskCreate(system_task_code, "system_task", 500,
-                NULL, 5, &system_task_handle);
+                NULL, 6, &system_task_handle);
 
-    xTaskCreate(sensor_task_code, "sensor_task", 500,
-                NULL, 6, &sensor_task_handle);
+    xTaskCreate(rt_sensor_task_code, "sensor_task", 500,
+                NULL, 7, &rt_sensor_task_handle);
 
     xTaskCreate(control_task_code, "control_task", 500,
-                NULL, 7, &control_task_handle);
+                NULL, 8, &control_task_handle);
 
     MAP_IntPrioritySet(INT_ADC0SS0, 0xE0);
     MAP_IntPrioritySet(INT_ADC1SS0, 0xE0);

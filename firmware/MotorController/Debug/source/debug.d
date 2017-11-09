@@ -22,6 +22,7 @@ source/debug.o: ../source/debug.c \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/tm4c1294kcpdt.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_gpio.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gpio.h
 
@@ -70,6 +71,8 @@ source/debug.o: ../source/debug.c \
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h:
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
 
 /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_gpio.h:
 

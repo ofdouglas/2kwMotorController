@@ -21,12 +21,14 @@ source/main.o: ../source/main.c \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/tm4c1294kcpdt.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h \
- /mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h \
- /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h \
- /mnt/storage/project/2kwMotorController/firmware/MotorController/include/pinconfig.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
- /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/systick.h \
- /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gpio.h
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/encoder.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/pinconfig.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/sensors.h \
+ /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/interrupt.h \
+ /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_nvic.h
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h:
 
@@ -72,14 +74,18 @@ source/main.o: ../source/main.c \
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h:
 
-/mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h:
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h:
 
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/encoder.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h:
+
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/pinconfig.h:
 
-/mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/sensors.h:
 
-/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/systick.h:
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/interrupt.h:
 
-/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gpio.h:
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_nvic.h:

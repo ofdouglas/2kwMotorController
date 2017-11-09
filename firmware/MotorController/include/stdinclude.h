@@ -31,8 +31,12 @@
 #include "build.h"
 #include "logger.h"
 #include "assert.h"
+#include "debug.h"
 
-#define ABS(x)  ((x) > 0 ? (x) : -(x))
-#define PI      3.1415926
+#define ABS(x)          ((x) > 0 ? (x) : -(x))
+#define PI              3.1415926
+#define RPM_TO_RADS     (PI / 30.0)
+#define RADS_TO_RPM     (30.0 / PI)
+
 
 #endif /* STDINCLUDE_H_ */

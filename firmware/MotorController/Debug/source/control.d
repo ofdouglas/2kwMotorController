@@ -21,9 +21,11 @@ source/control.o: ../source/control.c \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/tm4c1294kcpdt.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h \
- /mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/sensors.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/encoder.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/pwm.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gpio.h
 
@@ -71,11 +73,15 @@ source/control.o: ../source/control.c \
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h:
 
-/mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h:
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h:
 
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h:
+
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/sensors.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/encoder.h:
 
 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/pwm.h:
 

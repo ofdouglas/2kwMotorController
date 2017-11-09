@@ -57,7 +57,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.DWARF_VERSION.139745977" name="Generate debug information in DWARF version (-gdwarf-)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.DWARF_VERSION" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.DWARF_VERSION.3" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.STRICT_DWARF.1392249960" name="Do not emit DWARF additions beyond selected version (-gstrict-dwarf)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.STRICT_DWARF" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.SPECS.966582996" name="Override built-in specs with the contents of the specified file (-specs)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.SPECS" value="&quot;nosys.specs&quot;" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.OPT_LEVEL.487744648" name="Optimization Level" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.OPT_LEVEL.0" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.OPT_LEVEL.487744648" name="Optimization Level" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.OPT_LEVEL.2" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.SINGLE_PRECISION_CONSTANT.1313108469" name="Convert floating point constants to single precision constants (-fsingle-precision-constant)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compilerID.SINGLE_PRECISION_CONSTANT" value="true" valueType="boolean"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compiler.inputType__C_SRCS.221119150" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compiler.inputType__CPP_SRCS.178611866" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_6.0.compiler.inputType__CPP_SRCS"/>
@@ -82,7 +82,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="source/encoder-crap.c|startup_tm4c1294ncpdt.c|tm4c1294ncpdt_startup_ccs_gcc.c|tm4c1294ncpdt.lds" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="startup_tm4c1294ncpdt.c|tm4c1294ncpdt_startup_ccs_gcc.c|tm4c1294ncpdt.lds" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

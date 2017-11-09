@@ -37,7 +37,7 @@ FILENUM(5)
 
 
 /******************************************************************************
- * Circular buffer for Debug UART
+ * Circular buffer for Debug UART TX
  *****************************************************************************/
 static char tx_buffer[DEBUG_UART_BUFFER_SIZE];
 static int buf_head;
@@ -78,6 +78,8 @@ static char buffer_get(void)
 /******************************************************************************
  * Debug UART
  *****************************************************************************/
+
+
 
 /* Refill the UART peripheral's hardware FIFO from the software buffer. When
  * the software buffer has been emptied, disable the trigger for this ISR.

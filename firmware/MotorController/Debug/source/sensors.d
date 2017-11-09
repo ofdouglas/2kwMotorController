@@ -22,6 +22,9 @@ source/sensors.o: ../source/sensors.c \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/tm4c1294kcpdt.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/fir.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/adc.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gpio.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/timer.h \
@@ -74,6 +77,12 @@ source/sensors.o: ../source/sensors.c \
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h:
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/fir.h:
 
 /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/adc.h:
 

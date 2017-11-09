@@ -1,5 +1,5 @@
 /*
- * sensors.c - ADC and encoder code to collect sensor data.
+ * sensors.c - ADC code to collect sensor data.
  *
  *  Created on: Oct 8, 2017
  *      Author: Oliver Douglas
@@ -7,7 +7,7 @@
 
 #include "sensors.h"
 #include "system.h"
-#include "encoder.h"
+#include "fir.h"
 
 #include "driverlib/adc.h"
 #include "driverlib/gpio.h"
@@ -19,6 +19,12 @@
 
 // File index for ASSERT() macro
 FILENUM(3)
+
+/******************************************************************************
+ * ADC and sensor conversion definitions
+ *****************************************************************************/
+#define ADC_VOLTS_PER_BIT   (3.0 / 4096)
+
 
 /******************************************************************************
  * ADC pin/channel map
@@ -34,7 +40,8 @@ FILENUM(3)
  * Definitions for sample rates and timers
  *****************************************************************************/
 // Real-time sensor trigger (ADC0)
-#define RT_SAMPLE_RATE_HZ   100 //40000
+//#define RT_SAMPLE_RATE_HZ   40000
+#define RT_SAMPLE_RATE_HZ   10000
 #define RT_TIMER_SYSCTL     SYSCTL_PERIPH_TIMER0
 #define RT_TIMER_BASE       TIMER0_BASE
 
@@ -53,6 +60,14 @@ uint32_t ls_adc_buffer[3];
 
 void * adc_src = (void *)(ADC0_BASE + ADC_O_SSFIFO0);
 void * adc_dest = (void *)rt_adc_buffer;
+
+
+/******************************************************************************
+ * Task handles for IPC and synchronization
+ *****************************************************************************/
+extern TaskHandle_t rt_sensor_task_handle;
+extern TaskHandle_t ls_sensor_task_handle;
+extern TaskHandle_t control_task_handle;
 
 
 /******************************************************************************
@@ -83,10 +98,6 @@ static float hbridge_temp_celsius;     // H-bridge heatsink temperature (celsius
  * woken to process these samples (at 10 kHz).
  *****************************************************************************/
 
-// TODO: move this elsewhere!
-extern TaskHandle_t sensor_task_handle;
-extern TaskHandle_t control_task_handle;
-
 // This ISR runs when DMA has filled the RT sensor buffer. It resets the DMA
 // for the next sequence of samples, and wakes up the control task.
 void adc0_seq0_ISR(void)
@@ -100,7 +111,7 @@ void adc0_seq0_ISR(void)
                                    UDMA_MODE_BASIC, adc_src, adc_dest, 8);
     MAP_uDMAChannelEnable(UDMA_CHANNEL_ADC0);
 
-    vTaskNotifyGiveFromISR(sensor_task_handle, &task_woken);
+    vTaskNotifyGiveFromISR(rt_sensor_task_handle, &task_woken);
     portYIELD_FROM_ISR(task_woken);
 }
 
@@ -115,6 +126,7 @@ static void rt_trigger_timer_setup()
     MAP_TimerEnable(RT_TIMER_BASE, TIMER_BOTH);
     MAP_TimerControlTrigger(RT_TIMER_BASE, TIMER_BOTH, true);
 }
+
 
 // Configure ADC0 to collect the RT sensor data
 static void rt_adc_setup(void)
@@ -155,7 +167,7 @@ extern float celsius_from_adc_raw(uint32_t raw);
 static float bus_voltage_from_adc_raw(uint32_t raw)
 {
     // TODO: eliminate magic numbers
-    return raw * 3.0/4096 * 19.58;
+    return raw * ADC_VOLTS_PER_BIT * 19.58;
 }
 
 // This ISR runs when the low-speed sensor data has been collected. It checks
@@ -178,6 +190,10 @@ void adc1_seq0_ISR(void)
     */
 
     MAP_ADCSequenceDataGet(ADC1_BASE, 0, ls_adc_buffer);
+
+    BaseType_t task_woken;
+    vTaskNotifyGiveFromISR(ls_sensor_task_handle, &task_woken);
+    portYIELD_FROM_ISR(task_woken);
 }
 
 // Configure LS_TIMER_BASE to trigger ADC1 at LS_SAMPLE_RATE_HZ
@@ -214,6 +230,86 @@ static void ls_adc_setup(void)
 
 
 /******************************************************************************
+ * Sensor task
+ *
+ * TODO: mechanism for periodically sending updates over CAN / UART, at
+ * configurable rate(s)
+ *
+ * TODO: synchronize timers for ADC0 and ADC1; sensor task will do processing
+ * of ADC1 data at divided frequency, but zero phase shift, relative to ADC0.
+ *****************************************************************************/
+
+/* Impulse response for the 40 kHz -> 10 kHz decimator.
+ * Produced by Octave command 'fir1(20, 0.2)'
+ */
+static const float h_decimator[] = {
+  -0.000078, -0.002202, -0.006373,
+  -0.011527, -0.012039, 0.000525,
+  0.032310, 0.081681, 0.137227,
+  0.181370, 0.198213, 0.181370,
+  0.137227, 0.081681, 0.032310,
+  0.000525, -0.012039, -0.011527,
+  -0.006373, -0.002202, -0.000078
+};
+
+/* Process real-time sensor data.
+ */
+void rt_sensor_task_code(void * arg)
+{
+    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
+    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_UDMA);
+    rt_adc_setup();
+
+    unsigned h_len = sizeof(h_decimator) / sizeof(h_decimator[0]);
+    struct fir_filter * current_decimator = fir_create(h_decimator, h_len, 4);
+    struct fir_filter * voltage_decimator = fir_create(h_decimator, h_len, 4);
+
+    while (1) {
+        ulTaskNotifyTake(true, portMAX_DELAY);
+        debug_pins_set(0x01, 0x01);
+
+        // Retrieve newest samples from the DMA buffer
+        float new_motor_current[4], new_bus_voltage[4];
+        for (int i = 0; i < 4; i++) {
+            new_motor_current[i] = (rt_adc_buffer[i * 2] * ADC_VOLTS_PER_BIT - 1.5) * 67.8;
+            new_bus_voltage[i] = rt_adc_buffer[i * 2 + 1];
+        }
+
+        // Decimate to the primary control rate (10 kHz) and send the results
+        // to the control task.
+        debug_pins_set(0x02, 0x02);
+        volatile float current = fir_do_filter(current_decimator, new_motor_current);
+        //current = (current * ADC_VOLTS_PER_BIT - 1.5) * 13;
+        debug_pins_set(0x02, 0x00);
+
+        float voltage = fir_do_filter(voltage_decimator, new_bus_voltage);
+        voltage = (voltage * ADC_VOLTS_PER_BIT * 19.58);
+
+        // TODO: decimate to secondary rate for periodic update
+
+        // Tasks that infrequently read these variables will implicitly
+        // downsample, so we lowpass filter then to reduce aliasing
+        vbus_volts = vbus_volts * 0.995 + voltage * 0.005;
+        motor_current_amps = motor_current_amps * 0.995 + current * 0.005;
+
+        debug_pins_set(0x01, 0x00);
+        xTaskNotifyGive(control_task_handle);
+    }
+}
+
+void ls_sensor_task_code(void * arg)
+{
+    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC1);
+    ls_adc_setup();
+
+    while (1) {
+        ulTaskNotifyTake(true, portMAX_DELAY);
+    }
+}
+
+
+
+/******************************************************************************
  * Public functions
  *****************************************************************************/
 float sensor_get_motor_current_amps(void)
@@ -241,106 +337,10 @@ float sensor_get_hbridge_temp_celsius(void)
     return hbridge_temp_celsius;
 }
 
-static void sensor_setup(void)
-{
-    // Enable clocks to sensor hardware
-    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
-    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC1);
-    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_QEI0);
-    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_UDMA);
-
-    // Configure each group of sensors
-    rt_adc_setup();
-    ls_adc_setup();
-}
-
-/******************************************************************************
- * Sensor task
- *
- * TODO: mechanism for periodically sending updates over CAN / UART, at
- * configurable rate(s)
- *
- * TODO: synchronize timers for ADC0 and ADC1; sensor task will do processing
- * of ADC1 data at divided frequency, but zero phase shift, relative to ADC0.
- *****************************************************************************/
-
 float array_average(float *ar, int n)
 {
     float sum = 0;
     for (int i = 0; i < n; i++)
         sum += ar[i];
     return sum / n;
-}
-
-#define N_AVG 25
-
-void sensor_task_code(void * arg)
-{
-    sensor_setup();
-
-    int i = 0;
-    float vbus[N_AVG];
-    float htemp[N_AVG];
-    float mtemp[N_AVG];
-    float vbatt[N_AVG];
-    float current[N_AVG];
-
-    vTaskDelay(1500);
-
-    while (1) {
-        ulTaskNotifyTake(true, portMAX_DELAY);
-
-        // TODO: decimate RT sensor data
-
-        struct real_int ri;
-        /*
-        float motor_current = (rt_adc_buffer[0] * 3.0 / 4096 - 1.5) * 67.8;
-        float bus_voltage = bus_voltage_from_adc_raw(rt_adc_buffer[1]);
-        float hbridge_temp_celsius = celsius_from_adc_raw(ls_adc_buffer[0]);
-        float motor_temp_celsius = celsius_from_adc_raw(ls_adc_buffer[1]);
-        float vbatt_volts = ls_adc_buffer[2] * 3.0/4096 * 3.7;
-         */
-        vbus[i] = bus_voltage_from_adc_raw(rt_adc_buffer[1]);
-        htemp[i] = celsius_from_adc_raw(ls_adc_buffer[0]);
-        mtemp[i] = celsius_from_adc_raw(ls_adc_buffer[1]);
-        vbatt[i] = ls_adc_buffer[2] * 3.0/4096 * 3.7;
-        current[i] = (rt_adc_buffer[0] * 3.0 / 4096 - 1.5) * 26;
-
-        // Ip = Isense_out * 2000:1 * 2 / R
-
-        if (i == N_AVG - 1) {
-
-            vbus_volts = array_average(vbus, N_AVG);
-            vbatt_volts = array_average(vbatt, N_AVG);
-            motor_temp_celsius = array_average(mtemp, N_AVG);
-            motor_current_amps = array_average(current, N_AVG);
-
-            uint32_t tick_count = xTaskGetTickCount();
-
-            ri = real_int_from_float(tick_count/1000.0, 2);
-            log_msg("Uptime              = %d.%02d s\n", ri.whole, ri.fract, 0);
-
-            log_msg("Motor current       = %d mA\n", motor_current_amps * 1000, 0, 0);
-
-            ri = real_int_from_float(vbus_volts, 2);
-            log_msg("Bus voltage         = %d.%02d V\n", ri.whole, ri.fract, 0);
-
-            ri = real_int_from_float(vbatt_volts, 2);
-            log_msg("Battery voltage     = %d.%02d V\n", ri.whole, ri.fract, 0);
-
-            ri = real_int_from_float(motor_temp_celsius, 2);
-            log_msg("Ambient temperature = %d.%02d C\n", ri.whole, ri.fract, 0);
-
-            //ri = real_int_from_float(motor_velocity_rads * (PI / 30), 2);
-            ri = real_int_from_float(encoder_get_motor_velocity_rads() * PI / 30, 2);
-            log_msg("Motor velocity      = %d.%02d RPM\n", ri.whole, ri.fract, 0);
-
-            log_msg("\n", 0, 0, 0);
-            i = 0;
-        } else {
-            i++;
-        }
-
-        xTaskNotifyGive(control_task_handle);
-    }
 }

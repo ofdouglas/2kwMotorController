@@ -15,7 +15,6 @@
 #include "driverlib/gpio.h"
 
 
-
 // File index for ASSERT() macro
 FILENUM(4)
 
@@ -44,8 +43,7 @@ FILENUM(4)
 #define CONTROL_RATE_HZ         10000
 #define CONTROL_PERIOD_SECONDS  (1.0 / CONTROL_RATE_HZ)
 #define CONTROL_PERIOD_TICKS    (configTICK_RATE_HZ / CONTROL_RATE_HZ)
-//#define CONTROL_TICK_TIMEOUT    (CONTROL_PERIOD_TICKS + 2)
-#define CONTROL_TICK_TIMEOUT    2000
+#define CONTROL_TICK_TIMEOUT    (CONTROL_PERIOD_TICKS + 2)
 
 #define PWM_RATE_HZ             20000
 #define DUTY_CYCLE_MAX          98.0
@@ -57,7 +55,14 @@ FILENUM(4)
 
 // Bus voltage hysteresis for use of bleeder resistor
 #define VBUS_HYSTERESIS         1.0
-#define CURRENT_MAX_AMPS        10.0
+#define CURRENT_MAX_AMPS        5.0
+
+/* Ampflow E30-400 parameters used to calculate the maximum duty cycle
+ * that will not cause overcurrent. This is a temporary fix and should
+ * be removed when the cascade (velocity + current) controller works.
+ */
+#define AMPFLOW_KV_RADS         24.87   // radians per volt-second
+#define AMPFLOW_RESISTANCE      0.089   // ohms
 
 
 /******************************************************************************
@@ -179,9 +184,6 @@ void pwm_setup(void)
     MAP_PWMGenEnable(PWM0_BASE, PWM_GEN_1);
     MAP_PWMGenEnable(PWM0_BASE, PWM_GEN_2);
 
-    // MAP_PWMSyncTimeBase(PWM0_BASE, PWM_GEN_1_BIT | PWM_GEN_2_BIT);
-
-
     hbridge_enabled(true);
 
     // TODO: sketchy fix for mysterious bug causing H-bridge PWM pins to
@@ -193,7 +195,7 @@ void pwm_setup(void)
 /******************************************************************************
  * Math functions for control task
  *****************************************************************************/
-// PID integral terms
+// PID state. This is cleared by pid_state_reset when control modes are changed
 static float current_accumulator;
 static float velocity_accumulator;
 static float position_accumulator;
@@ -202,6 +204,8 @@ static float position_accumulator;
 // TODO: these can be modified by configuration commands
 #define CURRENT_KI  (10.0 * CONTROL_PERIOD_SECONDS)
 #define CURRENT_KP  (100.0 * CONTROL_PERIOD_SECONDS)
+#define VELOCITY_KI 0.01
+#define VELOCITY_KP 0.01
 
 float pid_current_loop(float error_signal)
 {
@@ -212,16 +216,13 @@ float pid_current_loop(float error_signal)
     return i_term + p_term + d_term;
 }
 
-// TODO: implement this
 float pid_velocity_loop(float error_signal)
 {
-    return 0;
-}
-
-// TODO: implement this
-float pid_position_loop(float error_signal)
-{
-    return 0;
+    velocity_accumulator += error_signal;
+    float i_term = VELOCITY_KI * velocity_accumulator;
+    float p_term = VELOCITY_KP * error_signal;
+    float d_term = 0;
+    return i_term + p_term + d_term;
 }
 
 void pid_state_reset(void)
@@ -232,12 +233,15 @@ void pid_state_reset(void)
 }
 
 // Clamp abs(duty) to DUTY_CYCLE_MAX
-static float duty_cycle_clamp(float duty)
+static float duty_cycle_clamp(float duty, float max)
 {
+    if (max > DUTY_CYCLE_MAX)
+        max = DUTY_CYCLE_MAX;
+
     if (duty > 0)
-        duty = duty > DUTY_CYCLE_MAX ? DUTY_CYCLE_MAX : duty;
+        duty = duty > max ? max : duty;
     else
-        duty = duty < -DUTY_CYCLE_MAX ? -DUTY_CYCLE_MAX : duty;
+        duty = duty < -max ? -max : duty;
 
     return duty;
 }
@@ -279,7 +283,6 @@ static void hbridge_safety_control(float current, float hbridge_temp,
     }
 }
 
-
 // Get control mode from system module. Clear PID state upon entry to
 // closed-loop modes to avoid glitches from residual PID state.
 static int update_control_mode(void)
@@ -295,41 +298,40 @@ static int update_control_mode(void)
     return control_mode;
 }
 
-void control_task_code(void * arg)
+void hbridge_soft_start(void)
 {
-    pwm_setup();
-
     // Crude soft start mechanism.
     // TODO: check VBUS sensor to confirm VBUS stabilized before proceeding
     hbridge_connected(true);
     vTaskDelay(1000);
     hbridge_soft_start_bypass();
+}
+
+void control_task_code(void * arg)
+{
+    pwm_setup();
+    hbridge_soft_start();
 
     while (1) {
         bool timeout = !ulTaskNotifyTake(true, CONTROL_TICK_TIMEOUT);
         ASSERT(timeout == false);
+        debug_pins_set(0x04, 0x04);
 
-        // read RT sensor data
-        float motor_current = 0;
-        float bus_voltage = 0;
-
-        float motor_velocity = encoder_get_motor_velocity_rads();
-        float motor_position = encoder_get_motor_position_rads();
-
-        static float duty_cycle;
-        float control_target;
+        // read sensor data
+        float motor_current = sensor_get_motor_current_amps();
+        float bus_voltage = sensor_get_vbus_volts();
+        float motor_velocity;
+        bool new_velocity = encoder_poll_motor_velocity_rads(&motor_velocity);
 
         // hbridge_safety_control();
         // hbridge_regen_control(duty_cycle, motor_current, bus_voltage);
-        int control_mode = update_control_mode();
 
-        control_target = system_get_control_target();
-        duty_cycle = 0;
+        static float duty_cycle;
+        float control_target = system_get_control_target();
+        int control_mode = update_control_mode();
 
         switch(control_mode) {
         case CTRL_OPEN_LOOP:
-            // todo: maybe it should be equivalent voltage instead of duty %
-            //duty_cycle = control_target / system_get_bus_voltage();
             duty_cycle = control_target;
             break;
 
@@ -338,25 +340,29 @@ void control_task_code(void * arg)
             break;
 
         case CTRL_VELOCITY:
-            duty_cycle = pid_velocity_loop(control_target - motor_velocity);
+            if (new_velocity)
+                duty_cycle = pid_velocity_loop(control_target - motor_velocity);
             break;
 
         case CTRL_POSITION:
-            duty_cycle = pid_position_loop(control_target - motor_position);
+            //duty_cycle = pid_position_loop(control_target - motor_position);
             break;
 
         default:
             ASSERT(0);
         }
 
-        duty_cycle = duty_cycle_clamp(duty_cycle);
+        /*
+        float duty_max = (CURRENT_MAX_AMPS * AMPFLOW_RESISTANCE +
+                motor_velocity * AMPFLOW_KV_RADS) / bus_voltage;
+         */
+
+        duty_cycle = duty_cycle_clamp(duty_cycle, DUTY_CYCLE_MAX);
         if (system_get_state() == STATE_RUNNING)
             pwm_duty_update(duty_cycle);
         if (system_get_state() == STATE_FAULTED)
             hbridge_enabled(false);
 
-        // check sensor update mode and update rate
-        // decimate to secondary rate
-        // send updates
+        debug_pins_set(0x04, 0x00);
     }
 }

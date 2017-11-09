@@ -1,28 +1,24 @@
 
-Encoder driver
+
+
+
+System task code
+- configuration registers
+
+improve UART command interface
+- error checking
+- more commands
+
+Tune VBUS sensor
 
 Current sensor
 
 Test sensors over wider range
 - Plot about 10 different values (ref. to multimeter)
 
-
-UART command interface
-- text based
-- basic closed-loop commands
-
-
-Simple velocity controller
-- Saturate current (maybe simple kv, rm model)
-
-
 Improve PWM driver
 
 H-bridge safety functions
 
-
-
-
 TODO: bugfixes
 * panic_log_msg doesn't always work
-* sensor_task_code is shit

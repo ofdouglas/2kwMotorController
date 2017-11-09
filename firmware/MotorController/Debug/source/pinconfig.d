@@ -21,6 +21,8 @@ source/pinconfig.o: ../source/pinconfig.c \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/tm4c1294kcpdt.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_gpio.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_types.h \
  /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gpio.h
@@ -68,6 +70,10 @@ source/pinconfig.o: ../source/pinconfig.c \
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h:
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h:
 
 /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_gpio.h:
 
