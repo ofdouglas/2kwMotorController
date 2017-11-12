@@ -92,11 +92,11 @@ void led_task_code(void * foo)
 void poll_task_code(void * foo)
 {
     struct real_int ri;
-/*
+
     while (1) {
         //vTaskDelay(5);
         vTaskDelay(1000);
-
+/*
         uint32_t tick_count = xTaskGetTickCount();
         ri = real_int_from_float(tick_count/1000.0, 2);
 
@@ -111,10 +111,8 @@ void poll_task_code(void * foo)
         int rpm = encoder_get_motor_velocity_rads() * (30.0 / PI);
         log_msg("Motor speed         = %d RPM\n", rpm, 0, 0);
         log_msg("\n", 0, 0, 0);
+        */
     }
-    */
-    while (1)
-        vTaskDelay(1000);
 }
 
 int main (void)

@@ -40,8 +40,7 @@ FILENUM(3)
  * Definitions for sample rates and timers
  *****************************************************************************/
 // Real-time sensor trigger (ADC0)
-//#define RT_SAMPLE_RATE_HZ   40000
-#define RT_SAMPLE_RATE_HZ   10000
+#define RT_SAMPLE_RATE_HZ   40000
 #define RT_TIMER_SYSCTL     SYSCTL_PERIPH_TIMER0
 #define RT_TIMER_BASE       TIMER0_BASE
 
@@ -271,15 +270,16 @@ void rt_sensor_task_code(void * arg)
         // Retrieve newest samples from the DMA buffer
         float new_motor_current[4], new_bus_voltage[4];
         for (int i = 0; i < 4; i++) {
-            new_motor_current[i] = (rt_adc_buffer[i * 2] * ADC_VOLTS_PER_BIT - 1.5) * 67.8;
+            new_motor_current[i] = rt_adc_buffer[i * 2];
             new_bus_voltage[i] = rt_adc_buffer[i * 2 + 1];
         }
 
         // Decimate to the primary control rate (10 kHz) and send the results
         // to the control task.
         debug_pins_set(0x02, 0x02);
-        volatile float current = fir_do_filter(current_decimator, new_motor_current);
-        //current = (current * ADC_VOLTS_PER_BIT - 1.5) * 13;
+        float current = fir_do_filter(current_decimator, new_motor_current);
+        log_msg("%d\n", (int)current, 0, 0);
+        current = (current * ADC_VOLTS_PER_BIT - 1.5) * 67.8;
         debug_pins_set(0x02, 0x00);
 
         float voltage = fir_do_filter(voltage_decimator, new_bus_voltage);

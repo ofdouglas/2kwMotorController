@@ -111,12 +111,14 @@ void encoder_task_code(void * arg)
         // Calculate velocity from accumulated data
         float pulses_per_sec = sum * encoder_gear_ratio * ENCODER_IRQ_RATE_HZ / N;
         float rads = pulses_per_sec * 60.0 / encoder_ppr * RPM_TO_RADS;
+
+        // Filter cutoff is 0.0167 * sampling rate
         motor_velocity_rads = motor_velocity_rads * 0.9 + rads * 0.1;
         //motor_velocity_rads = rads;
 
         velocity_updated = true;
 
-        log_msg("%d\n", motor_velocity_rads * RADS_TO_RPM, 0, 0);
+        //log_msg("%d\n", motor_velocity_rads * RADS_TO_RPM, 0, 0);
     }
 }
 

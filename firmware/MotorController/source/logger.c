@@ -27,7 +27,7 @@ FILENUM(5)
 #error "BUILD_TARGET not defined!"
 #endif
 
-#define DEBUG_UART_BAUD             115200
+#define DEBUG_UART_BAUD             921600
 #define DEBUG_UART_CONFIG           \
     (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE)
 #define DEBUG_UART_BUFFER_SIZE      512

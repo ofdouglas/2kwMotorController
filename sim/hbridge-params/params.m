@@ -19,18 +19,19 @@ Vg = 15;		% Generator voltage (arbitrary)
 
 % H-bridge parameters (using IRFP4468 MOSFET) 
 f = 20e3;               % PWM frequency
-tr = 200e-9;		% Rise time
+tr = 100e-9;		% Rise time
 N = 1;                  % N MOSFETs in parallel
 Rds = 4.68e-3;          % Drain-source ON resistance
 Rbus = 0.020;		% Total bus resistance 
 
 % Estimate current and duty cycle required to deliver 2kW to load,
 % based on bus resistance and Vg given above
+power = 2000;
 for i = 1:length(Vbus)
-  I(i) = min(roots([-Rbus, Vbus(i), -2000]));
+  I(i) = min(roots([-Rbus, Vbus(i), -power]));
   assert(isreal(I(i)) && I(i) > 0)
 
-  temp = roots([Vbus(i)^2, -Vbus(i)*Vg, -2000*Rm]);
+  temp = roots([Vbus(i)^2, -Vbus(i)*Vg, -power*Rm]);
   D(i) = min(temp(temp > 0 & temp < 1));
 end
 
