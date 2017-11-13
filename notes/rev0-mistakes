@@ -34,3 +34,5 @@ Footprint for soft start resistor works, but ideally would be slightly longer.
 C49 and C61,62,64,65 are (almost) redundant - only difference is voltage rating (50V vs 100V). Consolidate into all 100V rated.
 
 Current sensor has tabs for added mechanical stability; the footprint should have slots (not critical).
+
+Encoder needs index line!
