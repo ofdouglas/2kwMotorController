@@ -174,8 +174,7 @@ void pinconfig(void)
     /* Configure fan PWM pin:
      *  T5CCP0 = PB2 (91): PWM_FAN
      */
-    MAP_GPIOPinConfigure(GPIO_PB2_T5CCP0);
-    MAP_GPIOPinTypeTimer(GPIO_PORTB_BASE, GPIO_PIN_2);
+    MAP_GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_2);
 
     /* Configure log UART pins:
      *  UART3RX = PJ0 (116): MCU_UART3_RX

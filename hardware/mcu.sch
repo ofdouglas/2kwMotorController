@@ -862,21 +862,6 @@ F 3 "" H 6350 4800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 5150 4300
-$Comp
-L GND #PWR086
-U 1 1 59B94400
-P 5100 2050
-F 0 "#PWR086" H 5100 1800 50  0001 C CNN
-F 1 "GND" H 5100 1900 50  0000 C CNN
-F 2 "" H 5100 2050 50  0000 C CNN
-F 3 "" H 5100 2050 50  0000 C CNN
-	1    5100 2050
-	1    0    0    -1  
-$EndComp
-Text Label 5600 1900 0    60   ~ 0
-CAN_ID_0
-Text Label 5600 2000 0    60   ~ 0
-CAN_ID_1
 Text HLabel 1250 1550 0    60   Output ~ 0
 VBUS_ST_MCU
 $Comp
@@ -950,28 +935,6 @@ F 2 "" H 2900 5600 50  0000 C CNN
 F 3 "" H 2900 5600 50  0000 C CNN
 	1    2900 5600
 	1    0    0    -1  
-$EndComp
-$Comp
-L R R57
-U 1 1 59C182EB
-P 5400 1900
-F 0 "R57" V 5480 1900 50  0000 C CNN
-F 1 "2.2k" V 5400 1900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 5330 1900 50  0001 C CNN
-F 3 "" H 5400 1900 50  0000 C CNN
-	1    5400 1900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R58
-U 1 1 59C1848E
-P 5400 2000
-F 0 "R58" V 5480 2000 50  0000 C CNN
-F 1 "2.2k" V 5400 2000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 5330 2000 50  0001 C CNN
-F 3 "" H 5400 2000 50  0000 C CNN
-	1    5400 2000
-	0    1    1    0   
 $EndComp
 NoConn ~ 10650 1850
 $Comp
@@ -1701,17 +1664,6 @@ Wire Wire Line
 Connection ~ 4100 4500
 Connection ~ 4100 4300
 Wire Wire Line
-	5550 1900 6050 1900
-Wire Wire Line
-	6050 2000 5550 2000
-Wire Wire Line
-	5100 1900 5250 1900
-Wire Wire Line
-	5100 2000 5250 2000
-Wire Wire Line
-	5100 1900 5100 2050
-Connection ~ 5100 2000
-Wire Wire Line
 	1850 1450 1250 1450
 Wire Wire Line
 	4600 6550 5500 6550
@@ -1866,4 +1818,6 @@ Wire Wire Line
 	5625 4725 5625 4750
 Connection ~ 5625 4750
 NoConn ~ 7250 2100
+NoConn ~ 6050 1900
+NoConn ~ 6050 2000
 $EndSCHEMATC

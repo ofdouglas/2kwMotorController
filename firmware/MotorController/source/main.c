@@ -13,6 +13,7 @@
 
 #include <driverlib/interrupt.h>
 #include <driverlib/rom_map.h>
+#include <driverlib/gpio.h>
 #include <inc/hw_nvic.h>
 #include <inc/tm4c1294kcpdt.h>
 #include <sys/_stdint.h>
@@ -78,6 +79,11 @@ void led_task_code(void * foo)
         vTaskDelay(500);
         led_set(i, false);
     }
+
+    // power-on test fan
+    MAP_GPIOPinWrite(GPIO_PORTB_BASE, 0x04, 0x04);
+    vTaskDelay(2000);
+    MAP_GPIOPinWrite(GPIO_PORTB_BASE, 0x04, 0x00);
 
     // flash LED0 indefinitely
     while (1) {
