@@ -67,6 +67,7 @@ extern void xPortSysTickHandler(void);
 extern void adc0_seq0_ISR(void);
 extern void adc1_seq0_ISR(void);
 extern void qei_ISR(void);
+extern void can_ISR(void);
 
 
 
@@ -134,7 +135,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // Timer 3 subtimer B
     IntDefaultHandler,                      // I2C1 Master and Slave
     IntDefaultHandler,                      // CAN0
-    IntDefaultHandler,                      // CAN1
+    can_ISR,                                // CAN1
     IntDefaultHandler,                      // Ethernet
     IntDefaultHandler,                      // Hibernate
     IntDefaultHandler,                      // USB0

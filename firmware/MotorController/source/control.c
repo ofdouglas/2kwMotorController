@@ -202,26 +202,37 @@ static float position_accumulator;
 
 // PID gains
 // TODO: these can be modified by configuration commands
-#define CURRENT_KI  (10.0 * CONTROL_PERIOD_SECONDS)
-#define CURRENT_KP  (100.0 * CONTROL_PERIOD_SECONDS)
+
+// Hand-tuned
+#define CURRENT_KP  1.00
+#define CURRENT_KI  0.10
+#define CURRENT_KD  0.10
+
 #define VELOCITY_KI 0.01
 #define VELOCITY_KP 0.01
+#define VELOCITY_KD 0.00
 
 float pid_current_loop(float error_signal)
 {
+    static float prev_error;
+
     current_accumulator += error_signal;
     float i_term = CURRENT_KI * current_accumulator;
     float p_term = CURRENT_KP * error_signal;
-    float d_term = 0;
+    float d_term = CURRENT_KD * (error_signal - prev_error);
+    prev_error = error_signal;
+
     return i_term + p_term + d_term;
 }
 
 float pid_velocity_loop(float error_signal)
 {
+    static float prev_error;
+
     velocity_accumulator += error_signal;
     float i_term = VELOCITY_KI * velocity_accumulator;
     float p_term = VELOCITY_KP * error_signal;
-    float d_term = 0;
+    float d_term = VELOCITY_KD * (error_signal - prev_error);
     return i_term + p_term + d_term;
 }
 
@@ -330,13 +341,17 @@ void control_task_code(void * arg)
         float control_target = system_get_control_target();
         int control_mode = update_control_mode();
 
+        float error;
+
         switch(control_mode) {
         case CTRL_OPEN_LOOP:
             duty_cycle = control_target;
             break;
 
         case CTRL_CURRENT:
-            duty_cycle = pid_current_loop(control_target - motor_current);
+            error = (control_target / 1000.0) - motor_current;
+            //log_msg("%d\n", (int)(error * 1000), 0, 0);
+            duty_cycle = pid_current_loop(error);
             break;
 
         case CTRL_VELOCITY:

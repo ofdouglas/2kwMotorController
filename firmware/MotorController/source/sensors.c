@@ -279,11 +279,12 @@ void rt_sensor_task_code(void * arg)
         debug_pins_set(0x02, 0x02);
         float current = fir_do_filter(current_decimator, new_motor_current);
         log_msg("%d\n", (int)current, 0, 0);
-        current = (current * ADC_VOLTS_PER_BIT - 1.5) * 67.8;
+        current = (current * ADC_VOLTS_PER_BIT - 1.5) * -67.8;
         debug_pins_set(0x02, 0x00);
 
-        float voltage = fir_do_filter(voltage_decimator, new_bus_voltage);
-        voltage = (voltage * ADC_VOLTS_PER_BIT * 19.58);
+        float voltage = *new_bus_voltage;
+        //float voltage = fir_do_filter(voltage_decimator, new_bus_voltage);
+        //voltage = (voltage * ADC_VOLTS_PER_BIT * 19.58);
 
         // TODO: decimate to secondary rate for periodic update
 

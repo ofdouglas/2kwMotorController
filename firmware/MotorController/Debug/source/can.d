@@ -22,7 +22,12 @@ source/can.o: ../source/can.c \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/logger.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
- /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h \
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/can.h \
+ /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/can.h \
+ /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/interrupt.h \
+ /mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_can.h
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h:
 
@@ -71,3 +76,13 @@ source/can.o: ../source/can.c \
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/stdinclude.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h:
+
+/mnt/storage/project/2kwMotorController/firmware/MotorController/include/can.h:
+
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/can.h:
+
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/interrupt.h:
+
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/inc/hw_can.h:

@@ -6,6 +6,7 @@
  */
 
 #include "system.h"
+#include "can.h"
 #include "debug.h"
 #include "driverlib/rom_map.h"
 #include "driverlib/sysctl.h"
@@ -14,18 +15,53 @@
 // File index for ASSERT() macro
 FILENUM(2)
 
-/******************************************************************************
- * System state variables
- *****************************************************************************/
-//static int system_state = STATE_CONFIG;
-static int system_state = STATE_RUNNING;
-static int system_fault_flags = 0;
 
-static int motor_control_mode = CTRL_OPEN_LOOP;
-static int hbridge_drive_mode = DRIVE_ASYNC_SIGN_MAG;
-static float motor_target_value = 0;
+typedef union {
+    int i;
+    float f;
+} union32;
 
-static int sensor_update_mode = 0;
+/*
+ * TODO: read these from EEPROM instead of using default initializers.
+ * (When making that change, these tables can become flash-resident backups
+ * that are recovered when factory reset is activated.
+ */
+static union32 config_registers[NUM_CONFIG_REGISTERS] =
+{
+ [REG_CURRENT_KP].f = 1.00,
+ [REG_CURRENT_KI].f = 0.10,
+ [REG_CURRENT_KD].f = 0.10,
+ [REG_VELOCITY_KI].f = 0.01,
+ [REG_VELOCITY_KP].f = 0.01,
+ [REG_VELOCITY_KD].f = 0.00,
+ [REG_POSITION_KP].f = 0,
+ [REG_POSITION_KI].f = 0,
+ [REG_POSITION_KD].f = 0,
+
+ [REG_CURRENT_DEADBAND].f = 0,
+ [REG_VELOCITY_DEADBAND].f = 0,
+ [REG_POSITION_DEADBAND].f = 0,
+
+ [REG_MAX_CURRENT].f = 10,
+ [REG_MAX_VOLTAGE].f = 24,
+ [REG_MAX_MOTOR_TEMP].f = 100,
+ [REG_MAX_HBRIDGE_TEMP].f = 100,
+ //[REG_MAX_ACCEL_RATE].f = 0
+
+ [REG_NODE_ID].i = 1,
+ [REG_CAN_BAUD_RATE].i = 125000,
+ [REG_UART_BAUD_RATE].i = 921600,
+ [REG_SENSOR_LOG_ENABLES].i = 0x0,
+};
+
+static union32 state_registers[NUM_STATE_REGISTERS] =
+{
+ [REG_SYSTEM_STATE].i = STATE_CONFIG,
+ [REG_FAULT_FLAGS].i = 0x0,
+ [REG_CONTROL_MODE].i = CTRL_OPEN_LOOP,
+ [REG_CONTROL_TARGET].f = 0,
+ [REG_DRIVE_MODE].i = DRIVE_FREEWHEEL
+};
 
 
 /******************************************************************************
@@ -56,13 +92,92 @@ void system_lower_fault(int fault)
 
 int system_get_state(void)
 {
-  return system_state;
+  return state_registers[REG_SYSTEM_STATE].i;
 }
+
+void system_task_code(void * arg)
+{
+    struct can_msg msg;
+
+    while (1) {
+        if (can_recv(&msg)) {
+            can_send(&msg);
+         //   memcpy(&arg, can.data, 4);
+            //log_msg("received %d\n", arg, 0, 0);
+        }
+        vTaskDelay(50);
+    }
+}
+
+
+/******************************************************************************
+ * System configuration
+ *****************************************************************************/
+
+static uint32_t sysclk_freq;
+
+#define SYSCTL_CLOCK_CONFIG (SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN \
+                             | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480)
+
+void system_init_clocks(void)
+{
+    sysclk_freq = MAP_SysCtlClockFreqSet(SYSCTL_CLOCK_CONFIG, 120000000);
+}
+
+uint32_t system_get_sysclk_freq(void)
+{
+    return sysclk_freq;
+}
+
+int system_get_node_id(void)
+{
+    return 1;
+}
+
+/******************************************************************************
+ * Motor control commands
+ *****************************************************************************/
+int system_get_control_mode(void)
+{
+    return state_registers[REG_CONTROL_MODE].i;
+}
+
+int system_get_drive_mode(void)
+{
+    return state_registers[REG_DRIVE_MODE].i;
+}
+
+float system_get_control_target(void)
+{
+    return state_registers[REG_CONTROL_TARGET].f;
+}
+
+int system_get_update_mode(void)
+{
+    return config_registers[REG_SENSOR_LOG_ENABLES].i;
+}
+
+/* TODO: This is supposed to be the 'normal' bus voltage, e.g. the average bus
+ * voltage when regeneration is not occurring. However, the 'normal' bus
+ * voltage changes with current supplied (battery resistance) and battery state
+ * of charge, so this value must be updated periodically from average bus
+ * voltage... but we should ignore samples of VBUS taken while in regen mode!
+ *
+ */
+float system_get_bus_voltage(void)
+{
+    return 0;
+}
+
+
+
+
+
 
 /* Temporary crap - get rid of this!
  *
  *
- */
+
 #define CMD_BUF_LEN 40
 #include "driverlib/uart.h"
 
@@ -107,6 +222,8 @@ void process_cmd(void)
     case 'c' * 256 + 'm':   // change mode
         if (arg == CTRL_OPEN_LOOP)
             motor_control_mode = CTRL_OPEN_LOOP;
+        else if (arg == CTRL_CURRENT)
+            motor_control_mode = CTRL_CURRENT;
         else if (arg == CTRL_VELOCITY)
             motor_control_mode = CTRL_VELOCITY;
         break;
@@ -117,11 +234,8 @@ void process_cmd(void)
     }
 }
 
-
 void system_task_code(void * arg)
 {
-    vTaskDelay(2000);
-
     int index = 0;
     int c;
 
@@ -142,62 +256,4 @@ void system_task_code(void * arg)
                 index = 0;
         }
     }
-}
-
-
-/******************************************************************************
- * System configuration
- *****************************************************************************/
-
-static uint32_t sysclk_freq;
-
-#define SYSCTL_CLOCK_CONFIG (SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN \
-                             | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480)
-
-void system_init_clocks(void)
-{
-    sysclk_freq = MAP_SysCtlClockFreqSet(SYSCTL_CLOCK_CONFIG, 120000000);
-}
-
-uint32_t system_get_sysclk_freq(void)
-{
-    return sysclk_freq;
-}
-
-
-/******************************************************************************
- * Motor control commands
- *****************************************************************************/
-int system_get_control_mode(void)
-{
-    return motor_control_mode;
-}
-
-int system_get_drive_mode(void)
-{
-    return hbridge_drive_mode;
-}
-
-float system_get_control_target(void)
-{
-    return motor_target_value;
-}
-
-int system_get_update_mode(void)
-{
-    return sensor_update_mode;
-}
-
-/* TODO: This is supposed to be the 'normal' bus voltage, e.g. the average bus
- * voltage when regeneration is not occurring. However, the 'normal' bus
- * voltage changes with current supplied (battery resistance) and battery state
- * of charge, so this value must be updated periodically from average bus
- * voltage... but we should ignore samples of VBUS taken while in regen mode!
- *
- */
-float system_get_bus_voltage(void)
-{
-    return 0;
-}
-
-
+*/

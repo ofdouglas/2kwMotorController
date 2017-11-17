@@ -164,7 +164,7 @@ all: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 MotorController.out: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU Linker'
-	"/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc" -DPART_TM4C1294KCPDT -O2 -ffunction-sections -fdata-sections -fsingle-precision-constant -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MD -std=c99 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"MotorController.map" -L"/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc" -o"MotorController.out" $(ORDERED_OBJS)
+	"/home/odougs/bin/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc" -DPART_TM4C1294KCPDT -O3 -ffunction-sections -fdata-sections -fsingle-precision-constant -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MD -std=c99 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"MotorController.map" -L"/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/gcc" -o"MotorController.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
