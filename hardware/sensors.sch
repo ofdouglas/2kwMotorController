@@ -337,8 +337,6 @@ Text HLabel 8900 2100 2    60   Output ~ 0
 MOTOR_TEMP
 Text HLabel 9050 4550 2    60   Output ~ 0
 BRIDGE_TEMP
-Text Notes 2600 2650 0    60   ~ 0
-Use good tempco resistor\nand provide thermal relief
 $Comp
 L R R8
 U 1 1 59B94C38
