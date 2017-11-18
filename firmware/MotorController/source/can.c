@@ -89,7 +89,7 @@ void can_ISR(void)
 
         msg.can_cmd = can_id_get_cmd(msgObj.ui32MsgID);
         msg.data_len = msgObj.ui32MsgLen;
-        xQueueSendFromISR(can_tx_queue, &msg, &task_woken);
+        xQueueSendFromISR(can_rx_queue, &msg, &task_woken);
     }
     else if (status == TX_BUFFER_INDEX) {
         CANIntClear(CAN_BASE, TX_BUFFER_INDEX);

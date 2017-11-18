@@ -1,7 +1,7 @@
 R1 = 0.089;
 R2 = 0.156;
 %R2 = 0.15;
-I2 = 5:5:40;
+I2 = 5:5:50;
 N = length(I2);
 eta = 0.6;
 
@@ -19,10 +19,10 @@ for i = 1:1:length(I2)
   P2(i) = Vemf(i) * I2(i);
 end
 
-ax = plotyy(I2, Vemf, I2, I1);
+ax = plotyy(I2, V1, I2, I1);
 xlabel("M2 Current (A)")
-%ylabel(ax(1), "M1 Drive Voltage (V)")
-ylabel(ax(1), "Back EMF (V)")
+ylabel(ax(1), "M1 Drive Voltage (V)")
+%ylabel(ax(1), "Back EMF (V)")
 ylabel(ax(2), "M1 Current (A)")
 grid on
 

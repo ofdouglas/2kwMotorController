@@ -12,7 +12,9 @@
 
 
 /******************************************************************************
+ *
  * Register enumerations
+ *
  *****************************************************************************/
 
 // Config registers can only be changed while system_state == STATE_CONFIG
@@ -40,10 +42,13 @@ enum config_registers {
     REG_MAX_HBRIDGE_TEMP,
     //REG_MAX_ACCEL_RATE,
 
+    // H-Bridge configuration
+    REG_DRIVE_MODE,
+
     // Comm. interface params
     REG_NODE_ID,
-    REG_CAN_BAUD_RATE,
-    REG_UART_BAUD_RATE,
+    REG_CAN_BAUD_RATE,          // Changed at next boot after EEPROM write?
+    REG_UART_BAUD_RATE,         // Changed at next boot after EEPROM write?
     REG_SENSOR_LOG_ENABLES,
 
     NUM_CONFIG_REGISTERS
@@ -58,9 +63,19 @@ enum state_registers {
     // Motion control state
     REG_CONTROL_MODE,
     REG_CONTROL_TARGET,
-    REG_DRIVE_MODE,
+    REG_DRIVE_ENABLED,          // Freewheel if false
 
     NUM_STATE_REGISTERS
+};
+
+/******************************************************************************
+ * Config Register definitions
+ *****************************************************************************/
+// H-bridge drive modes
+enum drive_mode {
+    DRIVE_SIGN_MAG,         // Sign-magnitude (4-quadrant PWM)
+    DRIVE_ASYNC_SIGN_MAG,   // Asynchronous sign-magnitude (2-quadrant PWM)
+    DRIVE_LOCK_ANTIPHASE    // will not be implemented
 };
 
 
@@ -80,7 +95,7 @@ enum faults {
     FAULT_MOTOR_TEMP,
     FAULT_BRIDGE_TEMP,
     FAULT_CONTROL_BATT,
-    FAULT_CAN_BUS,
+    FAULT_CAN_BUS
 };
 
 // Motor control modes
@@ -89,14 +104,6 @@ enum control_mode {
     CTRL_CURRENT,           // control_target == current in amperes
     CTRL_VELOCITY,          // control_target == velocity in radians / sec
     CTRL_POSITION           // control target == position in radians
-};
-
-// H-bridge drive modes
-enum drive_mode {
-    DRIVE_FREEWHEEL,        // Drive is disabled
-    DRIVE_SIGN_MAG,         // Sign-magnitude (4-quadrant PWM)
-    DRIVE_ASYNC_SIGN_MAG,   // Asynchronous sign-magnitude (2-quadrant PWM)
-    DRIVE_LOCK_ANTIPHASE    // will not be implemented
 };
 
 
@@ -111,14 +118,19 @@ enum cmd {
 
     CMD_SET_STATE,      // uint8_t state_reg, uint32_t/float value
     CMD_GET_STATE,      // uint8_t state_reg
+    CMD_RET_STATE,      // uint8_t state_reg, uint32_t/float value
 
+    CMD_READ_SENSOR,    // uint8_t sensor enum
     CMD_SENSOR_DATA,    // uint8_t sensor enum, float data
-    CMD_REQUEST_DATA,   // uint8_t sensor enum
 
     CMD_SET_CONFIG,     // uint8_t config_reg, uint32_t / float value
     CMD_GET_CONFIG,     // uint8_t config_reg
+    CMD_RET_CONFIG,     // uint8_t config_reg, uint32_t / float value
 
-    CMD_NODE_ONLINE     // (none)
+    CMD_NODE_ONLINE,    // (none)
+    CMD_RESET,          // (none)
+
+    NUM_CMDS
 };
 
 
@@ -129,7 +141,9 @@ enum sensor_data {
     SENSOR_BUS_VOLTAGE,
     SENSOR_BATTERY_VOLTAGE,
     SENSOR_MOTOR_TEMP,
-    SENSOR_HBRIDGE_TEMP
+    SENSOR_HBRIDGE_TEMP,
+
+    NUM_SENSORS
 };
 
 
@@ -150,5 +164,26 @@ int system_get_node_id(void);
 void system_init_clocks(void);
 uint32_t system_get_sysclk_freq(void);
 
+
+
+/* Potential problems with state registers being modified both by this program
+ * any by client (via this program)...
+ *
+ * Faults / safety issues:
+ *  OK if client wants to clear a fault flag manually? If a fault situation like
+ *  FAULT_MOTOR_TEMP is active, the fault will be triggered again immediately.
+ *   - Not true if temp management is done entirely by ISRs / ADC comparators
+ *   - True if all physical faults are done by control.c at 10kHz!
+ *   - Some faults (e.g. FAULT_CAN_BUS) are 'non-physical' and would need to be
+ *     cleared by client, not control.c... Although FAULT_CAN_BUS can't really
+ *     be cleared by a client using CAN!
+ *
+ *  Client must change STATE_FAULTED to STATE_RUNNING or STATE_CONFIG when all
+ *  error have cleared. This is actually a good thing!
+ *
+ *  Changing to config mode while motor is still being driven:
+ *
+ *
+ */
 
 #endif /* SYSTEM_H_ */

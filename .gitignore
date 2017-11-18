@@ -1,5 +1,7 @@
 *~
 *.o
+*.d
+*.mk
 *.raw
 *.log
 *.plt
@@ -11,9 +13,11 @@ appnotes
 datasheet
 scratch
 hardware/gerber
+trace-pictures
 */.metadata
 */.jxbrowser-data
 */RemoteSystemsTempFiles
 firmware/*
 !firmware/MotorController
-trace-pictures
+firmware/MotorController/Debug
+software/CANard
