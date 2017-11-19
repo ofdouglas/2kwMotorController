@@ -12,9 +12,7 @@
 
 
 /******************************************************************************
- *
  * Register enumerations
- *
  *****************************************************************************/
 
 // Config registers can only be changed while system_state == STATE_CONFIG
@@ -36,11 +34,12 @@ enum config_registers {
     REG_POSITION_DEADBAND,
 
     // Motor limit values
-    REG_MAX_CURRENT,
-    REG_MAX_VOLTAGE,
-    REG_MAX_MOTOR_TEMP,
-    REG_MAX_HBRIDGE_TEMP,
-    //REG_MAX_ACCEL_RATE,
+    REG_MAX_AVG_CURRENT,        // Fault occurs after a few ms of this current
+    REG_MAX_PEAK_CURRENT,       // This current triggers an immediate fault
+    REG_MOTOR_SHUTDOWN_TEMP,    // Fault occurs immediately at this motor temp
+    REG_HBRIDGE_FAN_TEMP,       // The H-bridge fan turns on at this temp
+    REG_HBRIDGE_SHUTDOWN_TEMP,  // Fault occurs immediately at this hbridge temp
+    REG_MAX_ACCEL_RATE,
 
     // H-Bridge configuration
     REG_DRIVE_MODE,
@@ -86,7 +85,9 @@ enum drive_mode {
 enum system_state {
     STATE_CONFIG,       // Motor inactive. Config registers can be changed.
     STATE_RUNNING,      // Motor active. Motion commands can be issued.
-    STATE_FAULTED       // Motor shut down. No motion command accepted.
+    STATE_FAULTED,       // Motor shut down. No motion command accepted.
+
+    NUM_SYSTEM_STATES
 };
 
 // System state is STATE_FAULTED while any fault flag is asserted
@@ -95,7 +96,9 @@ enum faults {
     FAULT_MOTOR_TEMP,
     FAULT_BRIDGE_TEMP,
     FAULT_CONTROL_BATT,
-    FAULT_CAN_BUS
+    FAULT_CAN_BUS,
+
+    NUM_FAULTS
 };
 
 // Motor control modes
@@ -103,7 +106,9 @@ enum control_mode {
     CTRL_OPEN_LOOP,         // control_target == duty cycle in [-100, 100]
     CTRL_CURRENT,           // control_target == current in amperes
     CTRL_VELOCITY,          // control_target == velocity in radians / sec
-    CTRL_POSITION           // control target == position in radians
+    CTRL_POSITION,           // control target == position in radians
+
+    NUM_CTRL_MODES
 };
 
 
@@ -155,8 +160,13 @@ int system_get_control_mode(void);
 int system_get_drive_mode(void);
 float system_get_control_target(void);
 int system_get_update_mode(void);
-
+int system_get_drive_enabled(void);
 int system_get_node_id(void);
+
+union32 system_read_config_reg(uint8_t reg);
+
+void system_raise_fault(unsigned fault);
+void system_lower_fault(unsigned fault);
 
 /******************************************************************************
  * System configuration functions

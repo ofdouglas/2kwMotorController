@@ -55,7 +55,7 @@ static int can_id_get_cmd(int id)
 
 static int can_id_set_cmd(int id, int cmd)
 {
-    return (id & CAN_NODE_ID_MASK) | (cmd & CAN_CMD_MASK);
+    return (id & CAN_NODE_ID_MASK) | ((cmd << CAN_CMD_OFFSET) & CAN_CMD_MASK);
 }
 
 static int can_id_get_node_id(int id)

@@ -38,5 +38,9 @@
 #define RPM_TO_RADS     (PI / 30.0)
 #define RADS_TO_RPM     (30.0 / PI)
 
+typedef union {
+    int i;
+    float f;
+} union32;
 
 #endif /* STDINCLUDE_H_ */

@@ -113,7 +113,9 @@ void encoder_task_code(void * arg)
         float rads = pulses_per_sec * 60.0 / encoder_ppr * RPM_TO_RADS;
 
         // Filter cutoff is 0.0167 * sampling rate
-        motor_velocity_rads = motor_velocity_rads * 0.9 + rads * 0.1;
+        // motor_velocity_rads = motor_velocity_rads * 0.9 + rads * 0.1;
+
+        motor_velocity_rads = motor_velocity_rads * 0.98 + rads * 0.02;
         //motor_velocity_rads = rads;
 
         velocity_updated = true;

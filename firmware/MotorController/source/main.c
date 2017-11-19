@@ -98,44 +98,24 @@ void led_task_code(void * foo)
         vTaskDelay(400);
         led_set(0, true);
         vTaskDelay(100);
-        // log_message(".", 0, 0, 0);
     }
 }
 
 void poll_task_code(void * foo)
 {
-    struct real_int ri;
-
-    float f = 1.0;
     struct can_msg msg;
 
     while (1) {
         vTaskDelay(1000);
-/*
-        msg.can_cmd = CMD_TEMP_DATA;
-        memcpy(msg.data, &f, 4);
-        msg.data_len = 4;
+
+        float data = sensor_get_motor_current_amps();
+
+        msg.can_cmd = CMD_SENSOR_DATA;
+        msg.data[0] = SENSOR_CURRENT;
+        memcpy(msg.data + 1, &data, 4);
+        msg.data_len = 5;
 
         can_send(&msg);
-        f++;
-        */
-
-/*
-        uint32_t tick_count = xTaskGetTickCount();
-        ri = real_int_from_float(tick_count/1000.0, 2);
-
-        log_msg("Uptime              = %d.%02d s\n", ri.whole, ri.fract, 0);
-
-        log_msg("Motor current       = %d mA\n",
-                sensor_get_motor_current_amps() * 1000, 0, 0);
-
-        ri = real_int_from_float(sensor_get_vbus_volts(), 2);
-        log_msg("Bus voltage         = %d.%02d V\n", ri.whole, ri.fract, 0);
-
-        int rpm = encoder_get_motor_velocity_rads() * (30.0 / PI);
-        log_msg("Motor speed         = %d RPM\n", rpm, 0, 0);
-        log_msg("\n", 0, 0, 0);
-        */
     }
 }
 
@@ -187,3 +167,22 @@ int main (void)
     vTaskStartScheduler();
     ASSERT(0); // The scheduler does not return
 }
+
+
+/* TODO: delete this ancient crud
+        uint32_t tick_count = xTaskGetTickCount();
+        ri = real_int_from_float(tick_count/1000.0, 2);
+
+        log_msg("Uptime              = %d.%02d s\n", ri.whole, ri.fract, 0);
+
+        log_msg("Motor current       = %d mA\n",
+                sensor_get_motor_current_amps() * 1000, 0, 0);
+
+        ri = real_int_from_float(sensor_get_vbus_volts(), 2);
+        log_msg("Bus voltage         = %d.%02d V\n", ri.whole, ri.fract, 0);
+
+        int rpm = encoder_get_motor_velocity_rads() * (30.0 / PI);
+        log_msg("Motor speed         = %d RPM\n", rpm, 0, 0);
+        log_msg("\n", 0, 0, 0);
+        */
+

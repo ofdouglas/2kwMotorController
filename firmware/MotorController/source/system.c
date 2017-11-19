@@ -17,10 +17,6 @@
 FILENUM(2)
 
 
-typedef union {
-    int i;
-    float f;
-} union32;
 
 /*
  * TODO: read these from EEPROM instead of using default initializers.
@@ -32,21 +28,22 @@ static union32 config_registers[NUM_CONFIG_REGISTERS] =
  [REG_CURRENT_KP].f = 1.00,
  [REG_CURRENT_KI].f = 0.10,
  [REG_CURRENT_KD].f = 0.10,
+ [REG_VELOCITY_KP].f = 0.10,
  [REG_VELOCITY_KI].f = 0.01,
- [REG_VELOCITY_KP].f = 0.01,
  [REG_VELOCITY_KD].f = 0.00,
  [REG_POSITION_KP].f = 0,
  [REG_POSITION_KI].f = 0,
  [REG_POSITION_KD].f = 0,
 
- [REG_CURRENT_DEADBAND].f = 0,
- [REG_VELOCITY_DEADBAND].f = 0,
+ [REG_CURRENT_DEADBAND].f = 0.25,
+ [REG_VELOCITY_DEADBAND].f = 1,
  [REG_POSITION_DEADBAND].f = 0,
 
- [REG_MAX_CURRENT].f = 10,
- [REG_MAX_VOLTAGE].f = 24,
- [REG_MAX_MOTOR_TEMP].f = 100,
- [REG_MAX_HBRIDGE_TEMP].f = 100,
+ [REG_MAX_PEAK_CURRENT].f = 50,
+ [REG_MAX_AVG_CURRENT].f = 15,
+ [REG_MOTOR_SHUTDOWN_TEMP].f = 100,
+ [REG_HBRIDGE_FAN_TEMP].f = 45,
+ [REG_HBRIDGE_SHUTDOWN_TEMP].f = 90,
  //[REG_MAX_ACCEL_RATE].f = 0
 
  [REG_DRIVE_MODE] = DRIVE_ASYNC_SIGN_MAG,
@@ -63,39 +60,47 @@ static union32 state_registers[NUM_STATE_REGISTERS] =
  [REG_FAULT_FLAGS].i = 0x0,
  [REG_CONTROL_MODE].i = CTRL_OPEN_LOOP,
  [REG_CONTROL_TARGET].f = 0,
+ [REG_DRIVE_ENABLED].i = 1
 };
 
 
 /******************************************************************************
+ *
  * System fault management
+ *
  *****************************************************************************/
+
+/* Record that a serious error has occurred, and notify the client.
+ *
+ * fault: enumeration indicating which fault has occurred.
+ */
+void system_raise_fault(unsigned fault)
+{
+  ASSERT(fault < NUM_FAULTS);
+  state_registers[REG_FAULT_FLAGS].i |= 1 << fault;
+  state_registers[REG_SYSTEM_STATE].i = STATE_FAULTED;
+
+  struct can_msg msg;
+  msg.can_cmd = CMD_FAULT;
+  msg.data_len = 0;
+  can_send(&msg);
+}
+
 /*
-void system_raise_fault(int fault)
+ *
+ */
+void system_lower_fault(unsigned fault)
 {
-  system_fault_flags |= 1 << fault;
-
-  motor_shutdown();
-  system_state = STATE_FAULTED;
-  transmit_msg(MSG_FAULT, system_fault_flags);
+  ASSERT(fault < NUM_FAULTS);
+  state_registers[REG_FAULT_FLAGS].i &= ~(1 << fault);
 }
 
-void system_lower_fault(int fault)
-{
-  system_fault_flags &= ~(1 << fault);
 
-  if (system_fault_flags == 0) {
-    motor_power_up();
-    system_state = STATE_RUNNING;
-  }
-
-  transmit_msg(MSG_OK);
-}
-*/
-
-int system_get_state(void)
-{
-  return state_registers[REG_SYSTEM_STATE].i;
-}
+/******************************************************************************
+ *
+ * Commands invoked by client messages
+ *
+ *****************************************************************************/
 
 /* Graceful failure for indexes into cmd_table. This is used for commnads that
  * fall within the valid range [0, NUM_CMDS-1], but are only meant to be sent
@@ -127,23 +132,11 @@ static void cmd_freewheel(uint8_t * args)
 static void cmd_set_state(uint8_t * args)
 {
     uint8_t index = args[0];
-    if (index >= NUM_STATE_REGISTERS)
+    if (index >= NUM_STATE_REGISTERS) {
         ; // log error message
-    else {
-        switch(state_registers[REG_SYSTEM_STATE].i) {
-        case STATE_CONFIG:
-            memcpy(state_registers + index, args + 1, 4);
-            // TODO: OK for client to clear fault flags like this?
-            break;
-
-        case STATE_RUNNING:
-
-            break;
-
-        case STATE_FAULTED:
-
-            break;
-        }
+    } else {
+        memcpy(state_registers + index, args + 1, 4);
+        // TODO: OK for client to clear fault flags like this?
     }
     // TODO: OK for client to clear fault flags like this?
     // TODO: if client decides to enter config mode from drive mode,
@@ -252,15 +245,6 @@ void system_task_code(void * arg)
 {
     struct can_msg msg;
 
-    /*
-    while (1) {
-        if (can_recv(&msg)) {
-            can_send(&msg);
-        }
-        vTaskDelay(50);
-    }
-    */
-
     // TODO: allow multiple comms interfaces to be used.
     // Responses in cmd_xxx functions need to write to generic send() method,
     // ... could have a function pointer that gets pointed to uart_send(),
@@ -276,7 +260,6 @@ void system_task_code(void * arg)
                 ASSERT(f);
                 f(msg.data);
             }
-
         }
         vTaskDelay(10);
     }
@@ -320,6 +303,12 @@ int system_get_drive_mode(void)
     return config_registers[REG_DRIVE_MODE].i;
 }
 
+union32 system_read_config_reg(uint8_t reg)
+{
+    ASSERT(reg < NUM_CONFIG_REGISTERS);
+    return config_registers[reg];
+}
+
 float system_get_control_target(void)
 {
     return state_registers[REG_CONTROL_TARGET].f;
@@ -329,6 +318,17 @@ int system_get_update_mode(void)
 {
     return config_registers[REG_SENSOR_LOG_ENABLES].i;
 }
+
+int system_get_state(void)
+{
+  return state_registers[REG_SYSTEM_STATE].i;
+}
+
+int system_get_drive_enabled(void)
+{
+  return state_registers[REG_DRIVE_ENABLED].i;
+}
+
 
 /* TODO: This is supposed to be the 'normal' bus voltage, e.g. the average bus
  * voltage when regeneration is not occurring. However, the 'normal' bus
