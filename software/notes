@@ -1,0 +1,51 @@
+Ideas about how to improve the shitty Python-MCTRL CAN interface
+
+* Command object should be constructible from 'frame' object. An application that interacts with a CAN device should just write:
+  ...
+  frame = dev.recv()
+  cmd = command.Command(frame)
+  ...
+
+* Command object should be constructible from 'string' object.
+
+* Need a library usable with multiple different front-ends:
+  - terminal interface
+  - Battlebot RC drive (read 'ref' commands from PWM input daemon)
+  - test scripts (batch mode)
+  - ???
+
+* Need auto-logging feature
+
+* Would like real-time vital stats display
+
+* Resolve int-float issue: command's args format needs to be aware of register types... need register class?
+
+* Separate concepts of Command as a disposable object and as an immutable definition
+ - indicate if command was received or sent
+ - timestamp it
+
+
+* pseudo commands: 'config' --> "set_state system_state config"
+
+
+Command object:
+
+ metadata:
+  enum {null, sent, received}
+  timestamp (of sending or receiving)
+  CAN node ID
+
+ command info:
+  id (enum searchable as string <-> int)
+  arguments list
+
+ constructors:
+  from_string()
+  from_frame()
+
+ converters:
+  get_frame
+  get_string
+
+
+Session 
