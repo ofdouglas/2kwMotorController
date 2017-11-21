@@ -153,6 +153,8 @@ void can_task_code(void ** arg)
 
 /*  Non-blocking transmit request. Returns true if the message was
  *  queued successfully, false otherwise.
+ *
+ *  NOTE: This function should NOT be used in an ISR!
  */
 bool can_send(struct can_msg * msg)
 {
@@ -164,6 +166,8 @@ bool can_send(struct can_msg * msg)
 
 /*  Non-blocking receive request. Returns true if a message was
  *  written into the provided buffer, false otherwise.
+ *
+ *  NOTE: This function should NOT be used in an ISR!
  */
 bool can_recv(struct can_msg * msg)
 {

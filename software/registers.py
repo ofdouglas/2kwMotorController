@@ -158,8 +158,8 @@ class Sensors(Enum):
     MOTOR_TEMP = 5
     HBRIDGE_TEMP = 6
 
-sensor_current =         Register(0, 'current', 'f')
-sensor_velocity =        Register(1, 'velocity', 'f')
+sensor_current =         Register(0, 'current', 'f', enums=Sensors)
+sensor_velocity =        Register(1, 'velocity', 'f', enums=Sensors)
 sensor_position =        Register(2, 'position', 'f')
 sensor_bus_voltage =     Register(3, 'bus_voltage', 'f')
 sensor_battery_voltage = Register(4, 'battery_voltage', 'f')

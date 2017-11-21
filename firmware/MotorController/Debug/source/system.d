@@ -24,7 +24,8 @@ source/system.o: ../source/system.c \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/assert.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
  /mnt/storage/project/2kwMotorController/firmware/MotorController/include/can.h \
- /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h
+ /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h \
+ /mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/uart.h
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/system.h:
 
@@ -77,3 +78,5 @@ source/system.o: ../source/system.c \
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/can.h:
 
 /mnt/storage/project/2kwMotorController/firmware/MotorController/include/debug.h:
+
+/mnt/storage/project/2kwMotorController/firmware/Tivaware/driverlib/uart.h:

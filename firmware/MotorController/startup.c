@@ -68,6 +68,7 @@ extern void adc0_seq0_ISR(void);
 extern void adc1_seq0_ISR(void);
 extern void qei_ISR(void);
 extern void can_ISR(void);
+extern void ls_timer_ISR(void);
 
 
 
@@ -117,7 +118,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // Watchdog timer
     IntDefaultHandler,                      // Timer 0 subtimer A
     IntDefaultHandler,                      // Timer 0 subtimer B
-    IntDefaultHandler,                      // Timer 1 subtimer A
+    ls_timer_ISR,                           // Timer 1 subtimer A
     IntDefaultHandler,                      // Timer 1 subtimer B
     IntDefaultHandler,                      // Timer 2 subtimer A
     IntDefaultHandler,                      // Timer 2 subtimer B

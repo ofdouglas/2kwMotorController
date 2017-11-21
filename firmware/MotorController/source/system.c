@@ -25,9 +25,9 @@ FILENUM(2)
  */
 static union32 config_registers[NUM_CONFIG_REGISTERS] =
 {
- [REG_CURRENT_KP].f = 1.00,
- [REG_CURRENT_KI].f = 0.10,
- [REG_CURRENT_KD].f = 0.10,
+ [REG_CURRENT_KP].f = 0.10,
+ [REG_CURRENT_KI].f = 0.01,
+ [REG_CURRENT_KD].f = 0.00,
  [REG_VELOCITY_KP].f = 0.10,
  [REG_VELOCITY_KI].f = 0.01,
  [REG_VELOCITY_KD].f = 0.00,
@@ -51,7 +51,8 @@ static union32 config_registers[NUM_CONFIG_REGISTERS] =
  [REG_NODE_ID].i = 1,
  [REG_CAN_BAUD_RATE].i = 125000,
  [REG_UART_BAUD_RATE].i = 921600,
- [REG_SENSOR_LOG_ENABLES].i = 0x0,
+ //[REG_SENSOR_LOG_ENABLES].i = 0//(1 << SENSOR_CURRENT) | (1 << SENSOR_VELOCITY),
+ [REG_SENSOR_LOG_ENABLES].i = 0 //(1 << SENSOR_HBRIDGE_TEMP) //| (1 << SENSOR_MOTOR_TEMP)
 };
 
 static union32 state_registers[NUM_STATE_REGISTERS] =
@@ -241,6 +242,88 @@ static void (* const cmd_table[])(uint8_t *) =
  [CMD_RESET] = cmd_reset
 };
 
+
+
+
+#define CMD_BUF_LEN 40
+#include "driverlib/uart.h"
+
+char cmdbuf[CMD_BUF_LEN];
+
+
+int atoi(const char * s)
+{
+    int sign = 1;
+    int res = 0;
+
+    if (*s == '-') {
+        sign = -1;
+        s++;
+    }
+
+    while (*s) {
+        res = res*10 + *s - '0';
+        s++;
+    }
+
+    return res * sign;
+}
+
+
+void process_cmd(void)
+{
+    if (cmdbuf[0] == 0 || cmdbuf[1] == 0)
+        return;
+
+    uint16_t cmd = cmdbuf[0] * 256 + cmdbuf[1];
+    int arg = atoi(cmdbuf + 2);
+
+    switch(cmd) {
+    case 's' * 256 + 't':   // set target
+    if (state_registers[REG_CONTROL_MODE].i == CTRL_VELOCITY)
+        state_registers[REG_CONTROL_TARGET].f = arg * RPM_TO_RADS;
+    else
+        state_registers[REG_CONTROL_TARGET].f = arg;
+    break;
+
+    case 'c' * 256 + 'm':   // change mode
+        if (arg == CTRL_OPEN_LOOP)
+            state_registers[REG_CONTROL_MODE].i = CTRL_OPEN_LOOP;
+        else if (arg == CTRL_CURRENT)
+            state_registers[REG_CONTROL_MODE].i = CTRL_CURRENT;
+        else if (arg == CTRL_VELOCITY)
+            state_registers[REG_CONTROL_MODE].i = CTRL_VELOCITY;
+        break;
+
+    case 'h' * 256 + 'l':   // halt
+        state_registers[REG_CONTROL_TARGET].f = 0;
+    break;
+    }
+}
+
+void text_interface(void)
+{
+    int index = 0;
+    int c;
+
+    while (1) {
+        while ((c = UARTCharGetNonBlocking(UART3_BASE)) == -1)
+            vTaskDelay(10);
+
+        if (c == '\r') {
+            cmdbuf[index] = '\0';
+            process_cmd();
+            index = 0;
+        } else if (c == '\n') {
+            ;
+        } else {
+            cmdbuf[index] = c;
+            index++;
+            if (index == CMD_BUF_LEN)
+                index = 0;
+        }
+    }
+}
 void system_task_code(void * arg)
 {
     struct can_msg msg;
@@ -261,6 +344,8 @@ void system_task_code(void * arg)
                 f(msg.data);
             }
         }
+
+
         vTaskDelay(10);
     }
 }
@@ -346,87 +431,3 @@ float system_get_bus_voltage(void)
 
 
 
-
-/* Temporary crap - get rid of this!
- *
- *
-
-#define CMD_BUF_LEN 40
-#include "driverlib/uart.h"
-
-char cmdbuf[CMD_BUF_LEN];
-
-
-int atoi(const char * s)
-{
-    int sign = 1;
-    int res = 0;
-
-    if (*s == '-') {
-        sign = -1;
-        s++;
-    }
-
-    while (*s) {
-        res = res*10 + *s - '0';
-        s++;
-    }
-
-    return res * sign;
-}
-
-
-void process_cmd(void)
-{
-    if (cmdbuf[0] == 0 || cmdbuf[1] == 0)
-        return;
-
-    uint16_t cmd = cmdbuf[0] * 256 + cmdbuf[1];
-    int arg = atoi(cmdbuf + 2);
-
-    switch(cmd) {
-    case 's' * 256 + 't':   // set target
-    if (motor_control_mode == CTRL_VELOCITY)
-        motor_target_value = arg * RPM_TO_RADS;
-    else
-        motor_target_value = arg;
-    break;
-
-    case 'c' * 256 + 'm':   // change mode
-        if (arg == CTRL_OPEN_LOOP)
-            motor_control_mode = CTRL_OPEN_LOOP;
-        else if (arg == CTRL_CURRENT)
-            motor_control_mode = CTRL_CURRENT;
-        else if (arg == CTRL_VELOCITY)
-            motor_control_mode = CTRL_VELOCITY;
-        break;
-
-    case 'h' * 256 + 'l':   // halt
-        motor_target_value = 0;
-    break;
-    }
-}
-
-void system_task_code(void * arg)
-{
-    int index = 0;
-    int c;
-
-    while (1) {
-        while ((c = UARTCharGetNonBlocking(UART3_BASE)) == -1)
-            vTaskDelay(10);
-
-        if (c == '\r') {
-            cmdbuf[index] = '\0';
-            process_cmd();
-            index = 0;
-        } else if (c == '\n') {
-            ;
-        } else {
-            cmdbuf[index] = c;
-            index++;
-            if (index == CMD_BUF_LEN)
-                index = 0;
-        }
-    }
-*/

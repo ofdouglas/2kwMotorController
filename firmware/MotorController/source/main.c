@@ -37,7 +37,6 @@ FILENUM(1)
 TaskHandle_t led_task_handle;
 
 TaskHandle_t poll_task_handle;
-TaskHandle_t ls_sensor_task_handle;
 TaskHandle_t rt_sensor_task_handle;
 TaskHandle_t control_task_handle;
 TaskHandle_t logger_task_handle;
@@ -45,7 +44,6 @@ TaskHandle_t system_task_handle;
 TaskHandle_t encoder_task_handle;
 TaskHandle_t can_task_handle;
 
-extern void ls_sensor_task_code(void * arg);
 extern void rt_sensor_task_code(void * arg);
 extern void control_task_code(void * arg);
 extern void logger_task_code(void * arg);
@@ -104,18 +102,30 @@ void led_task_code(void * foo)
 void poll_task_code(void * foo)
 {
     struct can_msg msg;
+    msg.can_cmd = CMD_SENSOR_DATA;
+    msg.data_len = 5;
+
+    float sensor_data[NUM_SENSORS];
 
     while (1) {
-        vTaskDelay(1000);
+        vTaskDelay(10);
 
-        float data = sensor_get_motor_current_amps();
+        sensor_data[SENSOR_CURRENT] = sensor_get_motor_current();
+        sensor_data[SENSOR_VELOCITY] = encoder_get_motor_velocity_rads();
+        sensor_data[SENSOR_POSITION] = encoder_get_motor_position_rads();
+        sensor_data[SENSOR_BUS_VOLTAGE] = sensor_get_bus_voltage();
+        sensor_data[SENSOR_BATTERY_VOLTAGE] = sensor_get_battery_voltage();
+        sensor_data[SENSOR_MOTOR_TEMP] = sensor_get_motor_temperature();
+        sensor_data[SENSOR_HBRIDGE_TEMP] = sensor_get_hbridge_temperature();
 
-        msg.can_cmd = CMD_SENSOR_DATA;
-        msg.data[0] = SENSOR_CURRENT;
-        memcpy(msg.data + 1, &data, 4);
-        msg.data_len = 5;
-
-        can_send(&msg);
+        int enable_bits = system_read_config_reg(REG_SENSOR_LOG_ENABLES).i;
+        for (int i = 0; i < NUM_SENSORS; i++) {
+            if ((1 << i) & enable_bits) {
+                msg.data[0] = i;
+                memcpy(msg.data + 1, sensor_data + i, 4);
+                can_send(&msg);
+            }
+        }
     }
 }
 
@@ -144,19 +154,13 @@ int main (void)
     xTaskCreate(can_task_code, "can_task", 500,
                 NULL, 3, &can_task_handle);
 
-    xTaskCreate(ls_sensor_task_code, "sensor_task", 500,
-                NULL, 4, &ls_sensor_task_handle);
-
     xTaskCreate(encoder_task_code, "encoder_task", 500,
                 NULL, 5, &encoder_task_handle);
 
     xTaskCreate(system_task_code, "system_task", 500,
                 NULL, 6, &system_task_handle);
 
-    xTaskCreate(rt_sensor_task_code, "sensor_task", 500,
-                NULL, 7, &rt_sensor_task_handle);
-
-    xTaskCreate(control_task_code, "control_task", 500,
+    xTaskCreate(control_task_code, "control_task", 1000,
                 NULL, 8, &control_task_handle);
 
     MAP_IntPrioritySet(INT_ADC0SS0, 0xE0);

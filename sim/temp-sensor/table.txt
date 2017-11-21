@@ -1,4 +1,4 @@
-float table[] = {
+float thermistor_table[] = {
 	192.919644, 	//R = 100
 	163.973721, 	//R = 200
 	148.779292, 	//R = 300

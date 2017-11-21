@@ -10,7 +10,8 @@ B = 4131;
 R = 100:100:122300;
 
 Rinf = R0 * e^(-B/T0);
-Tc = B ./ log(R/Rinf) - Kc;
+Tk = B ./ log(R/Rinf);
+Tc = Tk - Kc;
 
 f = fopen('table.txt', 'w+');
 fprintf(f, 'float thermistor_table[] = {\n')

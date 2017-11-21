@@ -1243,9 +1243,9 @@ const float thermistor_table[] = {
 
 #define TABLE_STEP_OHMS     100
 #define ADC_VOLTS_PER_BIT   (3.0 / 4096)
-#define RCONST_OHMS         10000.0
+// TODO: RCONST_OHMS was originally 10k
+#define RCONST_OHMS         100000.0
 
-const float thermistor_table[];
 static size_t table_size = sizeof(thermistor_table) / sizeof(thermistor_table[0]);
 
 /* Determine temperature from NTC thermistor voltage divider
@@ -1253,22 +1253,25 @@ static size_t table_size = sizeof(thermistor_table) / sizeof(thermistor_table[0]
 float celsius_from_adc_raw(uint32_t raw)
 {
     float vin = raw * ADC_VOLTS_PER_BIT;
-    int r_therm = RCONST_OHMS * vin / (3.3 - vin);      // thermistor resistance
+    float r_therm = RCONST_OHMS * vin / (3.3 - vin);      // thermistor resistance
 
     // linear interpolation of thermistor lookup table
-    int lower_index = r_therm / 100 - 1;
-    int upper_index = r_therm / 100;
+    int lower_index = r_therm / TABLE_STEP_OHMS - 1;
+    int upper_index = r_therm / TABLE_STEP_OHMS;
 
+    float rv = 0;
     if (lower_index < 0)
-        return thermistor_table[0];
+        rv = thermistor_table[0];
     else if (upper_index >= table_size)
-        return thermistor_table[table_size];
+        rv = thermistor_table[table_size];
     else {
         float lower = thermistor_table[lower_index];
         float upper = thermistor_table[upper_index];
-
-        return lower + (upper - lower) * (r_therm - (lower_index + 1) * 100);
+        float slope = (upper - lower) / TABLE_STEP_OHMS;
+        float dx = r_therm - (lower_index + 1) * TABLE_STEP_OHMS;
+        rv = lower + slope * dx;
+        return rv;
     }
 
-    return 0;
+    return rv;
 }

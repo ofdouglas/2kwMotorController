@@ -97,7 +97,12 @@ class Message:
                 register = self.cmd.regmap[arg]
                 l.append(register.name)
             elif c == 'r':
-                l.append(register.enums(arg).name)
+                if register.typechar == 'i':
+                    l.append(register.enums(arg).name)
+                elif register.typechar == 'f':
+                    l.append(str(arg))
+                else:
+                    raise ValueError('Unexpected type character')
         return ' '.join(l)
 
     
@@ -181,9 +186,11 @@ class Message:
 #print(Message(string='set_state system_state running'))
 #print(Message(string='set_state system_state 1'))
 #print(Message(string='set_state 0 1'))
-f = can.Frame(id=6<<6, dlc=5, data=[1, 2, 0, 0, 0,])
-m = Message(frame=f)
-print(m)
-f2 = m.to_frame()
-print(f2)
-print(f)
+
+
+#f = can.Frame(id=6<<6, dlc=5, data=[1, 2, 0, 0, 0,])
+#m = Message(frame=f)
+#print(m)
+#f2 = m.to_frame()
+#print(f2)
+#print(f)

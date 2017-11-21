@@ -12,47 +12,60 @@ import threading
 
 from command import *
 
-def send_packet(dev, cmd, data):
-    frame = can.Frame(id=cmd.id << 6,
-                      dlc=len(data),
-                      data = list(data))
-    print(frame)
-    dev.send(frame)
-
-def receiver(dev):
-    while True:
-        frame = dev.recv()
-        cmd_index = frame.id >> 6
-        cmd_string = cmd_enums.CommandNames(cmd_index)
-        cmd = cmd_table[cmd_index]
-        
-        if cmd_string == cmd_enums.CommandNames['SENSOR_DATA']:
-            assert frame.dlc == 5, "Malformed sensor data packet"
-            data = bytearray(frame.data[:5])
-            (sensor_index, value) = struct.unpack('<bf', data)
-            sensor_name = cmd_enums.Sensors(sensor_index).name
-            print(sensor_name.lower(), " = {:.3f}".format(value))
-        else:
-            print(cmd_string)
+exitflag = False
 
 def get_cmd_line():
+    global exitflag
     try:
         kb_input = input("> ")
     except KeyboardInterrupt:
         print("\n")
+        exitflag = True
         sys.exit()
     return kb_input
+
+
+def freceiver(dev):
+    f = open('temp.csv', 'w')
+    global exitflag
+    i = 0
+    while True:
+        if exitflag == True:
+            sys.exit()
+        frame = dev.recv()
+        m = Message(frame=frame)
+        print(m, file=f)
+        if i == 99:
+            print(m)
+            i = 0
+        else:
+            i = i + 1
+
+def receiver(dev):
+    global exitflag
+    while True:
+        if exitflag == True:
+            sys.exit()
+        frame = dev.recv()
+        m = Message(frame=frame)
+        print(m)
+
     
 def main():
-#    dev = socketcan.SocketCanDev(sys.argv[1])
-#    dev.start()
-#    t = threading.Thread(target=receiver, args=(dev,))
-#    t.start()
+    dev = socketcan.SocketCanDev(sys.argv[1])
+    dev.start()
+    t = threading.Thread(target=freceiver, args=(dev,))
+    t.start()
     
     while True:
+
+        # m = Message(string='set_config sensor_log_enables 0')
+        # dev.send(m.to_frame())
+        
         cmd_line = get_cmd_line()
         m = Message(cmd_line)
-        print(m)
+        dev.send(m.to_frame())
+#        print(m)
 
 
 if __name__ == "__main__":

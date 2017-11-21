@@ -58,6 +58,7 @@ FILENUM(4)
 // Not yet implemented
 #define VBUS_HYSTERESIS         1.0
 
+#define FAN_HYSTERESIS          10
 
 struct pid {
     float accumulator;
@@ -345,7 +346,10 @@ static void hbridge_safety_control(float current, float hbridge_temp,
     static float avg_current;
     avg_current = avg_current * 0.85 + current * 0.15;
 
-    hbridge_fan_set_enabled(hbridge_temp > hbridge_fan_temp);
+    if (hbridge_temp > hbridge_fan_temp) {
+        hbridge_fan_set_enabled(true);
+    } else if (hbridge_temp < hbridge_fan_temp - FAN_HYSTERESIS)
+        hbridge_fan_set_enabled(false);
 
     // TODO: lower faults when they are no longer active!
     if (ABS(current) > max_peak_current ||
@@ -503,6 +507,7 @@ static float velocity_controller(float motor_current)
 void control_task_code(void * arg)
 {
     pwm_setup();
+    sensors_setup();
     load_config_regs();
     hbridge_soft_start();
 
@@ -511,11 +516,14 @@ void control_task_code(void * arg)
         ASSERT(timeout == false);
         debug_pins_set(0x04, 0x04);
 
+        //
+        sensors_rt_current_update();
+
         // Read sensor data for safety check
-        float motor_current = sensor_get_motor_current_amps();
-        float bus_voltage = sensor_get_vbus_volts();
-        float motor_temp = sensor_get_motor_temp_celsius();
-        float hbridge_temp = sensor_get_hbridge_temp_celsius();
+        float motor_current = sensor_get_motor_current();
+        float bus_voltage = sensor_get_bus_voltage();
+        float motor_temp = sensor_get_motor_temperature();
+        float hbridge_temp = sensor_get_hbridge_temperature();
 
         // Run safety checks and update fault flags
         hbridge_safety_control(motor_current, hbridge_temp, motor_temp);
