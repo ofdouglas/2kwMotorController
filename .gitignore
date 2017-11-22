@@ -21,3 +21,5 @@ firmware/*
 !firmware/MotorController
 firmware/MotorController/Debug
 software/CANard
+software/temp.csv
+__pycache__
