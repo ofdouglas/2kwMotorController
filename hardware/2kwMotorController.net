@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/odougs/storage/project/2kwMotorController/hardware/2kwMotorController.sch)
-    (date "Mon 13 Nov 2017 11:23:19 PM EST")
+    (date "Sat 25 Nov 2017 01:56:51 AM EST")
     (tool "Eeschema 4.0.5+dfsg1-4")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -72,7 +72,7 @@
       (sheetpath (names /sensors/) (tstamps /5975AD12/))
       (tstamp 5975C452))
     (comp (ref C2)
-      (value 27n)
+      (value 1u)
       (footprint Capacitors_SMD:C_0603)
       (fields
         (field (name Voltage) 16V))
@@ -122,7 +122,7 @@
       (sheetpath (names /sensors/) (tstamps /5975AD12/))
       (tstamp 597E9880))
     (comp (ref C1)
-      (value 10p)
+      (value 56p)
       (footprint Capacitors_SMD:C_0603)
       (fields
         (field (name Voltage) 16V))
@@ -168,7 +168,7 @@
       (sheetpath (names /sensors/) (tstamps /5975AD12/))
       (tstamp 59B94C38))
     (comp (ref C5)
-      (value 47n)
+      (value 2.2u)
       (footprint Capacitors_SMD:C_0603)
       (fields
         (field (name Voltage) 16V))

@@ -3,17 +3,15 @@
 # NXRT15WB473FA1B030 Thermistor parameters:
 # B value is B25/100
 R0 = 47e3;
-Kc = 237.15;
+Kc = 273.15;
 T0 = 25 + Kc;
-B = 4131;
+B = 4108;
 
-R = 100:100:122300;
+R = 1e3:1e2:R0+100;
+Bterm = R0 * e^(-B/T0);
+Tc = B ./ log(R ./ Bterm) - Kc; 
 
-Rinf = R0 * e^(-B/T0);
-Tk = B ./ log(R/Rinf);
-Tc = Tk - Kc;
-
-f = fopen('table.txt', 'w+');
+f = fopen('table2.txt', 'w+');
 fprintf(f, 'float thermistor_table[] = {\n')
 for i = 1:1:length(Tc)-1
   fprintf(f, '\t%f, \t//R = %d\n', Tc(i), R(i))

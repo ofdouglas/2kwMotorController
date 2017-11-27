@@ -2,8 +2,9 @@
 
 # s4 == 125kbaud
 # s8 == 1Mbaud
-sudo slcand -o -c -s4 /dev/serial/by-id/*CANtact*-if00 can0
-sudo ifconfig can0 up
+sudo slcand -o -c -s8 /dev/serial/by-id/*CANtact*-if00 can0
+sudo ip link set up can0
+#sudo ifconfig can0 up
 
 
 

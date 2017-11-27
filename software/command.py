@@ -2,6 +2,8 @@
 #
 # Library that defines CAN communication with motor controller
 #
+# TODO: proper bitflag lookup for cmd_fault
+#
 
 import struct
 from enum import Enum
@@ -19,7 +21,7 @@ class Command:
         self.argtypes = argtypes  # list of argument types as chars
         self.regmap = regmap      # (optional) dictionary of register objects
         
-cmd_fault =       Command(0, 'fault', '')
+cmd_fault =       Command(0, 'fault', 'i')
 cmd_ref =         Command(1, 'ref', 'f')
 cmd_stop =        Command(2, 'stop', '')
 cmd_freewheel =   Command(3, 'freewheel', '')
@@ -91,7 +93,12 @@ class Message:
         
         for c in self.cmd.argtypes:
             arg = next(args_iter)
-            if c == 'f' or c == 'i':
+            if self.cmd.name == 'fault': #special cause
+                for i in range(32):
+                    if (1 << i) & arg:
+                        print(Faults(i).name)
+                        l.append(Faults(i).name)
+            elif c == 'f' or c == 'i':
                 l.append(str(arg))
             elif c == 'b':
                 register = self.cmd.regmap[arg]
@@ -126,7 +133,7 @@ class Message:
         if ''.join(self.argtypes) == 'br':
             register = self.cmd.regmap[frame.data[0]]
             self.argtypes[1] = register.typechar
-
+            
         struct_str = '<' + ''.join(self.argtypes)
         raw_bytes = bytearray(frame.data[:frame.dlc])
         self.args = list(struct.unpack(struct_str, raw_bytes))

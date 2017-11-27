@@ -72,7 +72,7 @@ L C C2
 U 1 1 5975C496
 P 3350 2000
 F 0 "C2" H 3375 2100 50  0000 L CNN
-F 1 "27n" H 3375 1900 50  0000 L CNN
+F 1 "1u" H 3375 1900 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3388 1850 50  0001 C CNN
 F 3 "" H 3350 2000 50  0000 C CNN
 F 4 "16V" H 3350 2000 60  0001 C CNN "Voltage"
@@ -183,7 +183,7 @@ L C C1
 U 1 1 597E9DB4
 P 3150 6950
 F 0 "C1" H 3175 7050 50  0000 L CNN
-F 1 "10p" H 3175 6850 50  0000 L CNN
+F 1 "56p" H 3175 6850 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3188 6800 50  0001 C CNN
 F 3 "" H 3150 6950 50  0000 C CNN
 F 4 "16V" H 3150 6950 60  0001 C CNN "Voltage"
@@ -294,10 +294,8 @@ F 3 "" H 4100 1550 50  0000 C CNN
 	1    4100 1550
 	1    0    0    -1  
 $EndComp
-Text Notes 5300 950  0    60   ~ 0
-rflt, cflt to drive SAR ADC input:\nRadc <= 2.5k ohm\nCadc <= 10pF  
 Text Notes 5100 1500 0    60   ~ 0
-I_motor = (Vout - 1.50) * 67.8\nbandwidth = 100kHz
+I_motor = (Vout - 1.50) * 67.8\nbandwidth = 1.5kHz
 Text Notes 2700 2100 0    60   ~ 0
 0.05%\n180mW
 $Comp
@@ -353,7 +351,7 @@ L C C5
 U 1 1 59B94C8F
 P 5650 2050
 F 0 "C5" H 5675 2150 50  0000 L CNN
-F 1 "47n" H 5675 1950 50  0000 L CNN
+F 1 "2.2u" H 5675 1950 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5688 1900 50  0001 C CNN
 F 3 "" H 5650 2050 50  0000 C CNN
 F 4 "16V" H 5650 2050 60  0001 C CNN "Voltage"

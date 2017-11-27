@@ -105,9 +105,10 @@ void can_ISR(void)
 
 void can_init(void)
 {
+    uint32_t bit_rate = system_read_config_reg(REG_CAN_BAUD_RATE).i;
     SysCtlPeripheralEnable(CAN_SYSCTL);
     CANInit(CAN_BASE);
-    CANBitRateSet(CAN_BASE, system_get_sysclk_freq(), 125000);
+    CANBitRateSet(CAN_BASE, system_get_sysclk_freq(), bit_rate);
 
     tCANMsgObject msg;
     msg.ui32MsgIDMask = 0; // CAN_NODE_ID_MASK;

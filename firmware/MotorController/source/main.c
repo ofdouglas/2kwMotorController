@@ -74,6 +74,11 @@ inline void assertion_failed(int filenum, int linenum)
         ;
 }
 
+
+#define RED_LED   0
+#define GREEN_LEN 1
+#define BLUE_LED  2
+
 void led_task_code(void * foo)
 {
     (void) foo;

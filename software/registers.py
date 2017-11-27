@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class Register:
     def __init__(self, index, name, typechar, enums=None):
         self.index = index
@@ -110,11 +111,11 @@ class SystemStates(Enum):
 
 # Values of StateRegisters.FAULT_FLAGS
 class Faults(Enum):
-    OVERCURRENT  = 0x01
-    MOTOR_TEMP   = 0x02
-    BRIDGE_TEMP  = 0x04
-    CONTROL_BATT = 0x08
-    CAN_BUS      = 0x10
+    OVERCURRENT  = 0x00
+    MOTOR_TEMP   = 0x01
+    BRIDGE_TEMP  = 0x02
+    CONTROL_BATT = 0x03
+    CAN_BUS      = 0x04
 
 # Values of StateRegisters.CONTROL_MODE
 class ControlModes(Enum):

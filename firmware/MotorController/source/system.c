@@ -49,10 +49,13 @@ static union32 config_registers[NUM_CONFIG_REGISTERS] =
  [REG_DRIVE_MODE] = DRIVE_ASYNC_SIGN_MAG,
 
  [REG_NODE_ID].i = 1,
- [REG_CAN_BAUD_RATE].i = 125000,
+ [REG_CAN_BAUD_RATE].i = 1000000,
  [REG_UART_BAUD_RATE].i = 921600,
- //[REG_SENSOR_LOG_ENABLES].i = 0//(1 << SENSOR_CURRENT) | (1 << SENSOR_VELOCITY),
- [REG_SENSOR_LOG_ENABLES].i = 0 //(1 << SENSOR_HBRIDGE_TEMP) //| (1 << SENSOR_MOTOR_TEMP)
+ [REG_SENSOR_LOG_ENABLES].i = (1 << SENSOR_CURRENT) |
+                              (1 << SENSOR_BUS_VOLTAGE) |
+                              (1 << SENSOR_BATTERY_VOLTAGE) |
+                              (1 << SENSOR_MOTOR_TEMP) |
+                              (1 << SENSOR_HBRIDGE_TEMP)
 };
 
 static union32 state_registers[NUM_STATE_REGISTERS] =
@@ -83,7 +86,8 @@ void system_raise_fault(unsigned fault)
 
   struct can_msg msg;
   msg.can_cmd = CMD_FAULT;
-  msg.data_len = 0;
+  msg.data_len = 4;
+  memcpy(msg.data, state_registers + REG_FAULT_FLAGS, 4);
   can_send(&msg);
 }
 

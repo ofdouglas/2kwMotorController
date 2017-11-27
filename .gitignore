@@ -12,6 +12,9 @@
 appnotes
 datasheet
 scratch
+notes
+TODO.ods
+bom/2kwMotorController.csv
 hardware/gerber
 trace-pictures
 */.metadata
@@ -21,5 +24,8 @@ firmware/*
 !firmware/MotorController
 firmware/MotorController/Debug
 software/CANard
-software/temp.csv
+software/data.csv
+software/display.txt
+
 __pycache__
+testdata
