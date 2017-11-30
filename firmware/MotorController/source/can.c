@@ -111,8 +111,8 @@ void can_init(void)
     CANBitRateSet(CAN_BASE, system_get_sysclk_freq(), bit_rate);
 
     tCANMsgObject msg;
-    msg.ui32MsgIDMask = 0; // CAN_NODE_ID_MASK;
-    msg.ui32MsgID = 0;  // system_get_node_id();
+    msg.ui32MsgIDMask = CAN_NODE_ID_MASK;
+    msg.ui32MsgID = system_read_config_reg(REG_NODE_ID).i;
     msg.ui32Flags = MSG_OBJ_RX_INT_ENABLE | MSG_OBJ_USE_ID_FILTER;
     msg.ui32MsgLen = 8;
     CANMessageSet(CAN1_BASE, RX_BUFFER_INDEX, &msg, MSG_OBJ_TYPE_RX);
@@ -135,7 +135,7 @@ void can_task_code(void ** arg)
 
         xQueueReceive(can_tx_queue, &msg, portMAX_DELAY);
 
-        int id = can_id_set_node_id(0, system_get_node_id());
+        int id = can_id_set_node_id(0, system_read_config_reg(REG_NODE_ID).i);
         msgObj.ui32MsgID = can_id_set_cmd(id, msg.can_cmd);
         msgObj.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
         msgObj.ui32MsgLen = msg.data_len;
@@ -165,13 +165,13 @@ bool can_send(struct can_msg * msg)
     return xQueueSend(can_tx_queue, msg, 0);
 }
 
-/*  Non-blocking receive request. Returns true if a message was
+/*  CAN receive request. Returns true if a message was
  *  written into the provided buffer, false otherwise.
  *
  *  NOTE: This function should NOT be used in an ISR!
  */
-bool can_recv(struct can_msg * msg)
+bool can_recv(struct can_msg * msg, bool blocking)
 {
-    return xQueueReceive(can_rx_queue, msg, 0);
+    return xQueueReceive(can_rx_queue, msg, blocking ? portMAX_DELAY : 0);
 }
 

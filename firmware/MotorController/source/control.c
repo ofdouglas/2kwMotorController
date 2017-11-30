@@ -341,10 +341,10 @@ static void hbridge_fan_set_enabled(bool enabled)
 static void hbridge_safety_control(float current, float hbridge_temp,
                                    float motor_temp)
 {
-    // This IIR filter will reach 95% of a step input in about 20 samples.
-    // For our 10 kHz sample rate, this is about 2 milliseconds.
+    // This IIR filter will reach 95% of a step input in about 150 samples.
+    // For our 10 kHz sample rate, this is about 15 milliseconds.
     static float avg_current;
-    avg_current = avg_current * 0.85 + current * 0.15;
+    avg_current = avg_current * 0.98 + current * 0.02;
 
     if (hbridge_temp > hbridge_fan_temp) {
         hbridge_fan_set_enabled(true);

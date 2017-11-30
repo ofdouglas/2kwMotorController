@@ -12,7 +12,7 @@ struct can_msg {
 };
 
 bool can_send(struct can_msg * msg);
-bool can_recv(struct can_msg * msg);
+bool can_recv(struct can_msg * msg, bool blocking);
 
 /*
 enum CAN_CMD {

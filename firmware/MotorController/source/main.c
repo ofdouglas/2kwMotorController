@@ -76,33 +76,8 @@ inline void assertion_failed(int filenum, int linenum)
 
 
 #define RED_LED   0
-#define GREEN_LEN 1
+#define GREEN_LED 1
 #define BLUE_LED  2
-
-void led_task_code(void * foo)
-{
-    (void) foo;
-
-    // power-on test LEDs
-    for (int i = 0; i < 4; i++) {
-        led_set(i, true);
-        vTaskDelay(500);
-        led_set(i, false);
-    }
-
-    // power-on test fan
-    MAP_GPIOPinWrite(GPIO_PORTB_BASE, 0x04, 0x04);
-    vTaskDelay(2000);
-    MAP_GPIOPinWrite(GPIO_PORTB_BASE, 0x04, 0x00);
-
-    // flash LED0 indefinitely
-    while (1) {
-        led_set(0, false);
-        vTaskDelay(400);
-        led_set(0, true);
-        vTaskDelay(100);
-    }
-}
 
 void poll_task_code(void * foo)
 {
@@ -114,6 +89,23 @@ void poll_task_code(void * foo)
 
     while (1) {
         vTaskDelay(10);
+
+        switch (system_get_state()) {
+        case STATE_CONFIG:
+            led_set(RED_LED, true);
+            led_set(GREEN_LED, true);
+            led_set(BLUE_LED, false);
+            break;
+        case STATE_RUNNING:
+            led_set(RED_LED, false);
+            led_set(GREEN_LED, true);
+            led_set(BLUE_LED, false);
+            break;
+        case STATE_FAULTED:
+            led_set(RED_LED, true);
+            led_set(GREEN_LED, false);
+            led_set(BLUE_LED, false);
+        }
 
         sensor_data[SENSOR_CURRENT] = sensor_get_motor_current();
         sensor_data[SENSOR_VELOCITY] = encoder_get_motor_velocity_rads();
@@ -149,9 +141,6 @@ int main (void)
 
     xTaskCreate(poll_task_code, "poll_task", configMINIMAL_STACK_SIZE,
                 NULL, 2, &poll_task_handle);
-
-    xTaskCreate(led_task_code, "led_task", configMINIMAL_STACK_SIZE,
-                NULL, 2, &led_task_handle);
 
     xTaskCreate(logger_task_code, "log_task", 500,
                 NULL, 3, &logger_task_handle);

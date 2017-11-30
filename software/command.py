@@ -87,7 +87,7 @@ class Message:
 
         
     def __str__(self):
-        l = [self.cmd.name]
+        l = [str(self.node_id), self.cmd.name]
         args_iter = iter(self.args)
         register = None
         
@@ -118,7 +118,8 @@ class Message:
         """
         struct_str = '<' + ''.join(self.argtypes)
         data_bytes = struct.pack(struct_str, *self.args)
-        f = can.Frame(id = self.cmd.index << 6, dlc = len(data_bytes),
+        can_id = self.cmd.index << 6 | self.node_id
+        f = can.Frame(id = can_id, dlc = len(data_bytes),
                       data = list(data_bytes))
         return f
 
@@ -126,6 +127,7 @@ class Message:
     def init_from_frame(self, frame):
         """ Initialize a Message object from a CAN frame.
         """
+        self.node_id = frame.id & 0x3f
         self.cmd = cmd_table[frame.id >> 6]
         self.args = []
         self.argtypes = list(self.cmd.argtypes)
@@ -163,6 +165,7 @@ class Message:
         """
         strings_iter = iter(string.strip().lower().split())
         register = None
+        self.node_id = int(next(strings_iter))
         self.cmd = cmd_table[next(strings_iter)]
         self.args = []
         self.argtypes = []

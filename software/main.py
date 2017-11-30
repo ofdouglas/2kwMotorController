@@ -95,7 +95,7 @@ def freceiver(dev):
                 print(','.join(l), file=data_file)
                 
                 if count == 100:
-                    avg_current_str = avg_data[Sensors.CURRENT.value]
+                    avg_current = avg_data[Sensors.CURRENT.value]
                     avg_motor_temp = avg_data[Sensors.MOTOR_TEMP.value]
                     avg_hbridge_temp = avg_data[Sensors.HBRIDGE_TEMP.value]
                     avg_bus_voltage = avg_data[Sensors.BUS_VOLTAGE.value]
@@ -129,14 +129,11 @@ def main():
         print("  " + sys.argv[0] + " can[0..3]")
         
     elif sys.argv[1] == 'dryrun':
-        f = can.Frame(id=0<<6, dlc=4, data=[3])
-        m = Message(frame=f)
-        print(m)
-        
         while True:
             m = message_from_kb_cmd()
             if m:
                 print(m)
+                print(m.to_frame())
             
     else:
         dev = socketcan.SocketCanDev(sys.argv[1])

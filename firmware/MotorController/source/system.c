@@ -39,8 +39,8 @@ static union32 config_registers[NUM_CONFIG_REGISTERS] =
  [REG_VELOCITY_DEADBAND].f = 1,
  [REG_POSITION_DEADBAND].f = 0,
 
- [REG_MAX_PEAK_CURRENT].f = 50,
- [REG_MAX_AVG_CURRENT].f = 15,
+ [REG_MAX_PEAK_CURRENT].f = 120,
+ [REG_MAX_AVG_CURRENT].f = 90,
  [REG_MOTOR_SHUTDOWN_TEMP].f = 100,
  [REG_HBRIDGE_FAN_TEMP].f = 45,
  [REG_HBRIDGE_SHUTDOWN_TEMP].f = 90,
@@ -48,7 +48,7 @@ static union32 config_registers[NUM_CONFIG_REGISTERS] =
 
  [REG_DRIVE_MODE] = DRIVE_ASYNC_SIGN_MAG,
 
- [REG_NODE_ID].i = 1,
+ [REG_NODE_ID].i = 2,
  [REG_CAN_BAUD_RATE].i = 1000000,
  [REG_UART_BAUD_RATE].i = 921600,
  [REG_SENSOR_LOG_ENABLES].i = (1 << SENSOR_CURRENT) |
@@ -338,19 +338,15 @@ void system_task_code(void * arg)
     //can_send(), etc.
     while (1) {
         // TODO: callback function / TaskNotify instead of polling
-        if (can_recv(&msg)) {
-            uint8_t index = msg.can_cmd;
-            if (index > NUM_CMDS)
-                ; // log error message
-            else {
-                void (*f)(uint8_t *) = cmd_table[index];
-                ASSERT(f);
-                f(msg.data);
-            }
+        can_recv(&msg, true);
+        uint8_t index = msg.can_cmd;
+        if (index > NUM_CMDS)
+        ; // log error message
+        else {
+            void (*f)(uint8_t *) = cmd_table[index];
+            ASSERT(f);
+            f(msg.data);
         }
-
-
-        vTaskDelay(10);
     }
 }
 

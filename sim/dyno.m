@@ -3,7 +3,7 @@ R2 = 0.156;
 %R2 = 0.15;
 I2 = 5:5:50;
 N = length(I2);
-eta = 0.6;
+eta = 0.8;
 
 I1 = zeros(1,N);
 Vemf = zeros(1,N);
